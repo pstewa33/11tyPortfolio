@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+
+    .navbar-menu{
+        display: flex;
+        text-align: center;
+        gap: 1.5rem;
+        list-style: none;
+
+        li{
+            a{
+                text-decoration: none;
+                font-size: 1.3rem;
+                font-weight: 500;
+                padding: 3px 20px;
+                border-radius: 20px;
+                border: 2px solid transparent;
+                transition: all 0.3s ease;
+                white-space: nowrap;
+            }
+            a:hover{
+                color: blue;
+                border: 2px solid blue;
+            }
+        }
+    }
+}
+
+.navbar-logo{
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-toggle{
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: blue;
+        transition: all 0.3s ease-in-out
+    }
+}
+
+@media (max-width: 880px){
+    .navbar{
+        backdrop-filter: none;
+    }
+
+    .navbar-container{
+        .navbar-menu{
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.7rem !important;
+            position: absolute;
+            height: 100vh;
+            width: 250px;
+            top: 0;
+            right: 0;
+            padding: 5rem 1.5rem;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .navbar-menu.active{
+            display: flex;
+        }
+    }
+
+    .navbar-toggle{
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar-toggle.active{
+
+        .bar:nth-child(2){
+            opacity: 0;
+        }
+        .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+}
