@@ -1,0 +1,20 @@
+.block-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.block-container li {
+  list-style-type: none;
+}
+
+.block {
+  width: 800px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.block-image {
+  background-image: url(https://placehold.co/400);
+  height: 400px;
+}/*# sourceMappingURL=block.css.map */

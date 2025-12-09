@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/patterns/navigation.css">
+    <link rel="stylesheet" href="../assets/css/patterns/block.css">
 </head>
 <body>
     {% include "patterns/navigation.html" %}
-    {{ content | safe }}
-
+    <div class="container">
+        {{ content | safe }}
+    </div>
     <script src="../assets/js/patterns/navigation.js"></script>
 </body>
 </html>
