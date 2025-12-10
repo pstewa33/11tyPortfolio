@@ -1,10 +1,20 @@
 ---
 title: Hello World
 layout: /layouts/base.njk
+caseStudies:
+ - title: Case Study 1
+   link: 
+ - title: Case Study 2
+ - title: Case Study 3
+ - title: Case Study 4
 ---
 
-# Hello World!
+# Peyton Stewart. UX Designer + Engineer
 
-{% for page in collections.pages %}
- - {{ page.data.title }} {{ page.url }}
-{%- endfor %}
+## I bring digital products to life with design and code.
+
+<ul class="block-container">
+    {% for item in caseStudies %}
+        <a href="{{ item.link }}"><li>{% include "patterns/block.html" %}</li></a>
+    {% endfor %}
+</ul>
