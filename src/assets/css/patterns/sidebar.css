@@ -1,0 +1,18 @@
+.sidebar-nav li {
+  list-style: none;
+  padding: 1rem;
+}
+.sidebar-nav li a {
+  text-decoration: none;
+  color: black;
+}
+.sidebar-nav li a:hover {
+  background-color: #eee;
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sidebar-nav li a:active {
+  color: blue;
+  font-weight: bold;
+}/*# sourceMappingURL=sidebar.css.map */

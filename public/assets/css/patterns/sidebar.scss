@@ -1,0 +1,23 @@
+.sidebar-nav {
+    li{
+        list-style: none;
+        padding: 1rem;
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            background-color: #eee;
+            color: blue;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        a:active {
+            color: blue;
+            font-weight: bold;
+        }
+    }
+}
+

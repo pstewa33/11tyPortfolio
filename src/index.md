@@ -3,7 +3,7 @@ title: Hello World
 layout: /layouts/base.njk
 caseStudies:
  - title: Case Study 1
-   link: 
+   link: /case-studies/case1.html
  - title: Case Study 2
  - title: Case Study 3
  - title: Case Study 4

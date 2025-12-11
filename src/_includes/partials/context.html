@@ -1,0 +1,54 @@
+<div class="context-section">
+    <span>Context</span>
+    <h2>Context Heading</h2>
+    <div class="project-summary">
+        <div>
+            <h3>My Role</h3>
+            <span>{{ role }}</span>
+        </div>
+        <div>
+            <h3>Team</h3>
+            {% for item in team %}
+            <span>{{ item.role }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Timeline</h3>
+            <span> {{ timeline }}</span>
+        </div>
+        <div>
+            <h3>Tools</h3>
+            {% for item in tools %}
+            <span>{{ item.tool }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            <h3>Business Model</h3>
+            <span>{{ businessModel }}</span>
+        </div>
+    </div>
+    <h3>The Challenge</h3>
+    <p>{{ challenge }}</p>
+    <h3>The Task</h3>
+    <p>{{ task }}</p>
+    <h3>The Recommendation</h3>
+    <p>{{ recommendation }}</p>
+    <div class="constraints-contributions">
+        <div>
+            <h3>Constraints</h3>
+            <ul>
+                {% for item in constraints %}
+                <li>{{ item.constraint }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <h3>Contributions</h3>
+            <ul>
+                {% for item in contributions %}
+                <li>{{ item.contribution }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
