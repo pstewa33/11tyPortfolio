@@ -36,7 +36,7 @@ contributions:
 ---
 # Pattern Libraries, Design Systems, and Designing in Code
 
-{% include "partials/context.html" %}
+
 
 ## The Road to the Reccommendation
 

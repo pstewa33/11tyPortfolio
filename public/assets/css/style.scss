@@ -28,6 +28,27 @@ h1, h2,h3, h4{
     margin-top: 1rem;
 }
 
+.main-content{
+    img{
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.grid-col-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-col-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
 .context-section{
     .section-tag{
         color:#555;

@@ -1,0 +1,20 @@
+<div class="key-takeaways-section">
+    <h3>Key Takeaways</h3>
+    <p>{{ key-takeaways-statement }}</p>
+    <div class="learned">
+        <h4>What I Learned</h4>
+        <ul>
+            {% for item in what-i-learned %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="next-steps">
+        <h4>Next Steps</h4>
+        <ul>
+            {% for item in next-steps %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

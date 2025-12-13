@@ -1,0 +1,60 @@
+<div class="design-process-section">
+    <p>{{ design-process-statement }}</p>
+    <div class="grid-col-4">
+        <div class="ideation">
+            <img src="" alt="">
+            <h4>Ideation</h4>
+            <p>{{ ideation-description }}</p>
+        </div>
+        <div class="wireframing">
+            <img src="" alt="">
+            <h4>Wireframing</h4>
+            <p>{{ wireframing-description }}</p>
+        </div>
+        <div class="prototyping">
+            <img src="" alt="">
+            <h4>Prototyping</h4>
+            <p>{{ prototyping-description }}</p>
+        </div>
+        <div class="visual-design">
+            <img src="" alt="">
+            <h4>Visual Design</h4>
+            <p>{{ visual-design-description }}</p>
+        </div>
+    </div>
+    <h3>Sketches & Wireframes</h3>
+    <div class="grid-col-2">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+    <p>{{ sketches-wireframes-description }}</p>
+    <h3>Design Iterations</h3>
+    <div class="design-iterations">
+        <div class="grid-col-2">
+            <div class="before-design">
+                <span class="before">Before</span>
+                <img src="" alt="">
+            </div>
+            <div class="after-design">
+                <span class="after">After</span>
+                <img src="" alt="">
+            </div>
+            <div class="key-changes">
+                <h4>Key Changes</h4>
+                <ul>
+                    {% for change in key-changes %}
+                        <li>{{ change }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="design-decisions">
+                <h4>Design Decisions</h4>
+                <ul>
+                    {% for decision in design-decisions %}
+                        <li>{{ decision }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
