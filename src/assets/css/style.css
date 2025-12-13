@@ -20,12 +20,34 @@
 }
 
 h1 {
-  text-align: center;
+  margin-bottom: 1rem;
 }
 
-h2 {
-  text-align: center;
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.context-section .section-tag {
   color: #555;
+  font-weight: 600;
+}
+.context-section h2 {
+  text-align: left;
+  margin-top: 1rem;
+  color: black;
+}
+.context-section h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.context-section .constraints-contributions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.context-section .constraints-contributions li {
+  list-style-type: none;
 }
 
 .project-summary {
