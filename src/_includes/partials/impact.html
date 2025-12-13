@@ -1,0 +1,28 @@
+<div class="impact-section">
+    <div class="impact-results">
+        <h3>Impact & Results</h3>
+        <p>{{ impact-statement }}</p>
+        <div class="grid-col-4">
+            {% for impact in key-impacts %}
+                <div class="impact">
+                    <img src="{{ impact.icon }}" alt="{{ impact.title }}">
+                    <p>{{ impact.value }}</p>
+                    <h4>{{ impact.title }}</h4>
+                    <p>{{ impact.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="user-feedback">
+        <h3>User Feedback</h3>
+        <div class="grid-col-2">
+            {% for feedback in user-feedbacks %}
+                <div class="feedback">
+                    <p>{{ feedback.text }}</p>
+                    <h4>{{ feedback.author }}</h4>
+                    <p>{{ feedback.position }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

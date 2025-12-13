@@ -1,0 +1,21 @@
+<div class="research-section">
+    <p>{{ research-statement }}</p>
+    <div class="methods">
+        <div class="grid-col-2">
+            {% for item in methods %}
+            <div class="box">
+                <img src="{{ item.icon}}" alt="{{ item.method }}-icon">
+                <h4>{{ item.method }}</h4>
+                <p>{{ item.method-desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="key-findings">
+        <h4>Key Research Findings</h4>
+        <ul>
+            {% for finding in key-findings %}
+            <li>{{ finding }}</li>
+            {% endfor %}
+    </div>
+</div>

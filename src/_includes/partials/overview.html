@@ -1,0 +1,38 @@
+<div class="overview-section">
+    <div class="grid-col-4">
+        <div class="role">
+            <img src="" alt="Role Icon">
+            <p class="tag">Role</p>
+            <span class="name">{{ overview.role }}</span>
+        </div>
+        <div class="timeline">
+            <img src="" alt="Time Icon">
+            <p class="tag">Timeline</p>
+            <span class="name">{{ overview.timeline }}</span>
+        </div>
+        <div class="tools">
+            <img src="" alt="Tools Icon">
+            <p class="tag">Tools</p>
+            <span class="name">{{ overview.tools }}</span>
+        </div>
+        <div class="team">
+            <img src="" alt="Team Icon">
+            <p class="tag">Team</p>
+            <span class="name">{{ overview.team }}</span>
+        </div>
+    </div>
+    <div class="grid-col-2">
+        <div class="overview">
+            <h3>Overview</h3>
+            <p>{{ overview.desc }}</p>
+        </div>
+        <div class="project_goals">
+            <h3>Project Goals</h3>
+            <ul>
+                {% for goal in project_goals %}
+                    <li>{{ goal.goal }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
