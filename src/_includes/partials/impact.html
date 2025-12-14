@@ -3,14 +3,14 @@
         <h3>Impact & Results</h3>
         <p>{{ impact-statement }}</p>
         <div class="grid-col-4">
-            {% for impact in key-impacts %}
+            {%- for item in key-impacts %}
                 <div class="impact">
-                    <img src="{{ impact.icon }}" alt="{{ impact.title }}">
-                    <p>{{ impact.value }}</p>
-                    <h4>{{ impact.title }}</h4>
-                    <p>{{ impact.description }}</p>
+                    <img src="{{ item.impact-icon }}" alt="{{ item.impact-title }}">
+                    <p>{{ item.impact-value }}</p>
+                    <h4>{{ item.impact-title }}</h4>
+                    <p>{{ item.impact-description }}</p>
                 </div>
-            {% endfor %}
+            {%- endfor -%}
         </div>
     </div>
     <div class="user-feedback">
