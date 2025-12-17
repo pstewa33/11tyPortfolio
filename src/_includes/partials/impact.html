@@ -16,11 +16,10 @@
     <div class="user-feedback">
         <h3>User Feedback</h3>
         <div class="grid-col-2">
-            {% for feedback in user-feedbacks %}
+            {% for item in user-feedback %}
                 <div class="feedback">
-                    <p>{{ feedback.text }}</p>
-                    <h4>{{ feedback.author }}</h4>
-                    <p>{{ feedback.position }}</p>
+                    <p>{{ item.text }}</p>
+                    <h4>{{ item.author }}</h4>
                 </div>
             {% endfor %}
         </div>

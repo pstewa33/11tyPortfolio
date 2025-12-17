@@ -2,7 +2,9 @@
 title: Case Study Template
 layout: /layouts/case-study.njk
 permalink: /case-studies/template.html
+project-img: https://placehold.co/600x400
 overview:
+  phase: Context
   role: Role
   team: Team
   timeline: X months (MM,YYYY - MM, YYYY)
@@ -77,11 +79,21 @@ key-impacts:
   - impact-value: 4.8/5
     impact-title: User Rating
     impact-description: Based on 500+ reviews
+user-feedback:
+  - text: The new interface is so much easier to use! I can finally complete my tasks without getting lost or frustrated.
+  - author: Sarah M., Power User
+key-takeaways-statement: Reflections and learnings from this project that will inform future work.
+what-i-learned:
+  - learning: Early and continuous user testing is crucial - testing assumptions early saved weeks of design time
+  - learning: Quantitative data tells you what is happening, but qualitative research tells you why
+  - learning: Sometimes the simplest solution is the best - removing features can be as valuable as adding them
+  - learning: Cross-functional collaboration led to better solutions than working in isolation
+next-steps:
+  - step: Monitor analytics to validate the improvements continue over time
+  - step: Conduct follow-up interviews to gather deeper insights
+  - step: Expand the design system to other product areas
+  - step: Explore additional personalization features based on user segments
 ---
-
-# Case Study Title
-
-![Hero Image](https://placehold.co/600x400)
 
 {% include "partials/overview.html" %}
 

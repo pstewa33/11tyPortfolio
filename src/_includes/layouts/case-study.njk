@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/case-studies.css">
     <link rel="stylesheet" href="../assets/css/patterns/navigation.css">
     <link rel="stylesheet" href="../assets/css/patterns/block.css">
     <link rel="stylesheet" href="../assets/css/patterns/sidebar.css">
+    <script src="https://kit.fontawesome.com/e2a3af1213.js" crossorigin="anonymous"></script>
 </head>
 <body>
     {% include "patterns/navigation.html" %}
@@ -17,6 +19,10 @@
         </div>
         <div class="main-content">
             {{ content | safe }}
+            <div class="outro">
+                <button class="btn-primary">Thank you for reading!</button>
+                <p>Want to discuss this project or collaborate? Get in touch!</p>
+            </div>
         </div>
     </div>
     <script src="../assets/js/patterns/navigation.js"></script>

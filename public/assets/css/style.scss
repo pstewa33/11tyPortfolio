@@ -19,9 +19,6 @@
     padding-right: 2rem;
 }
 
-h1{
-    margin-bottom: 1rem;
-}
 
 h1, h2,h3, h4{
     margin-bottom: 1rem;
@@ -29,10 +26,14 @@ h1, h2,h3, h4{
 }
 
 .main-content{
-    img{
-        margin: auto;
-        width: 100%;
-    }
+   .project-image{
+    display: flex;
+    justify-content: center;
+   }
+   img{
+    width: 70%;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+   }
 }
 
 .grid-col-4{
@@ -47,38 +48,4 @@ h1, h2,h3, h4{
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
-}
-
-.context-section{
-    .section-tag{
-        color:#555;
-        font-weight: 600;
-    }
-    h2{
-        text-align: left;
-        margin-top: 1rem;
-        color: black;
-    }
-    h3{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    .constraints-contributions{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        li{
-            list-style-type: none;
-        }
-    }
-}
-
-.project-summary {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
 }
