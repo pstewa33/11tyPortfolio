@@ -7,9 +7,10 @@ overview:
   phase: Context
   role: Role
   team: Team
-  timeline: X months (MM,YYYY - MM, YYYY)
+  timeline: X months
+  dates: (MM, YYYY - MM, YYYY)
   tools: tool, tool, tool
-  desc: Overview Description
+  desc: Provide context about the project, the company or client, and what you were trying to achieve. Explain the business goals and user needs that drove this project.
 project_goals:
   - goal: Goal 1
   - goal: Goal 2

@@ -13,3 +13,44 @@
         margin-bottom: 1rem;;
     }
 }
+
+.problem-section{
+    border: #c42847 3px solid;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 0.2fr 3fr;
+
+
+    h2{
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .fa-exclamation{
+        color:#c42847;
+        border: #c42847 3px solid;
+        border-radius: 5px;
+        font-size: 18px;
+        padding-left: 1rem;
+        padding-right: 1.3rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: rgba(196, 40, 71, 0.2);
+    }
+
+    p{
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+
+    .italic{
+        font-weight: 200;
+    }
+
+    .box{
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+}
