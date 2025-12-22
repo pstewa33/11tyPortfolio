@@ -2,4 +2,7 @@
     <i class="fa-solid fa-chart-column"></i>
     <h4>Analytics Review</h4>
     <p>{{ item.method-desc }}</p>
+    {%- if item.research-link %}
+    <a class="research-link" href="{{ item.research-link }}">{{ item.research-link-text }}</a>
+    {%- endif %}
 </div>

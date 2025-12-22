@@ -21,10 +21,14 @@ research-statement: To understand the problem deeply, I conducted comprehensive 
 methods:
   - method: User Interviews
     method-desc: 12 in-depth interviews with target users to understand pain points and needs.
+    research-link: link
+    research-link-text: 29 Participants
   - method: Competitive Analysis
     method-desc: Analyzed 5 competitors to identify industry patterns and opportunities.
   - method: Analytics Review
     method-desc: Examined user behavior data to identify drop-off points and usage patterns
+    research-link: link
+    research-link-text: 10,000+ Sessions
   - method: Surveys
     method-desc: Gathered quantitative data on user preferences and satisfaction levels
 key-findings:

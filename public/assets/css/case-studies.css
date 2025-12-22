@@ -60,4 +60,13 @@
   height: auto;
   box-shadow: none;
   background-color: #007bff;
+}
+.research-section .box {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.research-section .box p {
+  margin-bottom: 1rem;
+  margin-top: 0;
 }/*# sourceMappingURL=case-studies.css.map */

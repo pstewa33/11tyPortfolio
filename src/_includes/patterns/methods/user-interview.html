@@ -2,4 +2,7 @@
     <i class="fa-solid fa-clipboard-question"></i>
     <h4>User Interviews</h4>
     <p>{{ item.method-desc }}</p>
+    {%- if item.research-link %}
+        <a class="research-link" href="{{ item.research-link }}">{{ item.research-link-text }}</a>
+    {%- endif %}
 </div>
