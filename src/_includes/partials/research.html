@@ -1,14 +1,22 @@
 <div class="research-section">
+    <span class="phase">{{ research-phase }}</span>
     <h2>Research and Discovery</h2>
     <p>{{ research-statement }}</p>
     <div class="methods">
         <div class="grid-col-2">
             {%- for item in methods %}
-                <div class="box">
-                    <img src="{{ item.icon }}" alt="{{ item.method }}-icon">
-                    <h4>{{ item.method }}</h4>
-                    <p>{{ item.method-desc }}</p>
-                </div>
+                {%- if item.method == "User Interviews" %}
+                    {% include "patterns/methods/user-interview.html" %}
+                {%- endif -%}
+                {%- if item.method == "Competitive Analysis" %}
+                    {% include "patterns/methods/competitive-analysis.html" %}
+                {%- endif -%}
+                {%- if item.method == "Analytics Review" %}
+                    {% include "patterns/methods/analytics-review.html" %}
+                {%- endif -%}
+                {%- if item.method == "Surveys" %}
+                    {% include "patterns/methods/surveys.html" %}
+                {%- endif -%}
             {%- endfor -%}
         </div>
     </div>

@@ -16,6 +16,7 @@ project_goals:
   - goal: Goal 2
   - goal: Goal 3
 problem-statement: Craft a clear, compelling problem statement that describes the pain points users were experiencing. This should be specific and grounded in real user feedback or data.
+research-phase: Discovery
 research-statement: To understand the problem deeply, I conducted comprehensive research using multiple methods to gather both qualitative and quantitative insights.
 methods:
   - method: User Interviews

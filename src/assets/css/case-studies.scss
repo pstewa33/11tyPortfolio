@@ -1,11 +1,14 @@
+.case-study{
+   // background-color: #E0E2DB;
+}
+.phase{
+    font-size: 1.5rem;
+    color: #007bff;
+}
 .overview-section{
     .title{
         margin-bottom: 3rem;
         margin-top: 3rem;
-        span{
-            font-size: 1.5rem;
-            color: #007bff;
-        }
     }
     i{
         font-size: 1.5rem;
@@ -20,6 +23,7 @@
     padding: 2rem;
     display: grid;
     grid-template-columns: 0.2fr 3fr;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 
 
     h2{
@@ -52,5 +56,20 @@
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         border-radius: 1rem;
         padding: 2rem;
+    }
+}
+
+.research-section{
+    margin-top: 3rem;
+
+    .methods{
+        margin-top: 2rem;
+    }
+
+    .method-icon{
+        width: 2rem;
+        height: auto;
+        box-shadow: none;
+        background-color:#007bff;
     }
 }
