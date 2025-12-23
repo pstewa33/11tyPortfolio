@@ -73,21 +73,25 @@ metric-3: Component Library
 metric-3-value: Built a reusable design system to ensure consistency and speed up future development.
 impact-statement: The redesigned experience launched in March 2024 and showed immediate positive results across all key metrics.
 key-impacts:
-  - impact-value: +42%
+  - impact-type: task completion
+    impact-value: +42%
     impact-title: Task Completion Rate
     impact-description: Increased from 32% to 74%
-  - impact-value: -65%
+  - impact-type: task time
+    impact-value: -65%
     impact-title: Time on Task
     impact-description: Reduced from 4.2 to 1.5 minutes
-  - impact-value: +58%
+  - impact-type: user satisfaction
+    impact-value: +58%
     impact-title: User Satisfaction
     impact-description: NPS score improved significantly
-  - impact-value: 4.8/5
+  - impact-type: user rating
+    impact-value: 4.8/5
     impact-title: User Rating
     impact-description: Based on 500+ reviews
 user-feedback:
   - text: The new interface is so much easier to use! I can finally complete my tasks without getting lost or frustrated.
-  - author: Sarah M., Power User
+    author: Sarah M., Power User
 key-takeaways-statement: Reflections and learnings from this project that will inform future work.
 what-i-learned:
   - learning: Early and continuous user testing is crucial - testing assumptions early saved weeks of design time
@@ -110,6 +114,8 @@ next-steps:
 {% include "partials/user-insights.html" %}
 
 {% include "partials/design-process.html" %}
+
+{% include "partials/wireframing.html" %}
 
 {% include "partials/final-design.html" %}
 

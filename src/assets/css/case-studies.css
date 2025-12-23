@@ -69,4 +69,123 @@
 .research-section .box p {
   margin-bottom: 1rem;
   margin-top: 0;
+}
+.research-section .key-findings {
+  background-color: aliceblue;
+  padding: 2rem;
+}
+.research-section .key-findings li {
+  list-style: none;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.user-insights-section {
+  background-color: azure;
+  padding: 2rem;
+}
+.user-insights-section .insight-statement {
+  margin-bottom: 1rem;
+}
+.user-insights-section img {
+  box-shadow: none;
+}
+.user-insights-section .persona {
+  background-color: #E0E2DB;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.user-insights-section .persona li {
+  list-style: none;
+  padding-bottom: 0.5rem;
+}
+.user-insights-section .persona p {
+  padding-bottom: 0.5rem;
+}
+.user-insights-section .journey-map {
+  background-color: white;
+  padding: 2rem;
+}
+.user-insights-section .journey-map h4 {
+  margin-bottom: 1rem;
+}
+.user-insights-section .journey-map p {
+  margin-top: 1rem;
+}
+
+.wireframing-section img {
+  box-shadow: none;
+}
+.wireframing-section .design-iterations {
+  background-color: #E0E2DB;
+  padding: 2rem;
+}
+.wireframing-section .design-iterations li {
+  list-style: none;
+  padding-bottom: 0.5rem;
+}
+
+.final-design-section img {
+  box-shadow: none;
+}
+
+.impact-section .impact {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.impact-section .impact .impact-value {
+  font-size: 20px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.impact-section .impact h4 {
+  font-weight: 500;
+}
+.impact-section .impact .impact-desc {
+  color: #4E5166;
+  font-size: 14px;
+}
+.impact-section img {
+  box-shadow: none;
+}
+.impact-section p {
+  margin-bottom: 1rem;
+}
+.impact-section .user-feedback {
+  background-color: #E0E2DB;
+  padding: 2rem;
+}
+.impact-section .user-feedback .feedback {
+  background-color: white;
+  padding: 2rem;
+}
+.impact-section .user-feedback .feedback p {
+  font-style: italic;
+}
+
+.key-takeaways-section {
+  margin-top: 2rem;
+}
+.key-takeaways-section p {
+  margin-bottom: 1rem;
+}
+.key-takeaways-section li {
+  list-style: none;
+  padding-bottom: 0.5rem;
+}
+.key-takeaways-section .learned {
+  background-color: aliceblue;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+.key-takeaways-section .next-steps {
+  background-color: #E0E2DB;
+  padding: 2rem;
+}
+
+.outro button {
+  margin: auto;
+  padding: 1rem;
+  border-radius: 15px;
 }/*# sourceMappingURL=case-studies.css.map */

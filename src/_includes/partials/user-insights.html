@@ -1,10 +1,11 @@
 <div class="user-insights-section">
+    <span class="phase">Define</span>
     <h2>User Personas</h2>
-    <p>{{ user-insights }}</p>
+    <p class="insight-statement">{{ user-insights }}</p>
     <div class="grid-col-2">
     {%- for item in personas %}
         <div class="persona">
-            <img src="{{ item.avatar }}" alt="{{ item.name }}-avatar">
+            <i class="fa-solid fa-id-card-clip"></i>
             <h4>{{ item.name }}</h4>
             <p>{{ item.role }} • {{ item.age }}</p>
             <ul class="user-goals">

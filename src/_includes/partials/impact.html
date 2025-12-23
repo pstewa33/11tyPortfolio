@@ -4,24 +4,30 @@
         <p>{{ impact-statement }}</p>
         <div class="grid-col-4">
             {%- for item in key-impacts %}
-                <div class="impact">
-                    <img src="{{ item.impact-icon }}" alt="{{ item.impact-title }}">
-                    <p>{{ item.impact-value }}</p>
-                    <h4>{{ item.impact-title }}</h4>
-                    <p>{{ item.impact-description }}</p>
-                </div>
+               {%- if item.impact-type == "task completion" %}
+                    {% include "patterns/impacts/task-completion.html" %}
+                {%- endif -%}
+                {%- if item.impact-type == "task time" %}
+                    {% include "patterns/impacts/task-time.html" %}
+                {%- endif -%}
+                {%- if item.impact-type == "user satisfaction" %}
+                    {% include "patterns/impacts/user-satisfaction.html" %}
+                {%- endif -%}
+                {%- if item.impact-type == "user rating" %}
+                    {% include "patterns/impacts/user-rating.html" %}
+                {%- endif -%}
             {%- endfor -%}
         </div>
     </div>
     <div class="user-feedback">
         <h3>User Feedback</h3>
         <div class="grid-col-2">
-            {% for item in user-feedback %}
+            {%- for item in user-feedback %}
                 <div class="feedback">
-                    <p>{{ item.text }}</p>
-                    <h4>{{ item.author }}</h4>
+                    <p>"{{ item.text }}"</p>
+                    <h4>- {{ item.author }}</h4>
                 </div>
-            {% endfor %}
+            {% endfor -%}
         </div>
     </div>
 </div>

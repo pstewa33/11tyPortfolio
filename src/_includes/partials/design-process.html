@@ -1,4 +1,6 @@
 <div class="design-process-section">
+    <span class="phase">Ideate</span>
+    <h2>Design Process</h2>
     <p>{{ design-process-statement }}</p>
     <div class="grid-col-4">
         <div class="ideation">
@@ -20,41 +22,6 @@
             <img src="" alt="">
             <h4>Visual Design</h4>
             <p>{{ visual-design-description }}</p>
-        </div>
-    </div>
-    <h3>Sketches & Wireframes</h3>
-    <div class="grid-col-2">
-        <img src="{{ wireframe-one }}" alt="wireframe-screenshot">
-        <img src="{{ wireframe-two }}" alt="wireframe-screenshot">
-    </div>
-    <p>{{ sketches-wireframes-description }}</p>
-    <h3>Design Iterations</h3>
-    <div class="design-iterations">
-        <div class="grid-col-2">
-            <div class="before-design">
-                <span class="before">Before</span>
-                <img src="{{ before-design }}" alt="before design screenshot">
-            </div>
-            <div class="after-design">
-                <span class="after">After</span>
-                <img src="{{ after-design }}" alt="after design screenshot">
-            </div>
-            <div class="key-changes">
-                <h4>Key Changes</h4>
-                <ul>
-                    {% for item in key-changes %}
-                        <li>{{ item.change }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="design-decisions">
-                <h4>Design Decisions</h4>
-                <ul>
-                    {% for item in design-decisions %}
-                        <li>{{ item.decision }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
         </div>
     </div>
 </div>

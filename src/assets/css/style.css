@@ -58,4 +58,26 @@ p, li, a, span {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+}
+
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outro {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.outro p {
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */
