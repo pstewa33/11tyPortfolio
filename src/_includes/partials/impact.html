@@ -1,28 +1,34 @@
 <div class="impact-section">
     <div class="impact-results">
-        <h3>Impact & Results</h3>
+        <span class="phase">Impact</span>
+        <h2>Impact & Results</h2>
         <p>{{ impact-statement }}</p>
         <div class="grid-col-4">
-            {% for impact in key-impacts %}
-                <div class="impact">
-                    <img src="{{ impact.icon }}" alt="{{ impact.title }}">
-                    <p>{{ impact.value }}</p>
-                    <h4>{{ impact.title }}</h4>
-                    <p>{{ impact.description }}</p>
-                </div>
-            {% endfor %}
+            {%- for item in key-impacts %}
+               {%- if item.impact-type == "task completion" %}
+                    {% include "patterns/impacts/task-completion.html" %}
+                {%- endif -%}
+                {%- if item.impact-type == "task time" %}
+                    {% include "patterns/impacts/task-time.html" %}
+                {%- endif -%}
+                {%- if item.impact-type == "user satisfaction" %}
+                    {% include "patterns/impacts/user-satisfaction.html" %}
+                {%- endif -%}
+                {%- if item.impact-type == "user rating" %}
+                    {% include "patterns/impacts/user-rating.html" %}
+                {%- endif -%}
+            {%- endfor -%}
         </div>
     </div>
     <div class="user-feedback">
         <h3>User Feedback</h3>
         <div class="grid-col-2">
-            {% for feedback in user-feedbacks %}
+            {%- for item in user-feedback %}
                 <div class="feedback">
-                    <p>{{ feedback.text }}</p>
-                    <h4>{{ feedback.author }}</h4>
-                    <p>{{ feedback.position }}</p>
+                    <p>"{{ item.text }}"</p>
+                    <h4>- {{ item.author }}</h4>
                 </div>
-            {% endfor %}
+            {% endfor -%}
         </div>
     </div>
 </div>

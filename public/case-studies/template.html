@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study Template</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/case-studies.css">
     <link rel="stylesheet" href="../assets/css/patterns/navigation.css">
     <link rel="stylesheet" href="../assets/css/patterns/block.css">
     <link rel="stylesheet" href="../assets/css/patterns/sidebar.css">
+    <script src="https://kit.fontawesome.com/e2a3af1213.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="case-study">
     <nav class="navbar">
     <div class="navbar-container">
         <a href="" class="navbar-logo">Logo</a>
@@ -46,27 +48,33 @@
 </div>
         </div>
         <div class="main-content">
-            <h1>Case Study Title</h1>
-<p><img src="https://placehold.co/600x400" alt="Hero Image"></p>
-<div class="overview-section">
+            <div class="overview-section">
+    <div class="project-image">
+        <img src="https://placehold.co/600x400" alt="Project Image">
+    </div>
+    <div class="title">
+        <span class="phase">Context</span>
+        <h1>Case Study Template</h1>
+    </div>
     <div class="grid-col-4">
         <div class="role">
-            <img src="" alt="Role Icon">
+            <i class="fa-solid fa-id-card-clip"></i>
             <p class="tag">Role</p>
             <span class="name">Role</span>
         </div>
         <div class="timeline">
-            <img src="" alt="Time Icon">
+            <i class="fa-solid fa-clock"></i>
             <p class="tag">Timeline</p>
-            <span class="name">X months (MM,YYYY - MM, YYYY)</span>
+            <p class="name">X months</p>
+            <p class="name">(MM, YYYY - MM, YYYY)</p>
         </div>
         <div class="tools">
-            <img src="" alt="Tools Icon">
+            <i class="fa-solid fa-toolbox"></i>
             <p class="tag">Tools</p>
             <span class="name">tool, tool, tool</span>
         </div>
         <div class="team">
-            <img src="" alt="Team Icon">
+            <i class="fa-solid fa-people-group"></i>
             <p class="tag">Team</p>
             <span class="name">Team</span>
         </div>
@@ -74,7 +82,7 @@
     <div class="grid-col-2">
         <div class="overview">
             <h3>Overview</h3>
-            <p>Overview Description</p>
+            <p>Provide context about the project, the company or client, and what you were trying to achieve. Explain the business goals and user needs that drove this project.</p>
         </div>
         <div class="project_goals">
             <h3>Project Goals</h3>
@@ -87,126 +95,241 @@
 </div></p>
 </div>
 <div class="problem-section">
-    <h2>The Problem</h2>
-    <p class="italic">What challenges are users facing?</p>
-    <div class="box">
-        <p></p>
+    <div class="icon">
+        <span><i class="fa-solid fa-exclamation"></i></span>
+    </div>
+    <div class="problem-content">
+        <h2>The Problem</h2>
+        <p class="italic">What challenges are users facing?</p>
+        <div class="box">
+            <p>Craft a clear, compelling problem statement that describes the pain points users were experiencing. This should be specific and grounded in real user feedback or data.</p>
+        </div>
     </div>
 </div>
 <div class="research-section">
-    <p></p>
+    <span class="phase">Discover</span>
+    <h2>Research and Discovery</h2>
+    <p>To understand the problem deeply, I conducted comprehensive research using multiple methods to gather both qualitative and quantitative insights.</p>
     <div class="methods">
         <div class="grid-col-2">
-<p></div>
+                    <div class="box">
+    <i class="fa-solid fa-clipboard-question"></i>
+    <h4>User Interviews</h4>
+    <p>12 in-depth interviews with target users to understand pain points and needs.</p>
+        <a class="research-link" href="link">29 Participants</a>
 </div>
-<div class="key-findings">
-<h4>Key Research Findings</h4>
-<ul></p>
-<p></div></p>
+                    <div class="box">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <h4>Competitive Analysis</h4>
+    <p>Analyzed 5 competitors to identify industry patterns and opportunities.</p>
+</div>
+                    <div class="box">
+    <i class="fa-solid fa-chart-column"></i>
+    <h4>Analytics Review</h4>
+    <p>Examined user behavior data to identify drop-off points and usage patterns</p>
+    <a class="research-link" href="link">10,000+ Sessions</a>
+</div>
+                    <div class="box">
+    <i class="fa-solid fa-square-poll-horizontal"></i>
+    <h4>User Surveys</h4>
+    <p>Gathered quantitative data on user preferences and satisfaction levels</p>
+</div></div>
+    </div>
+    <div class="key-findings">
+        <h4>Key Research Findings</h4>
+        <ul>
+<p><li>Finding 1</li></p>
+<p><li>Finding 2</li></p>
+<p><li>Finding 3</li></p>
+<p></ul>
+</div></p>
 </div>
 <div class="user-insights-section">
-    <p></p>
+    <span class="phase">Define</span>
+    <h2>User Personas</h2>
+    <p class="insight-statement">Based on research insights, I identified two primary user archetypes that represent different needs and behaviors.</p>
+    <div class="grid-col-2">
+        <div class="persona">
+            <i class="fa-solid fa-id-card-clip"></i>
+            <h4>User Name</h4>
+            <p>User Role • Use Age</p>
+            <ul class="user-goals">
+<p><li>Goal 1</li></p>
+<p><li>Goal 2</li></p>
+<p></ul>
+<ul class="user-frustrations"></p>
+<p></ul>
+</div>
+<div class="persona">
+<i class="fa-solid fa-id-card-clip"></i>
+<h4>User Name</h4>
+<p>User Role • Use Age</p>
+<ul class="user-goals"></p>
+<p><li>Goal 1</li></p>
+<p><li>Goal 2</li></p>
+<p></ul>
+<ul class="user-frustrations"></p>
+<p></ul>
+</div></div></p>
+<p><div class="journey-map">
+<h4>Journey Map</h4>
+<img src="" alt="Journey Map">
+<p>The journey map revealed critical pain points during the onboarding and task completion phases, where users felt most confused and likely to abandon the product.</p>
+</div></p>
 </div>
 <div class="design-process-section">
+    <span class="phase">Ideate</span>
+    <h2>Design Process</h2>
     <p></p>
     <div class="grid-col-4">
         <div class="ideation">
             <img src="" alt="">
             <h4>Ideation</h4>
-            <p></p>
+            <p>Brainstormed solutions through collaborative workshops and sketching sessions</p>
         </div>
         <div class="wireframing">
             <img src="" alt="">
             <h4>Wireframing</h4>
-            <p></p>
+            <p>Created low-fidelity wireframes to explore different layout options and information architecture</p>
         </div>
         <div class="prototyping">
             <img src="" alt="">
             <h4>Prototyping</h4>
-            <p></p>
+            <p>Built interactive prototypes to test flows and gather early feedback</p>
         </div>
         <div class="visual-design">
             <img src="" alt="">
             <h4>Visual Design</h4>
-            <p></p>
+            <p>Applied brand guidelines and refined the visual language for a polished experience</p>
         </div>
     </div>
-    <h3>Sketches & Wireframes</h3>
+</div>
+<div class="wireframing-section">
+    <span class="phase">Prototype</span>
+    <h2>Sketches & Wireframes</h2>
     <div class="grid-col-2">
-        <img src="" alt="">
-        <img src="" alt="">
+        <img src="" alt="wireframe-screenshot">
+        <img src="" alt="wireframe-screenshot">
     </div>
-    <p></p>
+    <p>Early explorations focused on simplifying the navigation structure and reducing cognitive load by grouping related features.</p>
     <h3>Design Iterations</h3>
     <div class="design-iterations">
         <div class="grid-col-2">
             <div class="before-design">
-                <span class="before">Before</span>
-                <img src="" alt="">
+                <p class="before">Before</p>
+                <img src="" alt="before design screenshot">
             </div>
             <div class="after-design">
                 <span class="after">After</span>
-                <img src="" alt="">
+                <img src="" alt="after design screenshot">
             </div>
             <div class="key-changes">
                 <h4>Key Changes</h4>
                 <ul>
+<p><li>Change One</li></p>
+<p><li>Change Two</li></p>
+<p><li>Change Three</li></p>
 <p></ul>
 </div>
 <div class="design-decisions">
 <h4>Design Decisions</h4>
 <ul></p>
+<p><li>Decision One</li></p>
+<p><li>Decision Two</li></p>
+<p><li>Decision Three</li></p>
 <p></ul>
 </div>
 </div>
 </div></p>
 </div>
 <div class="final-design-section">
-    <h3>Final Design</h3>
-    <p></p>
+    <span class="phase">Deliver</span>
+    <h2>Final Design</h2>
+    <p>The final design solution addresses all major pain points identified in research while maintaining visual consistency with the existing brand.</p>
     <img src="" alt="Final Design">
     <div class="grid-col-3">
         <div class="metric">
-            <h4></h4>
-            <p></p>
+            <h4>Accessibility</h4>
+            <p>WCAG 2.1 AA compliant with proper color contrast, keyboard navigation, and screen reader support.</p>
         </div>
         <div class="metric">
-            <h4></h4>
-            <p></p>
+            <h4>Responsive</h4>
+            <p>Optimized for all screen sizes from mobile (375px) to desktop (1920px) with adaptive layouts.</p>
         </div>
         <div class="metric">
-            <h4></h4>
-            <p></p>
+            <h4>Component Library</h4>
+            <p>Built a reusable design system to ensure consistency and speed up future development.</p>
         </div>
     </div>
 </div>
 <div class="impact-section">
     <div class="impact-results">
-        <h3>Impact & Results</h3>
-        <p></p>
+        <span class="phase">Impact</span>
+        <h2>Impact & Results</h2>
+        <p>The redesigned experience launched in March 2024 and showed immediate positive results across all key metrics.</p>
         <div class="grid-col-4">
-<p></div>
+                    <div class="impact task-completion">
+    <i class="fa-solid fa-arrow-up-right-dots"></i>
+    <p class="impact-value">+42%</p>
+    <h4>Task Completion Rate</h4>
+    <p class="impact-desc">Increased from 32% to 74%</p>
 </div>
-<div class="user-feedback">
-<h3>User Feedback</h3>
-<div class="grid-col-2"></p>
-<p></div>
-</div></p>
+                    <div class="impact task-completion">
+    <i class="fa-solid fa-clock"></i>
+    <p class="impact-value">-65%</p>
+    <h4>Time on Task</h4>
+    <p class="impact-desc">Reduced from 4.2 to 1.5 minutes</p>
+</div>
+                    <div class="impact task-completion">
+    <i class="fa-solid fa-face-grin-squint"></i>
+    <p class="impact-value">+58%</p>
+    <h4>User Satisfaction</h4>
+    <p class="impact-desc">NPS score improved significantly</p>
+</div>
+                    <div class="impact task-completion">
+    <i class="fa-solid fa-star"></i>
+    <p class="impact-value">4.8/5</p>
+    <h4>User Rating</h4>
+    <p class="impact-desc">Based on 500+ reviews</p>
+</div></div>
+    </div>
+    <div class="user-feedback">
+        <h3>User Feedback</h3>
+        <div class="grid-col-2">
+                <div class="feedback">
+                    <p>"The new interface is so much easier to use! I can finally complete my tasks without getting lost or frustrated."</p>
+                    <h4>- Sarah M., Power User</h4>
+                </div>
+            </div>
+    </div>
 </div>
 <div class="key-takeaways-section">
-    <h3>Key Takeaways</h3>
-    <p></p>
+    <span class="phase">Reflection</span>
+    <h2>Key Takeaways</h2>
+    <p>Reflections and learnings from this project that will inform future work.</p>
     <div class="learned">
         <h4>What I Learned</h4>
         <ul>
+<p><li>Early and continuous user testing is crucial - testing assumptions early saved weeks of design time</li></p>
+<p><li>Quantitative data tells you what is happening, but qualitative research tells you why</li></p>
+<p><li>Sometimes the simplest solution is the best - removing features can be as valuable as adding them</li></p>
+<p><li>Cross-functional collaboration led to better solutions than working in isolation</li></p>
 <p></ul>
 </div>
 <div class="next-steps">
 <h4>Next Steps</h4>
 <ul></p>
+<p><li>Monitor analytics to validate the improvements continue over time</li></p>
+<p><li>Conduct follow-up interviews to gather deeper insights</li></p>
+<p><li>Expand the design system to other product areas</li></p>
+<p><li>Explore additional personalization features based on user segments</li></p>
 <p></ul>
 </div></p>
 </div>
+            <div class="outro">
+                <button class="btn-primary center">Thank you for reading!</button>
+                <p>Want to discuss this project or collaborate? Get in touch!</p>
+            </div>
         </div>
     </div>
     <script src="../assets/js/patterns/navigation.js"></script>

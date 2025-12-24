@@ -1,13 +1,16 @@
 <div class="user-insights-section">
-    <p>{{ user-insights }}</p>
-    {% for user in personas %}
+    <span class="phase">Define</span>
+    <h2>User Personas</h2>
+    <p class="insight-statement">{{ user-insights }}</p>
+    <div class="grid-col-2">
+    {%- for item in personas %}
         <div class="persona">
-            <img src="{{ user.avatar }}" alt="{{ user.name }}-avatar">
-            <h4>{{ user.name }}</h4>
-            <p>{{ user.role }} • {{ user.age }}</p>
+            <i class="fa-solid fa-id-card-clip"></i>
+            <h4>{{ item.name }}</h4>
+            <p>{{ item.role }} • {{ item.age }}</p>
             <ul class="user-goals">
-                {% for goal in user.goals %}
-                    <li>{{ goal }}</li>
+                {% for subitem in item.goals %}
+                    <li>{{ subitem.goal }}</li>
                 {% endfor %}
             </ul>
             <ul class="user-frustrations">
@@ -16,7 +19,8 @@
                 {% endfor %}
             </ul>
         </div>
-    {% endfor %}
+    {%- endfor -%}
+    </div>
     {% if journey-map %}
         <div class="journey-map">
             <h4>Journey Map</h4>

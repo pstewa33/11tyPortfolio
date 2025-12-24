@@ -1,11 +1,12 @@
 <div class="key-takeaways-section">
-    <h3>Key Takeaways</h3>
+    <span class="phase">Reflection</span>
+    <h2>Key Takeaways</h2>
     <p>{{ key-takeaways-statement }}</p>
     <div class="learned">
         <h4>What I Learned</h4>
         <ul>
             {% for item in what-i-learned %}
-                <li>{{ item }}</li>
+                <li>{{ item.learning }}</li>
             {% endfor %}
         </ul>
     </div>
@@ -13,7 +14,7 @@
         <h4>Next Steps</h4>
         <ul>
             {% for item in next-steps %}
-                <li>{{ item }}</li>
+                <li>{{ item.step }}</li>
             {% endfor %}
         </ul>
     </div>
