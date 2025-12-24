@@ -125,8 +125,17 @@
   padding-bottom: 0.5rem;
 }
 
+.final-design-section p {
+  margin-bottom: 1rem;
+}
 .final-design-section img {
   box-shadow: none;
+}
+.final-design-section .metric {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 10px;
 }
 
 .impact-section .impact {
@@ -159,6 +168,7 @@
 .impact-section .user-feedback .feedback {
   background-color: white;
   padding: 2rem;
+  border-radius: 10px;
 }
 .impact-section .user-feedback .feedback p {
   font-style: italic;

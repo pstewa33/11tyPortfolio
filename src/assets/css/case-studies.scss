@@ -153,8 +153,19 @@
 }
 
 .final-design-section{
+    p{
+        margin-bottom: 1rem;
+    }
+    
     img{
         box-shadow: none;
+    }
+
+    .metric{
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 2rem;
+        margin-top: 1rem;
+        border-radius: 10px;
     }
 }
 
@@ -193,6 +204,7 @@
         .feedback{
             background-color: white;
             padding: 2rem;
+            border-radius: 10px;
 
             p{
                 font-style: italic;
