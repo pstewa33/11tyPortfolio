@@ -42,19 +42,23 @@ personas:
 journey-map: true
 journey-map-description: The journey map revealed critical pain points during the onboarding and task completion phases, where users felt most confused and likely to abandon the product.
 ideation-description: Brainstormed solutions through collaborative workshops and sketching sessions
+wireframe-one: ..\assets\images\smokefree\smokefree-nrt-wireframe.png
+wireframe-two: ..\assets\images\smokefree\QuitVet-wireframe.png
 wireframing-description: Created low-fidelity wireframes to explore different layout options and information architecture
 prototyping-description: Built interactive prototypes to test flows and gather early feedback
 visual-design-description: Applied brand guidelines and refined the visual language for a polished experience
-sketches-wireframes-description: Early explorations focused on simplifying the navigation structure and reducing cognitive load by grouping related features.
+factsheet-wireframes-description: Moving from static documents to webpages allowed for interactivity, which allowed for more flexibility in design. In order to reduce cognitive load we increased whitespace and implemented content grouping via tabs. We updated the IA to allow for navigation between the various fact sheets as well.
 key-changes:
-  - change: Change One
-  - change: Change Two
-  - change: Change Three
+  - change: Increase white space
+  - change: Added user interactivity with clickable components (tabs)
+  - change: Added cards to facilitate navigation between various fact sheets.
+landing-wires-description: Description goes here
 design-decisions:
   - decision: Decision One
   - decision: Decision Two
   - decision: Decision Three
 final-design-description: The final design solution addresses all major pain points identified in research while maintaining visual consistency with the existing brand.
+final-design: ..\assets\images\smokefree\landing-wire-3.png
 metric-1: Accessibility
 metric-1-value: WCAG 2.1 AA compliant with proper color contrast, keyboard navigation, and screen reader support.
 metric-2: Responsive
@@ -103,7 +107,7 @@ next-steps:
 
 {% include "partials/design-process.html" %}
 
-{% include "partials/wireframing.html" %}
+{% include "partials/smokefree-wires.html" %}
 
 {% include "partials/final-design.html" %}
 
