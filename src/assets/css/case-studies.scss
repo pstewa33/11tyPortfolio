@@ -16,6 +16,37 @@
         margin-bottom: 1rem;;
     }
 }
+.project-overview{
+    background-color: #E0E2DB;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    h2{
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    p{
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+
+    .project_goals{
+
+        ul{
+            display: flex;
+        }
+        
+        li{
+            list-style: none;
+            padding-bottom: 0.5rem;
+        }
+        li:not(:first-child){
+            padding-left: 2rem;
+        }
+    }
+}
 
 .problem-section{
     border: #c42847 3px solid;
