@@ -29,17 +29,24 @@
             <span class="name">{{ overview.team }}</span>
         </div>
     </div>
-    <div class="grid-col-2">
-        <div class="overview">
-            <h2>Overview</h2>
-            <p>{{ overview.desc }}</p>
+    <div class="project-overview">
+        <h2>Project Overview</h2>
+        <div class="grid-col-2">
+            <div class="overview">
+                <h3>The Challenge</h3>
+                <p>{{ overview.desc }}</p>
+            </div>
+            <div class="recommendation">
+                <h3>The Recommendation</h3>
+                <p>{{ overview.recommendation }}</p>
+            </div>
         </div>
         <div class="project_goals">
-            <h2>Project Goals</h2>
+            <h3>Project Goals</h3>
             <ul>
-                {% for goal in project_goals %}
+                {%- for goal in project_goals %}
                     <li>{{ goal.goal }}</li>
-                {% endfor %}
+                {%- endfor -%}
             </ul>
         </div>
     </div>

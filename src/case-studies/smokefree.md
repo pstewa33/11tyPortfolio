@@ -9,7 +9,8 @@ overview:
   timeline: X months
   dates: (04, 2025 - 07, 2025)
   tools: Figma, Crazy Egg
-  desc: <p>SmokefreeVET is a U.S. Department of Health and Human Services initiative that helps Veterans quit tobacco through evidence-based resources, including Nicotine Replacement Therapy (NRT).</p><br><p>This project focused on modernizing the NRT experience by replacing downloadable PDF fact sheets with web-based content and restructuring the NRT landing page’s information hierarchy to better support user needs and stakeholder goals.</p>
+  desc: <p>SmokefreeVET is a U.S. Department of Health and Human Services initiative that helps Veterans quit tobacco through evidence-based resources, including Nicotine Replacement Therapy (NRT).</p><br><p>The Smokefree Veterans Quit with NRT Interactive Tool relied on outdated interactions and content that limited usability, discoverability, and content effectiveness. Our challenge was to redesign the experience to better serve Veterans, improve SEO performance, and highlight the most useful information.</p>
+  recommendation: Modernize the NRT experience by replacing downloadable PDF fact sheets with accessible, web-based content and restructuring the NRT landing page's information hierarchy to better align with user needs and organizational objectives.
 project_goals:
   - goal: Improve User Experience
   - goal: Boost Search Engine Optimization
@@ -21,6 +22,7 @@ methods:
     method-desc: Utilized Crazy Egg analytics tools to understand how users interacted with the page and to pinpoint engagement drop-offs and usability issues.
     research-link: link
     research-link-text: Crazy Egg Analytics (show to the right)
+    img: ..\assets\images\smokefree\desktop-click-scroll-maps.png
 key-findings:
   - finding: The dosage graphics had a significant amount of dead clicks and rage clicks.
   - finding: Long Scroll - users stopped before getting to the high priority content lower on the page.
@@ -100,8 +102,6 @@ next-steps:
 ---
 
 {% include "partials/overview.html" %}
-
-{% include "partials/problem.html" %}
 
 {% include "partials/research.html" %}
 
