@@ -1,0 +1,35 @@
+{% extends "layouts/base.njk" %}
+
+{% set bodyClass = "home" %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="/assets/css/home.css">
+{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Peyton Stewart</h1>
+      <p>UX Designer + Engineer</p>
+      <p>I bring digital products to life with design and code.</p>
+    </div>
+  </section>
+
+  <section class="case-studies">
+    <h2>Featured Work</h2>
+    <ul class="block-container">
+      {% for item in caseStudies %}
+        <li>
+          <a href="{{ item.link }}">
+            {% include "patterns/block.html" %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="cta">
+    <p>Want to discuss a project or collaborate? <a href="/contact/">Get in touch!</a></p>
+  </section>
+{% endblock %}

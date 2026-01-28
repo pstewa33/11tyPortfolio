@@ -1,19 +1,26 @@
-<!Doctype html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/patterns/navigation.css">
-    <link rel="stylesheet" href="../assets/css/patterns/block.css">
-    <script src="https://kit.fontawesome.com/e2a3af1213.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ title }} | {{ site.name }}</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/patterns/navigation.css">
+  {% block styles %}{% endblock %}
+
+  <script src="https://kit.fontawesome.com/e2a3af1213.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    {% include "patterns/navigation.html" %}
-    <div class="container">
-        {{ content | safe }}
-    </div>
-    <script src="../assets/js/patterns/navigation.js"></script>
+
+<body class="{{ bodyClass | default('') }}">
+  {% include "patterns/navigation.html" %}
+
+<main>
+    {{ content | safe }}
+</main>
+
+
+  <script src="/assets/js/patterns/navigation.js"></script>
 </body>
 </html>
