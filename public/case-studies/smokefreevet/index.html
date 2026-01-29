@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Project Title Goes Here | </title>
+  <title>Modernizing a Legacy Healthcare System for Clarity and Scale | </title>
 
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/patterns/navigation.css">
@@ -39,149 +39,163 @@
 <main>
     <h2>Summary</h2>
 <h3>TL;DR</h3>
-<p>One–two sentence summary describing the problem, your approach, and the outcome. Focus on <strong>structure, systems, and impact</strong>, not visuals.</p>
+<p>Migrated a legacy, PDF-driven nicotine replacement therapy experience into a structured, decision-guided system for Veterans. Defined clear interaction logic and content hierarchy to support informed decision-making, resulting in higher engagement, longer sessions, and increased completion of high-priority actions — while maintaining full compliance with USWDS and healthcare regulations.</p>
 <hr>
 <h2>Overview</h2>
 <h3>The Challenge</h3>
-<p>Briefly describe:</p>
-<ul>
-<li>The product or system</li>
-<li>The user(s)</li>
-<li>The problem or breakdown</li>
-</ul>
+<p>SmokefreeVET supports Veterans in quitting tobacco through evidence-based guidance. Its Nicotine Replacement Therapy (NRT) resource delivers step-by-step support via an interactive landing page, allowing users to select NRT options and access tailored fact sheets.</p>
+<p>Prior to the redesign, this experience depended on legacy PDFs and outdated interaction patterns. Content was fragmented and difficult to navigate, making it hard for Veterans to locate, understand, and act on critical health information.</p>
 <h3>The Approach</h3>
-<p>Explain your strategy at a high level:</p>
-<ul>
-<li>What you focused on</li>
-<li>What you deliberately did <em>not</em> do</li>
-<li>How constraints shaped decisions</li>
-</ul>
+<p>The objective was to restructure the experience into a clear, maintainable system that supported informed decision-making without introducing new functionality. This required simplifying interaction flows, clarifying content hierarchy, and ensuring the solution met healthcare and government compliance standards.</p>
 <h3>Project Goals</h3>
 <ul>
-<li>Goal 1</li>
-<li>Goal 2</li>
-<li>Goal 3</li>
+<li>Support clear, confident health decision-making for Veterans</li>
+<li>Improve engagement through structure and clarity, not feature expansion</li>
+<li>Transition legacy, PDF-based content into a scalable, system-driven model</li>
 </ul>
 <h3>Guiding Principle</h3>
-<p>One concise principle that framed decision-making throughout the project.</p>
+<p>Veterans need <strong>clear, actionable guidance</strong> when making health decisions. This constraint shaped all system decisions — prioritizing <strong>clarity, predictable interaction patterns, and easy access to critical information</strong> over visual complexity or customization.</p>
 <hr>
 <h2>Discover</h2>
 <h3>Context</h3>
-<p>Explain how the system worked before:</p>
+<p>SmokefreeVET helps Veterans quit tobacco with evidence-based guidance. The Nicotine Replacement Therapy (NRT) resource offers step-by-step support, centering on a landing page where users select one or more NRT options and access fact sheets for quitting guidance. The experience centered on three core functions, each with distinct interaction and content challenges.</p>
+<h3>Primary Functions of the Experience</h3>
 <ul>
-<li>Core functions</li>
-<li>Dependencies</li>
-<li>Where friction appeared</li>
+<li>Estimate Your Dosage Calculator: Accepts user inputs based on daily tobacco use (smoking, dip, or chew) and outputs recommended NRT combinations and dosages.</li>
+<li>Choose Your Nicotine Replacement Therapy: Users select single or combination NRTs and receive downloadable fact sheets with relevant guidance.</li>
 </ul>
+<p><em>Insight</em>: Guidance was delivered via static PDFs, creating a rigid, content-heavy dependency that was difficult to update, reuse, or adapt as clinical guidance evolved — limiting both engagement and long-term maintainability.</p>
+<ul>
+<li>Nicotine Facts: A clickable component providing important facts about nicotine and quitting.</li>
+</ul>
+<p><em>Insight</em>: Although prioritized by stakeholders, this content’s placement and reliance on user scrolling made it effectively hidden, creating a mismatch between content importance and system visibility.</p>
+<p>Together, these issues revealed a system that technically functioned but failed to guide users through critical decisions in a predictable, scalable way.</p>
 <h3>Analyzing User Behavior</h3>
-<p>Describe:</p>
-<ul>
-<li>Data sources (analytics, logs, audits)</li>
-<li>What signals revealed breakdowns</li>
-</ul>
+<p>To understand how Veterans interacted with the existing NRT experience, we analyzed behavioral data from the landing page using heatmaps, scroll maps, and click maps. This analysis helped identify structural and interaction-level breakdowns that were limiting engagement and comprehension.</p>
+<h4>Dead clicks and rage clicks:</h4>
+<p>Users frequently clicked on non-interactive elements, including dosage recommendations within the calculator. This indicated uncertainty about system behavior and a disconnect between the UI and user expectations.</p>
+<h4>Scroll Drop-Off Before Critical Content</h4>
+<p>Scroll maps showed that users often stopped before reaching essential guidance lower on the page, including the Nicotine Facts component that stakeholders identified as critical for informed quitting decisions.</p>
 <h3>Key Insights</h3>
 <ul>
-<li><strong>Insight 1:</strong> What wasn’t working and why</li>
-<li><strong>Insight 2:</strong> Structural or behavioral mismatch</li>
-<li><strong>Insight 3:</strong> System-level limitation</li>
+<li><strong>Mismatch Between Visual Cues and System Behavior</strong>: Visual emphasis suggested interactivity where none existed, leading to confusion and repeated dead clicks.</li>
+<li><strong>Hierarchy Failed to Reflect Content Priority</strong>: High-value guidance was positioned too low in the page structure, making it easy to miss.</li>
+<li><strong>Content Delivery Model Limited Effectiveness</strong>: Reliance on static, downloadable PDFs created both a usability barrier and a long-term maintenance constraint, reducing flexibility as guidance evolved.</li>
 </ul>
+<p>These findings confirmed that the primary challenge was not content quality, but a system that failed to guide users through critical decisions in a clear, predictable way.</p>
 <hr>
 <h2>Define</h2>
 <h3>Problem Statement</h3>
-<p>A clear, system-oriented articulation of the problem:</p>
-<ul>
-<li>What failed</li>
-<li>Who it impacted</li>
-<li>Why it mattered</li>
-</ul>
+<p>The NRT experience had evolved organically over time, resulting in fragmented interaction patterns, implicit product compatibility rules, and a reliance on static content formats that did not scale as clinical guidance changed. Legacy PDFs and outdated interaction behaviors made it difficult for Veterans to locate prioritized information, understand next steps, and make confident quitting decisions. Behavioral analytics reinforced these issues, showing low engagement and waning user engagement — indicators that users were struggling to navigate the experience and frequently missed critical guidance.</p>
 <h3>Constraints</h3>
 <ul>
-<li>Technical constraints</li>
-<li>Accessibility / compliance constraints</li>
-<li>Time / scope / research constraints</li>
+<li>Core interactive elements, including the dosage calculator and NRT selection tools, could not be substantially modified due to project scope limitations.</li>
+<li>All content and interactions were required to comply with USWDS standards and strict accessibility requirements.</li>
+<li>Static PDF content needed to be converted into structured web pages without altering or omitting regulated healthcare information.</li>
+<li>Time and resource constraints limited new user research; decisions were informed by existing analytics and stakeholder input.</li>
 </ul>
-<p><strong>Explain how constraints shaped the solution space.</strong></p>
+<p><strong>These constraints defined the solution space and required restructuring the experience without changing core functionality — prioritizing clarity, consistency, and maintainability while preserving compliance.</strong></p>
 <hr>
 <h2>Explore</h2>
-<h3>Exploration &amp; Ideation</h3>
-<p>Describe:</p>
-<ul>
-<li>What directions you explored</li>
-<li>What you ruled out (and why)</li>
-<li>Where friction remained</li>
-</ul>
+<h2>Brainstorming and Problem Solving</h2>
+<p>Exploration focused on reducing cognitive load and improving scanability without altering core functionality. Behavioral analytics consistently showed that long scroll depth and buried guidance were the primary sources of friction, causing users to miss high-priority content.</p>
+<h3>Key Areas</h3>
+<h4>Reducing scroll and elevating priority content</h4>
+<p>Rather than introducing new tools, we explored restructuring page layout and content delivery. This included transitioning legacy PDFs into structured web pages, applying a consistent two-column layout to reduce vertical scanning, and elevating high-priority guidance — such as Nicotine Facts — alongside decision-support tools like the dosage calculator.</p>
+<h4>Information architecture, consolidation, and accessibility</h4>
+<p>We tested dynamic fact sheet cards that responded to selected NRT options, allowing guidance to remain contextual without overwhelming users. Low-priority visuals were removed, related sections were consolidated, and accessibility support was expanded to include a Spanish-language toggle.</p>
+<p>These explorations clarified that the core opportunity was not adding interaction, but making existing guidance visible, contextual, and decision-oriented.</p>
+<h3>Design Iterations</h3>
 <h3>Pivot: Key Insight</h3>
-<p>Call out the moment where your understanding shifted.
-Focus on:</p>
+<p>During the content and interaction audit, we identified a critical gap in the system:</p>
 <ul>
-<li>Hidden rules</li>
-<li>Implicit logic</li>
-<li>System behavior vs user expectations</li>
+<li>Some NRT products <strong>cannot be used together</strong></li>
+<li>Stakeholders wanted <strong>counseling prioritized before product selection</strong></li>
+<li>These rules existed, but were buried deep within long-form fact sheets</li>
 </ul>
+<p>The issue was not content volume — it was that decision rules were implicit rather than enforced by the system.</p>
+<p>Users did not need more information; they needed the experience to guide decisions explicitly. This insight became the pivot: the system needed to surface and enforce compatibility and prioritization rules, rather than expecting users to infer them on their own.</p>
 <h3>Design Challenges &amp; Tradeoffs</h3>
+<p>Introducing conditional logic without increasing complexity surfaced several constraints:</p>
 <ul>
-<li>Challenge 1 + tradeoff</li>
-<li>Challenge 2 + tradeoff</li>
-<li>Challenge 3 + tradeoff</li>
+<li>Prioritization: Counseling needed greater emphasis, but users frequently skipped it when presented alongside product selection.</li>
+<li>Design Limitations: Core tools, including the dosage calculator and NRT selection components, could not be redesigned.</li>
+<li>Accessibility: Certain layout experiments introduced accessibility risks that required rollback or refinement.
+-Content Density: Adding new elements to an already content-heavy page risked increasing cognitive load rather than reducing it.</li>
 </ul>
-<hr>
-<h2>Synthesis</h2>
-<h3>System-Level Solution</h3>
-<p>Explain the final approach:</p>
-<ul>
-<li>What changed structurally</li>
-<li>What stayed the same</li>
-<li>Why this resolved the core problem</li>
-</ul>
-<p>Use bullets sparingly to reinforce clarity:</p>
+<h2>Iteration made it clear that the solution would not come from additional UI or new features, but from restructuring how existing elements were ordered and presented.</h2>
+<h2>Synthesis &amp; System-Level Solution</h2>
+<p>The breakthrough came from reordering the experience rather than redesigning it.</p>
+<p>I proposed restructuring the selection flow itself — without introducing new UI — to surface and enforce compatibility and prioritization rules that already existed in the content. This approach:</p>
 <ul>
 <li>Preserved existing functionality</li>
+<li>Met stakeholder requirements</li>
 <li>Reduced cognitive load</li>
-<li>Made decision logic explicit</li>
+<li>Made compatibility rules explicit and visible</li>
 </ul>
+<p><strong>The system already contained the necessary logic; the work was in restructuring the experience so that this logic was clear, enforceable, and aligned with user decision-making.</strong></p>
 <hr>
 <h2>Final Design</h2>
-<h3>Design Direction</h3>
-<p>Describe the final structure, not visuals:</p>
+<p>The final experience established a consistent structural rhythm across the page.</p>
 <ul>
-<li>Layout strategy</li>
-<li>Component reuse</li>
-<li>Responsiveness</li>
-<li>Standards compliance</li>
+<li>Branding: Designs followed SmokefreeVET brand standards and leveraged existing, reusable web components.</li>
+<li>Responsive Design: The design leverages a 12-column grid system optimized for seamless experiences across mobile, tablet, and desktop devices</li>
+<li>USWDS: All final designs conform to the U.S. Web Design System (USWDS) standards to ensure accessibility and consistency.</li>
 </ul>
 <h3>Key Design Outcomes</h3>
 <ul>
-<li><strong>Outcome 1:</strong> What changed and why it mattered</li>
-<li><strong>Outcome 2:</strong> Structural or behavioral improvement</li>
-<li><strong>Outcome 3:</strong> Accessibility or scalability win</li>
+<li>Streamlined Layout:
+<ul>
+<li>Established a consistent two-column layout across the page to improve scanability and reduce long scrolling.</li>
+<li>Tabs utilized to group fact sheet content and reduce information density.</li>
+</ul>
+</li>
+<li>Intuitive Interactions:
+<ul>
+<li>Clarified the NRT selection tool through explicit sequencing and AND / OR conditional logic to communicate product compatibility</li>
+<li>Returned the calculator to full-width to reinforce its role as a primary decision-making tool</li>
+</ul>
+</li>
+<li>Visability &amp; Accessibility:
+<ul>
+<li>Elevated Nicotine Facts alongside the introduction to surface critical guidance earlier in the experience</li>
+<li>Low-priority visuals were removed, related sections were consolidated, and accessibility was expanded with a Spanish language toggle.</li>
+</ul>
+</li>
+<li>Updated Information Architecture:
+<ul>
+<li>Replaced legacy PDFs with dynamic, web-based fact sheet cards, enabling contextual guidance and reducing reliance on downloads</li>
+<li>Dynamic cards linked directly to relevant fact sheets, eliminating multiple downloads</li>
+</ul>
+</li>
 </ul>
 <p>(Images can be referenced here in your layout, not the MD itself.)</p>
 <hr>
 <h2>Outcomes &amp; Impact</h2>
 <h3>Results</h3>
-<p>Include measurable outcomes when possible:</p>
+<h4>Year-over-year comparison</h4>
+<p>(July 21 – Sept 30, 2025 vs. same period 2024)</p>
 <ul>
-<li>Engagement metrics</li>
-<li>Efficiency gains</li>
-<li>Accessibility improvements</li>
-<li>Adoption or usage signals</li>
+<li>+50% overall engagement</li>
+<li>+33% increase in user actions (6.71 events per user)</li>
+<li>+104% increase in average session duration (2:09)</li>
+<li>+57% calculator interactions</li>
+<li>+35% NRT type selections</li>
+<li>+65% NRT facts interactions</li>
+<li>+14% hybrid opt-in submissions</li>
+<li>+17% users scrolling to 90% of the page</li>
+<li>+13% increase in Google Organic traffic</li>
 </ul>
 <h3>Reflection</h3>
-<p>What this project reinforced about:</p>
-<ul>
-<li>Systems</li>
-<li>Architecture</li>
-<li>Decision-making under constraints</li>
-</ul>
+<p>This project reinforced the value of prioritizing structure, hierarchy, and decision logic over introducing new functionality</p>
 <h3>Key Takeaways</h3>
 <ul>
-<li>Takeaway 1</li>
-<li>Takeaway 2</li>
-<li>Takeaway 3</li>
+<li>Alignment between user needs and stakeholder goals leads to stronger outcomes</li>
+<li>Small structural changes can have system-wide impact</li>
+<li>Analytics-driven collaboration enables confident decisions in constrained environments</li>
 </ul>
 <hr>
-<p><strong>Optional Closing Statement</strong></p>
-<p>One sentence tying this project to how you approach UX engineering or system design work more broadly.</p>
+<p><strong>This project demonstrated that thoughtful design system migration and structural clarity can deliver measurable impact while maintaining compliance and user trust—key principles I bring to every UX engineering challenge</strong></p>
 
 </main>
 

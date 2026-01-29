@@ -3,7 +3,7 @@ title: Peyton Stewart. UX Designer + Engineer
 layout: /layouts/home.njk
 caseStudies:
   - title: SmokefreeVET NRT
-    link: /case-studies/smokefree/
+    link: /case-studies/smokefreevet/
   - title: Case Study 2
     link: /case-studies/case-study-2/
   - title: Case Study 3
