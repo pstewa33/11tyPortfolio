@@ -17,8 +17,11 @@
   {% include "patterns/navigation.html" %}
 
 <main>
+  {% block content %}
     {{ content | safe }}
+  {% endblock %}
 </main>
+
 
 
   <script src="/assets/js/patterns/navigation.js"></script>
