@@ -27,7 +27,6 @@ Migrated a legacy, PDF-driven nicotine replacement therapy experience into a str
 ### The Challenge
 SmokefreeVET supports Veterans in quitting tobacco through evidence-based guidance. Its Nicotine Replacement Therapy (NRT) resource delivers step-by-step support via an interactive landing page, allowing users to select NRT options and access tailored fact sheets.
 
-
 Prior to the redesign, this experience depended on legacy PDFs and outdated interaction patterns. Content was fragmented and difficult to navigate, making it hard for Veterans to locate, understand, and act on critical health information.
 
 ### The Approach
