@@ -80,4 +80,19 @@ p, li, a, span {
 }
 .outro p {
   margin-top: 1rem;
+}
+
+/* Case Study Styles */
+.case-study p {
+  margin-bottom: 1.25rem;
+}
+
+.case-study ul,
+.case-study ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+}
+
+.case-study li {
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
