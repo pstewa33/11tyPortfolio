@@ -1,167 +1,100 @@
 ---
-eleventyExcludeFromCollections: true
-permalink: false
+permalink: /case-studies/dmxlibrary/
 layout: layouts/case-study.njk
 projectImage: /assets/images/{{ slug }}/hero.png
-title: Project Title Goes Here
-subtitle: Short descriptive subtitle
-role: Your Role
-timeline: Month Year – Month Year
-team:
-  - Role 1
-  - Role 2
+title: Design System Engineering
+subtitle: Scalable, Accessible Pattern Library
+role: UX Engineer / Design Systems Engineer
+context: Large, multi-team digital platform
+focus: Design systems, component architecture, accessibility, system adoption
 tools:
-  - Tool 1
-  - Tool 2
-  - Tool 3
+  - HTML
+  - CSS
+  - JavaScript
+  - USWDS
+  - Figma
+  - Git
+  - Eleventy
+  - Netlify
 ---
 
 ## Summary
 
 ### TL;DR
-One–two sentence summary describing the problem, your approach, and the outcome. Focus on **structure, systems, and impact**, not visuals.
+Collaborated with the design lead on the technical implementation of a reusable, accessible pattern library, building components and templates that strengthened front-end consistency, reduced duplication, and embedded accessibility throughout the system.
 
 ---
 
-## Overview
+## The Challenge
+In a fast-moving, multi-team environment, product teams were repeatedly solving the same front-end and accessibility problems from scratch. While a shared visual design standard existed, teams relied heavily on static mockups, which failed to capture real interaction behavior, responsiveness, and accessibility constraints.
 
-### The Challenge
-Briefly describe:
-- The product or system
-- The user(s)
-- The problem or breakdown
+I partnered closely with a UX designer to define and build a shared pattern library, translating design intent into production-ready patterns. Clear ownership boundaries were established early to ensure the system could scale without becoming a bottleneck.
 
-### The Approach
-Explain your strategy at a high level:
-- What you focused on
-- What you deliberately did *not* do
-- How constraints shaped decisions
+My role focused on system architecture and implementation: converting design standards into reusable, code-based components and establishing workflows that enabled consistent adoption across teams without slowing delivery.
 
-### Project Goals
-- Goal 1
-- Goal 2
-- Goal 3
+## The Problem
+Without a shared front-end system:
+- UI components behaved inconsistently across products
+- Accessibility decisions were re-made on every project, increasing risk
+- Static design artifacts masked real implementation constraints
+- Teams duplicated effort and introduced drift over time
 
-### Guiding Principle
-One concise principle that framed decision-making throughout the project.
+## The Need
+The organization needed a **reliable, production-adjacent foundation** that teams could reuse confidently while maintaining flexibility for different product needs.
 
----
+## Constraints & Requirements
+The system needed to:
+- Enforce accessibility and compliance by default (WCAG-aligned)
+- Scale across multiple teams working in parallel
+- Integrate with existing design and development workflows
+- Enable team autonomy without creating a centralized bottleneck
+- Support extension without fragmenting the core system
 
-## Discover
+These constraints required a system that was **opinionated but extensible**: enforcing strong defaults for accessibility and consistency, while providing clear extension points that allowed teams to adapt patterns without fragmenting the core system.
 
-### Context
-Explain how the system worked before:
-- Core functions
-- Dependencies
-- Where friction appeared
+## Solution: Code-Based Pattern Library
+- Base Components: A curated set of base components with defined extension points
+- Custom Components: Reusable custom components addressing common product needs
+- Page Templates: Standardized page templates for frequent use cases
+- Git Workflow: Git-based contribution and review workflow for quality control
 
-### Analyzing User Behavior
-Describe:
-- Data sources (analytics, logs, audits)
-- What signals revealed breakdowns
-
-### Key Insights
-- **Insight 1:** What wasn’t working and why
-- **Insight 2:** Structural or behavioral mismatch
-- **Insight 3:** System-level limitation
+**The library was implemented as a static site using Eleventy and hosted on Netlify, making it easy for teams to access, review, and adopt.**
 
 ---
 
-## Define
-
-### Problem Statement
-A clear, system-oriented articulation of the problem:
-- What failed
-- Who it impacted
-- Why it mattered
-
-### Constraints
-- Technical constraints
-- Accessibility / compliance constraints
-- Time / scope / research constraints
-
-**Explain how constraints shaped the solution space.**
+## System Architecture & Ownership
+- Core components were centrally owned and versioned
+- Project teams consumed and extended components without modifying the foundation
+- All changes flowed through pull requests to ensure accessibility, consistency, and maintainability
 
 ---
 
-## Explore
+## Tradeoffs & Challenges
 
-### Exploration & Ideation
-Describe:
-- What directions you explored
-- What you ruled out (and why)
-- Where friction remained
+### Opinionated standards vs. flexibility
+Constraining some design freedom reduced inconsistency and compliance drift across products. Flexibility was preserved through documented extension points rather than ad-hoc customization.
 
-### Pivot: Key Insight
-Call out the moment where your understanding shifted.
-Focus on:
-- Hidden rules
-- Implicit logic
-- System behavior vs user expectations
+### Shifting teams from static mockups to code
+Adoption required more than documentation. I ran walkthroughs, demos, and hands-on sessions to help designers and developers understand how to use and extend the system effectively.
 
-### Design Challenges & Tradeoffs
-- Challenge 1 + tradeoff
-- Challenge 2 + tradeoff
-- Challenge 3 + tradeoff
+### Central ownership without slowing delivery
+Versioning and opt-in updates allowed teams to adopt improvements on their own timelines without blocking active work.
 
 ---
 
-## Synthesis
+## Outcomes
+While formal metrics were not tracked, adoption and reuse across teams indicated clear operational benefits:
+- Used as the starting point for multiple product builds
+- Reduced duplicated front-end work across teams
+- Improved consistency in component behavior and layout
+- Lower accessibility risk through standards embedded directly into components
+- Stronger alignment between design and development via shared, code-based artifacts
+- A scalable foundation that continues to evolve as new needs emerge
 
-### System-Level Solution
-Explain the final approach:
-- What changed structurally
-- What stayed the same
-- Why this resolved the core problem
 
-Use bullets sparingly to reinforce clarity:
-- Preserved existing functionality
-- Reduced cognitive load
-- Made decision logic explicit
-
----
-
-## Final Design
-
-### Design Direction
-Describe the final structure, not visuals:
-- Layout strategy
-- Component reuse
-- Responsiveness
-- Standards compliance
-
-### Key Design Outcomes
-- **Outcome 1:** What changed and why it mattered
-- **Outcome 2:** Structural or behavioral improvement
-- **Outcome 3:** Accessibility or scalability win
-
-(Images can be referenced here in your layout, not the MD itself.)
-
----
-
-## Outcomes & Impact
-
-### Results
-Include measurable outcomes when possible:
-- Engagement metrics
-- Efficiency gains
-- Accessibility improvements
-- Adoption or usage signals
-
-### Reflection
-What this project reinforced about:
-- Systems
-- Architecture
-- Decision-making under constraints
-
-### Key Takeaways
-- Takeaway 1
-- Takeaway 2
-- Takeaway 3
-
----
-
-**Optional Closing Statement**
-
-One sentence tying this project to how you approach UX engineering or system design work more broadly.
+## Key Takeaways
+- **Design systems are products**: Adoption, governance, and onboarding matter as much as code.
+- **Production-adjacent artifacts improve outcomes**: Code-based prototypes surface issues static designs cannot.
+- **Accessibility scales best when embedded at the component level.**
+- **Clear boundaries enable speed**: Defined ownership and extension points prevent drift without limiting teams.
 
