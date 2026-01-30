@@ -2,14 +2,12 @@
 title: Peyton Stewart. UX Designer + Engineer
 layout: /layouts/home.njk
 caseStudies:
-  - title: SmokefreeVET NRT
+  - title: Design System Engineering
+    link: /case-studies/dmxlibrary/
+  - title: Design System Migration - From Legacy Framework to Scalable System
+    link: /case-studies/dccps/
+  - title: Modernizing a Legacy Healthcare System for Clarity and Scale
     link: /case-studies/smokefreevet/
-  - title: Case Study 2
-    link: /case-studies/case-study-2/
-  - title: Case Study 3
-    link: /case-studies/case-study-3/
-  - title: Case Study 4
-    link: /case-studies/case-study-4/
 permalink: /
 ---
 # I bring digital products to life with design and code.
