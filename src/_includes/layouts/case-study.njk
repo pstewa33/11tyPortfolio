@@ -1,5 +1,18 @@
 {% extends "layouts/base.njk" %}
 
+{% set headings = [] %}
+{% set headingRegex = '<h2[^>]*id="([^"]+)"[^>]*>(.*?)</h2>' %}
+
+
+{% for match in content | regexFindAll(headingRegex) %}
+  {% set _ = headings.push({
+    id: match[1],
+    text: match[2] | striptags
+  }) %}
+{% endfor %}
+
+
+
 {% set bodyClass = "case-study" %}
 
 {% block styles %}

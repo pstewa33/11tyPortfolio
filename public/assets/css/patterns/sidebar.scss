@@ -1,28 +1,27 @@
-.sidebar-container{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 20%;
-}
-.sidebar-nav {
-    li{
-        list-style: none;
-        padding: 1rem;
-
-        a{
-            text-decoration: none;
-            color: black;
-        }
-
-        a:hover {
-            background-color: #eee;
-            color: blue;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        a:active {
-            color: blue;
-            font-weight: bold;
-        }
-    }
+.case-study-content h2 {
+  scroll-margin-top: 6rem;
 }
 
+.case-study-nav {
+  position: sticky;
+  top: 2rem;
+}
+
+.case-study-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.case-study-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.case-study-nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.case-study-nav a:hover {
+  text-decoration: underline;
+}

@@ -3,7 +3,7 @@ layout: layouts/case-study.njk
 permalink: /case-studies/smokefreevet/
 projectImage: /assets/images/{{ slug }}/hero.png
 title: Modernizing a Legacy Healthcare System for Clarity and Scale
-subtitle: SmokefreeVET Nicotine Replacement Therapy (NRT)
+subtitle: From Static PDFs to Decision-Guided Care
 role: UX Architect
 timeline: July 2024 – September 2025
 team:
@@ -94,7 +94,7 @@ The NRT experience had evolved organically over time, resulting in fragmented in
 
 ## Explore
 
-## Brainstorming and Problem Solving
+## Exploration
 Exploration focused on reducing cognitive load and improving scanability without altering core functionality. Behavioral analytics consistently showed that long scroll depth and buried guidance were the primary sources of friction, causing users to miss high-priority content.
 
 ### Key Areas
@@ -128,7 +128,7 @@ Introducing conditional logic without increasing complexity surfaced several con
 - Prioritization: Counseling needed greater emphasis, but users frequently skipped it when presented alongside product selection.
 - Design Limitations: Core tools, including the dosage calculator and NRT selection components, could not be redesigned.
 - Accessibility: Certain layout experiments introduced accessibility risks that required rollback or refinement.
--Content Density: Adding new elements to an already content-heavy page risked increasing cognitive load rather than reducing it.
+- Content Density: Adding new elements to an already content-heavy page risked increasing cognitive load rather than reducing it.
 
 Iteration made it clear that the solution would not come from additional UI or new features, but from restructuring how existing elements were ordered and presented.
 ---
@@ -161,7 +161,7 @@ The final experience established a consistent structural rhythm across the page.
 - Intuitive Interactions:
   - Clarified the NRT selection tool through explicit sequencing and AND / OR conditional logic to communicate product compatibility
   - Returned the calculator to full-width to reinforce its role as a primary decision-making tool
-- Visability & Accessibility:
+- Visibility & Accessibility:
   - Elevated Nicotine Facts alongside the introduction to surface critical guidance earlier in the experience
   - Low-priority visuals were removed, related sections were consolidated, and accessibility was expanded with a Spanish language toggle.
 - Updated Information Architecture:
