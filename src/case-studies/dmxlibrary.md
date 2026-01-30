@@ -42,7 +42,7 @@ Without a shared front-end system:
 ## The Need
 The organization needed a **reliable, production-adjacent foundation** that teams could reuse confidently while maintaining flexibility for different product needs.
 
-## Constraints & Requirements
+## Constraints and Requirements
 The system needed to:
 - Enforce accessibility and compliance by default (WCAG-aligned)
 - Scale across multiple teams working in parallel
@@ -62,14 +62,14 @@ These constraints required a system that was **opinionated but extensible**: enf
 
 ---
 
-## System Architecture & Ownership
+## System Architecture and Ownership
 - Core components were centrally owned and versioned
 - Project teams consumed and extended components without modifying the foundation
 - All changes flowed through pull requests to ensure accessibility, consistency, and maintainability
 
 ---
 
-## Tradeoffs & Challenges
+## Tradeoffs and Challenges
 
 ### Opinionated standards vs. flexibility
 Constraining some design freedom reduced inconsistency and compliance drift across products. Flexibility was preserved through documented extension points rather than ad-hoc customization.

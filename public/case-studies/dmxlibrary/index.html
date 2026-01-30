@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Design System Engineering | </title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/patterns/navigation.css">
+  
+<link rel="stylesheet" href="/assets/css/case-studies.css">
+<link rel="stylesheet" href="/assets/css/patterns/block.css">
+<link rel="stylesheet" href="/assets/css/patterns/sidebar.css">
+
+
+  <script src="https://kit.fontawesome.com/e2a3af1213.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="case-study">
+  <nav class="navbar">
+    <div class="navbar-container">
+        <a href="" class="navbar-logo">Logo</a>
+        <button class="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="navbar-menu">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">Resume</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Case Studies</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+  
+<div class="grid-container">
+
+  <aside class="sidebar">
+    
+<nav class="case-study-nav" aria-label="Case study sections">
+  <ul>
+    
+      <li>
+        <a href="#summary">
+          Summary
+        </a>
+      </li>
+    
+      <li>
+        <a href="#the-challenge">
+          The Challenge
+        </a>
+      </li>
+    
+      <li>
+        <a href="#the-problem">
+          The Problem
+        </a>
+      </li>
+    
+      <li>
+        <a href="#the-need">
+          The Need
+        </a>
+      </li>
+    
+      <li>
+        <a href="#constraints-and-requirements">
+          Constraints and Requirements
+        </a>
+      </li>
+    
+      <li>
+        <a href="#solution-code-based-pattern-library">
+          Solution: Code-Based Pattern Library
+        </a>
+      </li>
+    
+      <li>
+        <a href="#system-architecture-and-ownership">
+          System Architecture and Ownership
+        </a>
+      </li>
+    
+      <li>
+        <a href="#tradeoffs-and-challenges">
+          Tradeoffs and Challenges
+        </a>
+      </li>
+    
+      <li>
+        <a href="#outcomes">
+          Outcomes
+        </a>
+      </li>
+    
+      <li>
+        <a href="#key-takeaways">
+          Key Takeaways
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  </aside>
+
+  <article class="main-content">
+    <h2 id="summary" tabindex="-1">Summary</h2>
+<h3 id="tl-dr" tabindex="-1">TL;DR</h3>
+<p>Collaborated with the design lead on the technical implementation of a reusable, accessible pattern library, building components and templates that strengthened front-end consistency, reduced duplication, and embedded accessibility throughout the system.</p>
+<hr>
+<h2 id="the-challenge" tabindex="-1">The Challenge</h2>
+<p>In a fast-moving, multi-team environment, product teams were repeatedly solving the same front-end and accessibility problems from scratch. While a shared visual design standard existed, teams relied heavily on static mockups, which failed to capture real interaction behavior, responsiveness, and accessibility constraints.</p>
+<p>I partnered closely with a UX designer to define and build a shared pattern library, translating design intent into production-ready patterns. Clear ownership boundaries were established early to ensure the system could scale without becoming a bottleneck.</p>
+<p>My role focused on system architecture and implementation: converting design standards into reusable, code-based components and establishing workflows that enabled consistent adoption across teams without slowing delivery.</p>
+<h2 id="the-problem" tabindex="-1">The Problem</h2>
+<p>Without a shared front-end system:</p>
+<ul>
+<li>UI components behaved inconsistently across products</li>
+<li>Accessibility decisions were re-made on every project, increasing risk</li>
+<li>Static design artifacts masked real implementation constraints</li>
+<li>Teams duplicated effort and introduced drift over time</li>
+</ul>
+<h2 id="the-need" tabindex="-1">The Need</h2>
+<p>The organization needed a <strong>reliable, production-adjacent foundation</strong> that teams could reuse confidently while maintaining flexibility for different product needs.</p>
+<h2 id="constraints-and-requirements" tabindex="-1">Constraints and Requirements</h2>
+<p>The system needed to:</p>
+<ul>
+<li>Enforce accessibility and compliance by default (WCAG-aligned)</li>
+<li>Scale across multiple teams working in parallel</li>
+<li>Integrate with existing design and development workflows</li>
+<li>Enable team autonomy without creating a centralized bottleneck</li>
+<li>Support extension without fragmenting the core system</li>
+</ul>
+<p>These constraints required a system that was <strong>opinionated but extensible</strong>: enforcing strong defaults for accessibility and consistency, while providing clear extension points that allowed teams to adapt patterns without fragmenting the core system.</p>
+<h2 id="solution-code-based-pattern-library" tabindex="-1">Solution: Code-Based Pattern Library</h2>
+<ul>
+<li>Base Components: A curated set of base components with defined extension points</li>
+<li>Custom Components: Reusable custom components addressing common product needs</li>
+<li>Page Templates: Standardized page templates for frequent use cases</li>
+<li>Git Workflow: Git-based contribution and review workflow for quality control</li>
+</ul>
+<p><strong>The library was implemented as a static site using Eleventy and hosted on Netlify, making it easy for teams to access, review, and adopt.</strong></p>
+<hr>
+<h2 id="system-architecture-and-ownership" tabindex="-1">System Architecture and Ownership</h2>
+<ul>
+<li>Core components were centrally owned and versioned</li>
+<li>Project teams consumed and extended components without modifying the foundation</li>
+<li>All changes flowed through pull requests to ensure accessibility, consistency, and maintainability</li>
+</ul>
+<hr>
+<h2 id="tradeoffs-and-challenges" tabindex="-1">Tradeoffs and Challenges</h2>
+<h3 id="opinionated-standards-vs-flexibility" tabindex="-1">Opinionated standards vs. flexibility</h3>
+<p>Constraining some design freedom reduced inconsistency and compliance drift across products. Flexibility was preserved through documented extension points rather than ad-hoc customization.</p>
+<h3 id="shifting-teams-from-static-mockups-to-code" tabindex="-1">Shifting teams from static mockups to code</h3>
+<p>Adoption required more than documentation. I ran walkthroughs, demos, and hands-on sessions to help designers and developers understand how to use and extend the system effectively.</p>
+<h3 id="central-ownership-without-slowing-delivery" tabindex="-1">Central ownership without slowing delivery</h3>
+<p>Versioning and opt-in updates allowed teams to adopt improvements on their own timelines without blocking active work.</p>
+<hr>
+<h2 id="outcomes" tabindex="-1">Outcomes</h2>
+<p>While formal metrics were not tracked, adoption and reuse across teams indicated clear operational benefits:</p>
+<ul>
+<li>Used as the starting point for multiple product builds</li>
+<li>Reduced duplicated front-end work across teams</li>
+<li>Improved consistency in component behavior and layout</li>
+<li>Lower accessibility risk through standards embedded directly into components</li>
+<li>Stronger alignment between design and development via shared, code-based artifacts</li>
+<li>A scalable foundation that continues to evolve as new needs emerge</li>
+</ul>
+<h2 id="key-takeaways" tabindex="-1">Key Takeaways</h2>
+<ul>
+<li><strong>Design systems are products</strong>: Adoption, governance, and onboarding matter as much as code.</li>
+<li><strong>Production-adjacent artifacts improve outcomes</strong>: Code-based prototypes surface issues static designs cannot.</li>
+<li><strong>Accessibility scales best when embedded at the component level.</strong></li>
+<li><strong>Clear boundaries enable speed</strong>: Defined ownership and extension points prevent drift without limiting teams.</li>
+</ul>
+
+
+    <footer class="outro">
+      <button class="btn-primary center">Thank you for reading!</button>
+      <p>Want to discuss this project or collaborate? Get in touch!</p>
+    </footer>
+  </article>
+
+</div>
+
+</main>
+
+
+
+  <script src="/assets/js/patterns/navigation.js"></script>
+</body>
+</html>
