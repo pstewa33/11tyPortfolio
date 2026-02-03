@@ -38,6 +38,60 @@
 
 <main>
   
+
+<section class="hero hero--icons">
+ 
+
+  
+  
+    <div class="hero-media">
+      <img
+        src="https://placehold.co/600x400"
+        alt="hero image"
+        loading="eager"
+      >
+    </div>
+  
+  
+  <div class="hero-inner">
+
+  
+    <div class="hero-icons">
+  
+    <span class="hero-icon" aria-label="Front End">
+      <i class="fa-solid fa-code" aria-hidden="true"></i>
+      <span class="sr-only">Front End</span>
+    </span>
+  
+    <span class="hero-icon" aria-label="Accessibility">
+      <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+      <span class="sr-only">Accessibility</span>
+    </span>
+  
+    <span class="hero-icon" aria-label="Components">
+      <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+      <span class="sr-only">Components</span>
+    </span>
+  
+</div>
+
+  
+
+    
+
+    <h1>Design System Engineering</h1>
+
+    
+      <p class="hero-subtitle">Scalable, Accessible Pattern Library</p>
+    
+
+    
+
+    
+
+  </div>
+</section>
+
 <div class="grid-container">
 
   <aside class="sidebar">
@@ -82,6 +136,12 @@
       </li>
     
       <li>
+        <a href="#what-i-built">
+          What I Built
+        </a>
+      </li>
+    
+      <li>
         <a href="#system-architecture-and-ownership">
           System Architecture and Ownership
         </a>
@@ -105,6 +165,12 @@
         </a>
       </li>
     
+      <li>
+        <a href="#if-i-did-this-again">
+          If I Did This Again
+        </a>
+      </li>
+    
   </ul>
 </nav>
 
@@ -114,7 +180,7 @@
   <article class="main-content">
     <h2 id="summary" tabindex="-1">Summary</h2>
 <h3 id="tl-dr" tabindex="-1">TL;DR</h3>
-<p>Collaborated with the design lead on the technical implementation of a reusable, accessible pattern library, building components and templates that strengthened front-end consistency, reduced duplication, and embedded accessibility throughout the system.</p>
+<p>Led the technical implementation of a reusable, accessible design system, partnering with design to translate standards into production-ready components and templates that scaled across teams.</p>
 <hr>
 <h2 id="the-challenge" tabindex="-1">The Challenge</h2>
 <p>In a fast-moving, multi-team environment, product teams were repeatedly solving the same front-end and accessibility problems from scratch. While a shared visual design standard existed, teams relied heavily on static mockups, which failed to capture real interaction behavior, responsiveness, and accessibility constraints.</p>
@@ -149,6 +215,22 @@
 </ul>
 <p><strong>The library was implemented as a static site using Eleventy and hosted on Netlify, making it easy for teams to access, review, and adopt.</strong></p>
 <hr>
+<h2 id="what-i-built" tabindex="-1">What I Built</h2>
+<p>I was responsible for the technical architecture and implementation of the system, including:</p>
+<ul>
+<li>Designing and implementing core UI components as reusable, accessible HTML/CSS/JS patterns</li>
+<li>Defining component APIs (props, variants, states) to balance consistency and extensibility</li>
+<li>Encoding accessibility requirements directly into components (ARIA, keyboard behavior, focus management)</li>
+<li>Creating page templates that demonstrated correct component composition</li>
+</ul>
+<h3 id="example-accessible-component-defaults" tabindex="-1">Example: Accessible Component Defaults</h3>
+<p>Rather than documenting accessibility as guidance, components were built with accessible defaults:</p>
+<ul>
+<li>Semantic HTML enforced by component structure</li>
+<li>Keyboard interactions implemented at the component level</li>
+<li>ARIA attributes applied consistently across variants</li>
+</ul>
+<p>This reduced the likelihood of teams shipping inaccessible UI, even under time pressure.</p>
 <h2 id="system-architecture-and-ownership" tabindex="-1">System Architecture and Ownership</h2>
 <ul>
 <li>Core components were centrally owned and versioned</li>
@@ -180,6 +262,12 @@
 <li><strong>Production-adjacent artifacts improve outcomes</strong>: Code-based prototypes surface issues static designs cannot.</li>
 <li><strong>Accessibility scales best when embedded at the component level.</strong></li>
 <li><strong>Clear boundaries enable speed</strong>: Defined ownership and extension points prevent drift without limiting teams.</li>
+</ul>
+<h2 id="if-i-did-this-again" tabindex="-1">If I Did This Again</h2>
+<ul>
+<li>I would introduce automated accessibility checks earlier in the workflow</li>
+<li>I would invest sooner in clearer upgrade and versioning communication</li>
+<li>I would provide more starter templates to accelerate first-time adoption</li>
 </ul>
 
 

@@ -1,7 +1,20 @@
 ---
 permalink: /case-studies/dmxlibrary/
 layout: layouts/case-study.njk
-projectImage: /assets/images/{{ slug }}/hero.png
+
+hero:
+  variant: icons
+  icons:
+    - name: fa-code
+      label: Front End
+    - name: fa-universal-access
+      label: Accessibility
+    - name: fa-layer-group
+      label: Components
+  image: 
+    src: https://placehold.co/600x400
+    alt: hero image
+
 title: Design System Engineering
 subtitle: Scalable, Accessible Pattern Library
 role: UX Engineer / Design Systems Engineer
@@ -21,7 +34,7 @@ tools:
 ## Summary
 
 ### TL;DR
-Collaborated with the design lead on the technical implementation of a reusable, accessible pattern library, building components and templates that strengthened front-end consistency, reduced duplication, and embedded accessibility throughout the system.
+Led the technical implementation of a reusable, accessible design system, partnering with design to translate standards into production-ready components and templates that scaled across teams.
 
 ---
 
@@ -62,6 +75,26 @@ These constraints required a system that was **opinionated but extensible**: enf
 
 ---
 
+## What I Built
+
+I was responsible for the technical architecture and implementation of the system, including:
+
+- Designing and implementing core UI components as reusable, accessible HTML/CSS/JS patterns
+- Defining component APIs (props, variants, states) to balance consistency and extensibility
+- Encoding accessibility requirements directly into components (ARIA, keyboard behavior, focus management)
+- Creating page templates that demonstrated correct component composition
+
+### Example: Accessible Component Defaults
+
+Rather than documenting accessibility as guidance, components were built with accessible defaults:
+- Semantic HTML enforced by component structure
+- Keyboard interactions implemented at the component level
+- ARIA attributes applied consistently across variants
+
+This reduced the likelihood of teams shipping inaccessible UI, even under time pressure.
+
+
+
 ## System Architecture and Ownership
 - Core components were centrally owned and versioned
 - Project teams consumed and extended components without modifying the foundation
@@ -98,3 +131,8 @@ While formal metrics were not tracked, adoption and reuse across teams indicated
 - **Accessibility scales best when embedded at the component level.**
 - **Clear boundaries enable speed**: Defined ownership and extension points prevent drift without limiting teams.
 
+## If I Did This Again
+
+- I would introduce automated accessibility checks earlier in the workflow
+- I would invest sooner in clearer upgrade and versioning communication
+- I would provide more starter templates to accelerate first-time adoption

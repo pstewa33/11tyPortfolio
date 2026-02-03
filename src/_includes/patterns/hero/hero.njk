@@ -1,0 +1,44 @@
+<section class="hero hero--{{ hero.variant | default("default") }}">
+ 
+
+  
+  {% if hero.image %}
+    <div class="hero-media">
+      <img
+        src="{{ hero.image.src }}"
+        alt="{{ hero.image.alt | default('') }}"
+        loading="eager"
+      >
+    </div>
+  {% endif %}
+  
+  <div class="hero-inner">
+
+  {% if hero.variant == "icons" %}
+    {% include "patterns/hero/icons.njk" %}
+  {% endif %}
+
+    {% if hero.tags %}
+      <div class="hero-tags">
+        {% for tag in hero.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <h1>{{ title }}</h1>
+
+    {% if subtitle %}
+      <p class="hero-subtitle">{{ subtitle }}</p>
+    {% endif %}
+
+    {% if variant == "icons" %}
+      {% include "patterns/hero/boxes.njk" %}
+    {% endif %}
+
+    {% if variant == "meta" %}
+      {% include "patterns/hero/meta.njk" %}
+    {% endif %}
+
+  </div>
+</section>

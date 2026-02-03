@@ -44,6 +44,15 @@ The organization needed a reliable, production-adjacent foundation that teams co
 
 **The project aimed to move the site to a modern, standardized design system without making content teams feel constrained or breaking live pages.**
 
+## My Technical Role
+
+I led the migration strategy and implementation, including:
+- Auditing and rebuilding legacy Bootstrap components using the new design system
+- Defining template structures that enforced accessibility and consistency
+- Partnering with teams to migrate incrementally without breaking live pages
+- Establishing contribution and governance workflows
+
+
 ## Constraints & Requirements
 The system needed to:
 - **Accessibility & Compliance**: Components and templates had to meet WCAG and accessibility standards
@@ -54,6 +63,7 @@ The system needed to:
 
 ## Solution: Template-Driven Migration
 The migration followed a component-first approach:
+
 
 ### Audit and Convert Components
 Legacy Bootstrap components were audited and rebuilt using the new design system.

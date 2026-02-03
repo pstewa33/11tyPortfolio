@@ -38,6 +38,32 @@
 
 <main>
   
+
+<section class="hero hero--default">
+ 
+
+  
+  
+  
+  <div class="hero-inner">
+
+  
+
+    
+
+    <h1>Modernizing a Legacy Healthcare System for Clarity and Scale</h1>
+
+    
+      <p class="hero-subtitle">From Static PDFs to Decision-Guided Care</p>
+    
+
+    
+
+    
+
+  </div>
+</section>
+
 <div class="grid-container">
 
   <aside class="sidebar">
@@ -48,6 +74,12 @@
       <li>
         <a href="#summary">
           Summary
+        </a>
+      </li>
+    
+      <li>
+        <a href="#my-role-system-scope">
+          My Role &amp;amp; System Scope
         </a>
       </li>
     
@@ -76,8 +108,8 @@
       </li>
     
       <li>
-        <a href="#exploration">
-          Exploration
+        <a href="#structural-exploration">
+          Structural Exploration
         </a>
       </li>
     
@@ -90,6 +122,12 @@
       <li>
         <a href="#synthesis-system-level-solution">
           Synthesis &amp;amp; System-Level Solution
+        </a>
+      </li>
+    
+      <li>
+        <a href="#system-logic-decision-rules">
+          System Logic &amp;amp; Decision Rules
         </a>
       </li>
     
@@ -115,11 +153,20 @@
     <h2 id="summary" tabindex="-1">Summary</h2>
 <h3 id="tl-dr" tabindex="-1">TL;DR</h3>
 <p>Migrated a legacy, PDF-driven nicotine replacement therapy experience into a structured, decision-guided system for Veterans. Defined clear interaction logic and content hierarchy to support informed decision-making, resulting in higher engagement, longer sessions, and increased completion of high-priority actions — while maintaining full compliance with USWDS and healthcare regulations.</p>
+<h2 id="my-role-system-scope" tabindex="-1">My Role &amp; System Scope</h2>
+<p>I served as the UX Architect responsible for restructuring the system logic, interaction sequencing, and content hierarchy of the NRT experience.</p>
+<p>While core tools could not be rebuilt, my work focused on:</p>
+<ul>
+<li>Making implicit decision rules explicit in the system structure</li>
+<li>Defining interaction logic that guided users through compatible NRT options</li>
+<li>Replacing static, PDF-driven content with structured, maintainable web patterns</li>
+<li>Ensuring all changes complied with USWDS and healthcare accessibility standards</li>
+</ul>
 <hr>
 <h2 id="overview" tabindex="-1">Overview</h2>
 <h3 id="the-challenge" tabindex="-1">The Challenge</h3>
 <p>SmokefreeVET supports Veterans in quitting tobacco through evidence-based guidance. Its Nicotine Replacement Therapy (NRT) resource delivers step-by-step support via an interactive landing page, allowing users to select NRT options and access tailored fact sheets.</p>
-<p>Prior to the redesign, this experience depended on legacy PDFs and outdated interaction patterns. Content was fragmented and difficult to navigate, making it hard for Veterans to locate, understand, and act on critical health information.</p>
+<p>Prior to the redesign, this experience relied on legacy PDFs and outdated interaction patterns, fragmenting critical guidance across long scroll depths and static downloads. As a result, Veterans struggled to locate, understand, and act on high-priority health information.</p>
 <h3 id="the-approach" tabindex="-1">The Approach</h3>
 <p>The objective was to restructure the experience into a clear, maintainable system that supported informed decision-making without introducing new functionality. This required simplifying interaction flows, clarifying content hierarchy, and ensuring the solution met healthcare and government compliance standards.</p>
 <h3 id="project-goals" tabindex="-1">Project Goals</h3>
@@ -161,7 +208,7 @@
 <hr>
 <h2 id="define" tabindex="-1">Define</h2>
 <h3 id="problem-statement" tabindex="-1">Problem Statement</h3>
-<p>The NRT experience had evolved organically over time, resulting in fragmented interaction patterns, implicit product compatibility rules, and a reliance on static content formats that did not scale as clinical guidance changed. Legacy PDFs and outdated interaction behaviors made it difficult for Veterans to locate prioritized information, understand next steps, and make confident quitting decisions. Behavioral analytics reinforced these issues, showing low engagement and waning user engagement — indicators that users were struggling to navigate the experience and frequently missed critical guidance.</p>
+<p>The NRT experience had evolved organically over time, resulting in fragmented interaction patterns, implicit product compatibility rules, and a reliance on static content formats that did not scale as clinical guidance changed. Outdated content delivery and interaction behaviors made it difficult for Veterans to locate prioritized information, understand next steps, and make confident quitting decisions. Behavioral analytics reinforced these issues, showing low engagement and waning user engagement — indicators that users were struggling to navigate the experience and frequently missed critical guidance.</p>
 <h3 id="constraints" tabindex="-1">Constraints</h3>
 <ul>
 <li>Core interactive elements, including the dosage calculator and NRT selection tools, could not be substantially modified due to project scope limitations.</li>
@@ -172,17 +219,17 @@
 <p><strong>These constraints defined the solution space and required restructuring the experience without changing core functionality — prioritizing clarity, consistency, and maintainability while preserving compliance.</strong></p>
 <hr>
 <h2 id="explore" tabindex="-1">Explore</h2>
-<h2 id="exploration" tabindex="-1">Exploration</h2>
+<h2 id="structural-exploration" tabindex="-1">Structural Exploration</h2>
 <p>Exploration focused on reducing cognitive load and improving scanability without altering core functionality. Behavioral analytics consistently showed that long scroll depth and buried guidance were the primary sources of friction, causing users to miss high-priority content.</p>
 <h3 id="key-areas" tabindex="-1">Key Areas</h3>
 <h4 id="reducing-scroll-and-elevating-priority-content" tabindex="-1">Reducing scroll and elevating priority content</h4>
-<p>Rather than introducing new tools, we explored restructuring page layout and content delivery. This included transitioning legacy PDFs into structured web pages, applying a consistent two-column layout to reduce vertical scanning, and elevating high-priority guidance — such as Nicotine Facts — alongside decision-support tools like the dosage calculator.</p>
+<p>I evaluated multiple structural approaches to reduce scroll depth and surface priority guidance, balancing accessibility, content density, and existing system constraints.</p>
 <h4 id="information-architecture-consolidation-and-accessibility" tabindex="-1">Information architecture, consolidation, and accessibility</h4>
 <p>We tested dynamic fact sheet cards that responded to selected NRT options, allowing guidance to remain contextual without overwhelming users. Low-priority visuals were removed, related sections were consolidated, and accessibility support was expanded to include a Spanish-language toggle.</p>
 <p>These explorations clarified that the core opportunity was not adding interaction, but making existing guidance visible, contextual, and decision-oriented.</p>
 <h3 id="design-iterations" tabindex="-1">Design Iterations</h3>
 <h3 id="pivot-key-insight" tabindex="-1">Pivot: Key Insight</h3>
-<p>During the content and interaction audit, we identified a critical gap in the system:</p>
+<p>During the content and interaction audit, I identified a critical gap in the system::</p>
 <ul>
 <li>Some NRT products <strong>cannot be used together</strong></li>
 <li>Stakeholders wanted <strong>counseling prioritized before product selection</strong></li>
@@ -209,6 +256,14 @@
 <li>Made compatibility rules explicit and visible</li>
 </ul>
 <p><strong>The system already contained the necessary logic; the work was in restructuring the experience so that this logic was clear, enforceable, and aligned with user decision-making.</strong></p>
+<h2 id="system-logic-decision-rules" tabindex="-1">System Logic &amp; Decision Rules</h2>
+<p>A key outcome of this work was making previously implicit rules explicit in the experience:</p>
+<ul>
+<li>Certain NRT products could not be used together</li>
+<li>Counseling needed to be prioritized before product selection</li>
+<li>Guidance needed to remain contextual without increasing cognitive load</li>
+</ul>
+<p>Rather than adding new features, these rules were enforced through sequencing, layout hierarchy, and conditional content visibility.</p>
 <hr>
 <h2 id="final-design" tabindex="-1">Final Design</h2>
 <p>The final experience established a consistent structural rhythm across the page.</p>
@@ -270,7 +325,7 @@
 <li>Analytics-driven collaboration enables confident decisions in constrained environments</li>
 </ul>
 <hr>
-<p><strong>This project demonstrated that thoughtful design system migration and structural clarity can deliver measurable impact while maintaining compliance and user trust—key principles I bring to every UX engineering challenge</strong></p>
+<p><strong>This project demonstrates how structural clarity and system-level decision logic can deliver measurable impact while maintaining compliance and user trust</strong></p>
 
 
     <footer class="outro">
