@@ -33,6 +33,7 @@
   text-align: center;
   gap: 1.5rem;
   list-style: none;
+  margin-bottom: 0;
 }
 .navbar-container .navbar-menu li a {
   text-decoration: none;

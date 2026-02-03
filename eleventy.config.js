@@ -3,7 +3,14 @@ const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function(eleventyConfig) {
     
-eleventyConfig.addFilter("regexFindAll", function (content, pattern) {
+  // Collection for pages you want in the nav
+  eleventyConfig.addCollection("navPages", function(collectionApi) {
+    return collectionApi.getAll()
+      .filter(item => item.data.nav) // only pages where nav: true in front matter
+      .sort((a, b) => a.data.navOrder - b.data.navOrder || 0); // optional ordering
+  });
+
+  eleventyConfig.addFilter("regexFindAll", function (content, pattern) {
   if (!content) return [];
 
   let regex;
@@ -47,6 +54,7 @@ eleventyConfig.addFilter("regexFindAll", function (content, pattern) {
         dir: {
             input: "src",
             output: "public",
+            data: "_data",
         }
     }
 }
