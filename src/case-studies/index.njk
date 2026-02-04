@@ -1,0 +1,16 @@
+---
+title: Case Studies
+layout: layouts/base.njk
+permalink: /case-studies/
+nav: true
+navOrder: 4
+---
+<h1>Case Studies</h1>
+
+<ul>
+  {% for case in collections.caseStudies %}
+    <li>
+      <a href="{{ case.url }}">{{ case.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

@@ -10,6 +10,15 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => a.data.navOrder - b.data.navOrder || 0); // optional ordering
   });
 
+  // Case study collections
+  eleventyConfig.addCollection("caseStudies", function (collectionApi) {
+  return collectionApi.getFilteredByGlob("src/case-studies/*.md")
+    .sort((a, b) => {
+      return (a.data.order || 0) - (b.data.order || 0);
+    });
+});
+
+
   eleventyConfig.addFilter("regexFindAll", function (content, pattern) {
   if (!content) return [];
 

@@ -1,6 +1,15 @@
 ---
 permalink: /case-studies/dmxlibrary/
 layout: layouts/case-study.njk
+collection: caseStudies
+order: 1
+title: Design System Engineering
+subtitle: Scalable, Accessible Pattern Library
+role: UX Engineer / Design Systems Engineer
+cardTags:
+  - Design Systems
+  - Accessibility
+  - Front-End Architecture
 
 hero:
   variant: icons
@@ -15,9 +24,6 @@ hero:
     src: https://placehold.co/600x400
     alt: hero image
 
-title: Design System Engineering
-subtitle: Scalable, Accessible Pattern Library
-role: UX Engineer / Design Systems Engineer
 context: Large, multi-team digital platform
 focus: Design systems, component architecture, accessibility, system adoption
 tools:

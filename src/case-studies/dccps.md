@@ -2,9 +2,16 @@
 permalink: /case-studies/dccps/
 layout: layouts/case-study.njk
 projectImage: /assets/images/{{ slug }}/hero.png
+collection: caseStudies
+order: 2
 title: Design System Migration - From Legacy Framework to Scalable System
 subtitle: Template-Driven Migration for Accessibility, Consistency, and Scale
 role: UX Engineer / Design Systems Engineer
+cardTags:
+  - Design System Migration
+  - Accessibility
+  - Atomic Design
+
 context: Large, multi-team digital platform
 tools:
   - HTML
