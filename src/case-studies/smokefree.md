@@ -2,9 +2,16 @@
 layout: layouts/case-study.njk
 permalink: /case-studies/smokefreevet/
 projectImage: /assets/images/{{ slug }}/hero.png
+collection: caseStudies
+order: 3
 title: Modernizing a Legacy Healthcare System for Clarity and Scale
 subtitle: From Static PDFs to Decision-Guided Care
 role: UX Architect
+cardTags:
+  - System Design
+  - Accessibility
+  - Front-End Architecture
+
 timeline: July 2024 – September 2025
 team:
   - UX Designer

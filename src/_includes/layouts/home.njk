@@ -3,33 +3,105 @@
 {% set bodyClass = "home" %}
 
 {% block styles %}
-  {{ super() }}
   <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/patterns/cards.css">
 {% endblock %}
 
 {% block content %}
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Peyton Stewart</h1>
-      <p>UX Designer + Engineer</p>
-      <p>I bring digital products to life with design and code.</p>
-    </div>
-  </section>
 
-  <section class="case-studies">
-    <h2>Featured Work</h2>
-    <ul class="block-container">
-      {% for item in caseStudies %}
+<section class="home-hero">
+  <div class="container grid grid-2">
+
+    <div class="home-title">
+        <h1>
+            I'm Peyton, a UX Engineer who bridges design and code to create thoughtful, user-friendly interfaces.
+        </h1>
+    </div>
+    <div class="home-profile-img">
+        <img src="https://placehold.co/400" alt="profile">
+    </div>
+  </div>
+</section>
+
+<section class="home-work">
+  <div class="container">
+    <h2>Some of my work so far...</h2>
+
+    <ul class="case-card-grid">
+      {% for case in collections.caseStudies %}
         <li>
-          <a href="{{ item.link }}">
-            {% include "patterns/block.html" %}
+          <a href="{{ case.url }}" class="case-card-link">
+            {% include "patterns/card/case-study-card.njk" %}
           </a>
         </li>
       {% endfor %}
     </ul>
-  </section>
+  </div>
+</section>
 
-  <section class="cta">
-    <p>Want to discuss a project or collaborate? <a href="/contact/">Get in touch!</a></p>
-  </section>
+<section class="key-strengths-section">
+    <h2>Key Strengths</h2>
+    <p>I’m a UX Architect with 5 years of experience working on complex, multi-team products. I care about clarity, scalability, and building systems that make good design the default—not the exception.</p>
+    <div class="key-strengths">
+        <div class="strength">
+            <i></i>
+            <h3>Architecture and Systems Thinking</h3>
+            <p>I focus on systems, not just screens.</p>
+            <ul class="fa-ul">
+                <li> 
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Information Architecture
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Interaction Models
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Design Systems and Governance
+                </li>
+            </ul>
+        </div>
+        <div class="strength">
+            <i></i>
+            <h3>Architecture and Systems Thinking</h3>
+            <p>I focus on systems, not just screens.</p>
+            <ul class="fa-ul">
+                <li> 
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Information Architecture
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Interaction Models
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Design Systems and Governance
+                </li>
+            </ul>
+        </div>
+        <div class="strength">
+            <i></i>
+            <h3>Architecture and Systems Thinking</h3>
+            <p>I focus on systems, not just screens.</p>
+            <ul class="fa-ul">
+                <li> 
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Information Architecture
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Interaction Models
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Design Systems and Governance
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button>About Me</button>
+
+
 {% endblock %}

@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/patterns/navigation.css">
   
-  
   <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="stylesheet" href="/assets/css/patterns/cards.css">
 
 
   <script src="https://kit.fontawesome.com/e2a3af1213.js" crossorigin="anonymous"></script>
@@ -18,70 +18,246 @@
 
 <body class="home">
   <nav class="navbar">
-    <div class="navbar-container">
-        <a href="" class="navbar-logo">Logo</a>
-        <button class="navbar-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <ul class="navbar-menu">
-            <li><a href="" class="active">Home</a></li>
-            <li><a href="">Resume</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Case Studies</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-    </div>
+  <div class="navbar-container">
+
+    <a href="/" class="navbar-logo">
+      Logo
+    </a>
+
+    <button class="navbar-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="navbar-menu">
+      
+        <li>
+          <a href="/pages/about/" class="active">
+            About
+          </a>
+        </li>
+      
+        <li>
+          <a href="/pages/resume/" class="active">
+            Resume
+          </a>
+        </li>
+      
+        <li>
+          <a href="/case-studies/" class="active">
+            Case Studies
+          </a>
+        </li>
+      
+        <li>
+          <a href="/pages/contact/" class="active">
+            Contact
+          </a>
+        </li>
+      
+    </ul>
+  </div>
 </nav>
 
-<main>
+
+<main class = "grid-container">
   
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Peyton Stewart</h1>
-      <p>UX Designer + Engineer</p>
-      <p>I bring digital products to life with design and code.</p>
+
+<section class="home-hero">
+  <div class="container grid grid-2">
+
+    <div class="home-title">
+        <h1>
+            I'm Peyton, a UX Engineer who bridges design and code to create thoughtful, user-friendly interfaces.
+        </h1>
     </div>
-  </section>
+    <div class="home-profile-img">
+        <img src="https://placehold.co/400" alt="profile">
+    </div>
+  </div>
+</section>
 
-  <section class="case-studies">
-    <h2>Featured Work</h2>
-    <ul class="block-container">
+<section class="home-work">
+  <div class="container">
+    <h2>Some of my work so far...</h2>
+
+    <ul class="case-card-grid">
       
         <li>
-          <a href="/case-studies/dmxlibrary/">
-            <div class="block">
-  <h3>Design System Engineering</h3>
-</div>
+          <a href="/case-studies/dmxlibrary/" class="case-card-link">
+            <article class="case-card">
+  <h3 class="case-card-title">
+    Design System Engineering
+  </h3>
+
+  
+    <p class="case-card-subtitle">
+      Scalable, Accessible Pattern Library
+    </p>
+  
+
+  
+    <p class="case-card-role">
+      UX Engineer / Design Systems Engineer
+    </p>
+  
+
+  
+    <ul class="case-card-tags">
+      
+        <li>Design Systems</li>
+      
+        <li>Accessibility</li>
+      
+        <li>Front-End Architecture</li>
+      
+    </ul>
+  
+</article>
 
           </a>
         </li>
       
         <li>
-          <a href="/case-studies/dccps/">
-            <div class="block">
-  <h3>Design System Migration - From Legacy Framework to Scalable System</h3>
-</div>
+          <a href="/case-studies/dccps/" class="case-card-link">
+            <article class="case-card">
+  <h3 class="case-card-title">
+    Design System Migration - From Legacy Framework to Scalable System
+  </h3>
+
+  
+    <p class="case-card-subtitle">
+      Template-Driven Migration for Accessibility, Consistency, and Scale
+    </p>
+  
+
+  
+    <p class="case-card-role">
+      UX Engineer / Design Systems Engineer
+    </p>
+  
+
+  
+    <ul class="case-card-tags">
+      
+        <li>Design System Migration</li>
+      
+        <li>Accessibility</li>
+      
+        <li>Atomic Design</li>
+      
+    </ul>
+  
+</article>
 
           </a>
         </li>
       
         <li>
-          <a href="/case-studies/smokefreevet/">
-            <div class="block">
-  <h3>Modernizing a Legacy Healthcare System for Clarity and Scale</h3>
-</div>
+          <a href="/case-studies/smokefreevet/" class="case-card-link">
+            <article class="case-card">
+  <h3 class="case-card-title">
+    Modernizing a Legacy Healthcare System for Clarity and Scale
+  </h3>
+
+  
+    <p class="case-card-subtitle">
+      From Static PDFs to Decision-Guided Care
+    </p>
+  
+
+  
+    <p class="case-card-role">
+      UX Architect
+    </p>
+  
+
+  
+    <ul class="case-card-tags">
+      
+        <li>System Design</li>
+      
+        <li>Accessibility</li>
+      
+        <li>Front-End Architecture</li>
+      
+    </ul>
+  
+</article>
 
           </a>
         </li>
       
     </ul>
-  </section>
+  </div>
+</section>
 
-  <section class="cta">
-    <p>Want to discuss a project or collaborate? <a href="/contact/">Get in touch!</a></p>
-  </section>
+<section class="key-strengths-section">
+    <h2>Key Strengths</h2>
+    <p>I’m a UX Architect with 5 years of experience working on complex, multi-team products. I care about clarity, scalability, and building systems that make good design the default—not the exception.</p>
+    <div class="key-strengths">
+        <div class="strength">
+            <i></i>
+            <h3>Architecture and Systems Thinking</h3>
+            <p>I focus on systems, not just screens.</p>
+            <ul class="fa-ul">
+                <li> 
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Information Architecture
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Interaction Models
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Design Systems and Governance
+                </li>
+            </ul>
+        </div>
+        <div class="strength">
+            <i></i>
+            <h3>Architecture and Systems Thinking</h3>
+            <p>I focus on systems, not just screens.</p>
+            <ul class="fa-ul">
+                <li> 
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Information Architecture
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Interaction Models
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Design Systems and Governance
+                </li>
+            </ul>
+        </div>
+        <div class="strength">
+            <i></i>
+            <h3>Architecture and Systems Thinking</h3>
+            <p>I focus on systems, not just screens.</p>
+            <ul class="fa-ul">
+                <li> 
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Information Architecture
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Interaction Models
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+                    Design Systems and Governance
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button>About Me</button>
+
+
 
 </main>
 

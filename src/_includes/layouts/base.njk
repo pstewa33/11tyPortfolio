@@ -14,9 +14,9 @@
 </head>
 
 <body class="{{ bodyClass | default('') }}">
-  {% include "patterns/navigation.html" %}
+  {% include "patterns/navigation.njk" %}
 
-<main>
+<main class = "grid-container">
   {% block content %}
     {{ content | safe }}
   {% endblock %}
