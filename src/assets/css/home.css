@@ -2,6 +2,12 @@
   background-color: lightgray;
 }
 
+.home .home-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-profile-img img {
   border-radius: 50%;
   width: 300px;
@@ -10,37 +16,16 @@
   display: block;
 }
 
-.case-card-grid {
+.key-strengths {
+  margin-top: var(--space-md);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  list-style: none;
   padding: 0;
 }
-
-.case-card {
-  border: 1px solid var(--border-subtle);
-  padding: 1.5rem;
-  height: 100%;
-  box-shadow: var(--shadow-md);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+.key-strengths .strength p {
+  margin-top: var(--space-sm);
 }
-
-.case-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  height: 100%;
-}
-
-.case-card-link:hover .case-card {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
-}
-
-.case-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
+.key-strengths .strength ul {
+  margin-top: var(--space-sm);
 }/*# sourceMappingURL=home.css.map */
