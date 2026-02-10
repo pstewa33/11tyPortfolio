@@ -32,11 +32,11 @@
       <p class="hero-subtitle">{{ subtitle }}</p>
     {% endif %}
 
-    {% if variant == "icons" %}
+    {% if hero.variant == "icons" %}
       {% include "patterns/hero/boxes.njk" %}
     {% endif %}
 
-    {% if variant == "meta" %}
+    {% if hero.variant == "meta" %}
       {% include "patterns/hero/meta.njk" %}
     {% endif %}
 

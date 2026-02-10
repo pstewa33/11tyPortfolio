@@ -1,4 +1,20 @@
 <div class="hero-boxes">
-  {% if role %}<p>{{ role }}</p>{% endif %}
-  {% if context %}<p>{{ context }}</p>{% endif %}
+  {% if role %}
+    <div class="hero-box hero-role">
+      <h3>Role</h3>
+      <p>{{ role }}</p>
+    </div>
+  {% endif %}
+  {% if context %}
+    <div class="hero-box hero-context">
+      <h3>Context</h3>
+      <p>{{ context }}</p>
+    </div>
+  {% endif %}
+  {% if focus%}
+    <div class="hero-box hero-focus">
+      <h3>Focus</h3>
+      <p>{{ focus }}</p>
+    </div>
+  {% endif %}
 </div>

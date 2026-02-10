@@ -1,8 +1,22 @@
 {% extends "layouts/base.njk" %}
 
+{% set bodyClass = "case-study" %}
+
+{# =========================
+   Styles
+========================= #}
+{% block styles %}
+  <link rel="stylesheet" href="/assets/css/case-studies.css">
+  <link rel="stylesheet" href="/assets/css/patterns/block.css">
+  <link rel="stylesheet" href="/assets/css/patterns/sidebar.css">
+  <link rel="stylesheet" href="/assets/css/patterns/hero.css">
+{% endblock %}
+
+{# =========================
+   Generate Table of Contents
+========================= #}
 {% set headings = [] %}
 {% set headingRegex = '<h2[^>]*id="([^"]+)"[^>]*>(.*?)</h2>' %}
-
 
 {% for match in content | regexFindAll(headingRegex) %}
   {% set _ = headings.push({
@@ -11,33 +25,45 @@
   }) %}
 {% endfor %}
 
-
-
-{% set bodyClass = "case-study" %}
-
-{% block styles %}
-<link rel="stylesheet" href="/assets/css/case-studies.css">
-<link rel="stylesheet" href="/assets/css/patterns/block.css">
-<link rel="stylesheet" href="/assets/css/patterns/sidebar.css">
-{% endblock %}
-
+{# =========================
+   Content
+========================= #}
 {% block content %}
 
-{% include "patterns/hero/hero.njk" %}
+{# Hero Section (variant can be overridden in front matter) #}
+
 <div class="grid-container">
+{% include "patterns/hero/hero.njk" %}
+  {# Sidebar / TOC (optional) #}
+  {% if showSidebar | default(true) %}
+    <aside class="sidebar">
+      {% if headings | length > 0 %}
+      <nav class="toc">
+        <h2>On this page</h2>
+        <ul>
+          {% for heading in headings %}
+            <li><a href="#{{ heading.id }}">{{ heading.text }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {% endif %}
+    </aside>
+  {% endif %}
 
-  <aside class="sidebar">
-    {% include "patterns/sidebar.njk" %}
-  </aside>
-
+  {# Main Article #}
   <article class="main-content">
     {{ content | safe }}
 
+    {# Footer CTA #}
     <footer class="outro">
-      <button class="btn-primary center">Thank you for reading!</button>
-      <p>Want to discuss this project or collaborate? Get in touch!</p>
+      {% if showOutro | default(true) %}
+        <button class="btn-primary center">Thank you for reading!</button>
+        <p>Want to discuss this project or collaborate? <a href="/contact/">Get in touch!</a></p>
+      {% endif %}
     </footer>
   </article>
 
 </div>
+
 {% endblock %}
+

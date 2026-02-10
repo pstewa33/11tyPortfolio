@@ -11,6 +11,8 @@ cardTags:
   - Accessibility
   - Front-End Architecture
 
+showSidebar: false
+showOutro: false
 hero:
   variant: icons
   icons:
@@ -20,9 +22,9 @@ hero:
       label: Accessibility
     - name: fa-layer-group
       label: Components
-  image: 
+  image:
     src: https://placehold.co/600x400
-    alt: hero image
+    alt: Hero image
 
 context: Large, multi-team digital platform
 focus: Design systems, component architecture, accessibility, system adoption
@@ -37,12 +39,14 @@ tools:
   - Netlify
 ---
 
-## Summary
+<div class="tldr full-bleed">
+  <div class="tldr-inner">
 
 ### TL;DR
 Led the technical implementation of a reusable, accessible design system, partnering with design to translate standards into production-ready components and templates that scaled across teams.
 
----
+  </div>
+</div>
 
 ## The Challenge
 In a fast-moving, multi-team environment, product teams were repeatedly solving the same front-end and accessibility problems from scratch. While a shared visual design standard existed, teams relied heavily on static mockups, which failed to capture real interaction behavior, responsiveness, and accessibility constraints.

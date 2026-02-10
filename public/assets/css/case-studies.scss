@@ -1,0 +1,27 @@
+//TLDR
+
+.tldr{
+
+    padding: var(--space-md) 0;
+
+    &-inner{
+        max-width: 1200px; // match your grid/container width
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        
+
+        border-left: 4px solid var(--accent, #2563eb);
+
+        h3{
+            margin-bottom: var(--space-sm);
+        }
+    }
+}
+
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: var(--surface-muted, #f5f7fa);
+}
+
