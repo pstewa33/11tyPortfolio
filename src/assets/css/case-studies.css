@@ -15,4 +15,19 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   background: var(--surface-muted, #f5f7fa);
+}
+
+.the-problem {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--surface-muted, #f5f7fa);
+  border-left: 4px solid var(--accent, #2563eb);
+}
+.the-problem h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.problem-screenshot {
+  margin-top: var(--space-md);
+  width: 100%;
 }/*# sourceMappingURL=case-studies.css.map */

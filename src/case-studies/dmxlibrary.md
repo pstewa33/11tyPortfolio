@@ -55,12 +55,23 @@ I partnered closely with a UX designer to define and build a shared pattern libr
 
 My role focused on system architecture and implementation: converting design standards into reusable, code-based components and establishing workflows that enabled consistent adoption across teams without slowing delivery.
 
+<div class="grid grid-2">
+<div class="the-problem">
+
 ## The Problem
 Without a shared front-end system:
 - UI components behaved inconsistently across products
 - Accessibility decisions were re-made on every project, increasing risk
 - Static design artifacts masked real implementation constraints
 - Teams duplicated effort and introduced drift over time
+
+</div>
+<div class="problem-screenshot">
+
+![problem](https://placehold.co/600x400)
+
+</div>
+</div>
 
 ## The Need
 The organization needed a **reliable, production-adjacent foundation** that teams could reuse confidently while maintaining flexibility for different product needs.

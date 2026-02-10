@@ -25,3 +25,20 @@
   background: var(--surface-muted, #f5f7fa);
 }
 
+// The Problem
+
+.the-problem {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background-color: var(--surface-muted, #f5f7fa);
+    border-left: 4px solid var(--accent, #2563eb);
+
+    h3{
+        margin-bottom: var(--space-sm);
+    }
+}
+
+.problem-screenshot{
+    margin-top: var(--space-md);
+    width: 100%;
+}
