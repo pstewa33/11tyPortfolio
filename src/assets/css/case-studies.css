@@ -30,4 +30,19 @@
 .problem-screenshot {
   margin-top: var(--space-md);
   width: 100%;
+}
+
+.constraints-section ul {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.solution-section {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--surface-muted, #f5f7fa);
+  border-left: 4px solid var(--accent, #2563eb);
+}
+.solution-section h3 {
+  margin-bottom: var(--space-sm);
 }/*# sourceMappingURL=case-studies.css.map */
