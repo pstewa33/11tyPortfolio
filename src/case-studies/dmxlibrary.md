@@ -1,8 +1,7 @@
 ---
-permalink: /case-studies/dmxlibrary/
+eleventyExcludeFromCollections: true
+permalink: false
 layout: layouts/case-study.njk
-collection: caseStudies
-order: 1
 title: Design System Engineering
 subtitle: Scalable, Accessible Pattern Library
 role: UX Engineer / Design Systems Engineer
@@ -11,6 +10,8 @@ cardTags:
   - Accessibility
   - Front-End Architecture
 
+showSidebar: false
+showOutro: false
 hero:
   variant: icons
   icons:
@@ -20,9 +21,9 @@ hero:
       label: Accessibility
     - name: fa-layer-group
       label: Components
-  image: 
+  image:
     src: https://placehold.co/600x400
-    alt: hero image
+    alt: Hero image
 
 context: Large, multi-team digital platform
 focus: Design systems, component architecture, accessibility, system adoption
@@ -37,19 +38,24 @@ tools:
   - Netlify
 ---
 
-## Summary
+<div class="tldr full-bleed">
+  <div class="tldr-inner">
 
 ### TL;DR
-Led the technical implementation of a reusable, accessible design system, partnering with design to translate standards into production-ready components and templates that scaled across teams.
+Led the technical implementation and architecture of a reusable, accessible design system, translating USWDS design standards into production-ready components, page templates, and content models. Established governance and workflows to ensure consistency and scalability across teams, and enabled adoption by non-technical designers and developers.
 
----
+  </div>
+</div>
 
 ## The Challenge
 In a fast-moving, multi-team environment, product teams were repeatedly solving the same front-end and accessibility problems from scratch. While a shared visual design standard existed, teams relied heavily on static mockups, which failed to capture real interaction behavior, responsiveness, and accessibility constraints.
 
-I partnered closely with a UX designer to define and build a shared pattern library, translating design intent into production-ready patterns. Clear ownership boundaries were established early to ensure the system could scale without becoming a bottleneck.
+I partnered closely with a UX Lead to define and build a shared pattern library, translating design intent into production-ready patterns. Clear ownership boundaries were established early to ensure the system could scale without becoming a bottleneck.
 
 My role focused on system architecture and implementation: converting design standards into reusable, code-based components and establishing workflows that enabled consistent adoption across teams without slowing delivery.
+
+<div class="grid grid-2">
+<div class="the-problem">
 
 ## The Problem
 Without a shared front-end system:
@@ -58,37 +64,108 @@ Without a shared front-end system:
 - Static design artifacts masked real implementation constraints
 - Teams duplicated effort and introduced drift over time
 
-## The Need
-The organization needed a **reliable, production-adjacent foundation** that teams could reuse confidently while maintaining flexibility for different product needs.
+</div>
+<div class="problem-screenshot">
+
+![problem](https://placehold.co/600x400)
+
+</div>
+</div>
+
+<div class="constraints-section">
 
 ## Constraints and Requirements
-The system needed to:
-- Enforce accessibility and compliance by default (WCAG-aligned)
-- Scale across multiple teams working in parallel
-- Integrate with existing design and development workflows
-- Enable team autonomy without creating a centralized bottleneck
-- Support extension without fragmenting the core system
+**The system needed to:**
+<ul class="fa-ul">
+  <li>
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    Enforce accessibility and compliance by default (WCAG-aligned)
+  </li>
+  <li>
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    Scale across multiple teams working in parallel
+  </li>
+  <li>
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    Integrate with existing design and development workflows
+  </li>
+  <li>
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    Enable team autonomy without creating a centralized bottleneck
+  </li>
+  <li>
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    Support extension without fragmenting the core system
+  </li>
+</ul>
 
 These constraints required a system that was **opinionated but extensible**: enforcing strong defaults for accessibility and consistency, while providing clear extension points that allowed teams to adapt patterns without fragmenting the core system.
 
+</div>
+
+<div class="solution-section">
+
 ## Solution: Code-Based Pattern Library
-- Base Components: A curated set of base components with defined extension points
+
+<div class="solution-boxes">
+  <div class="solution-box">
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    <h3>Base Components</h3>
+    <p>A curated set of base components with defined extension points</p>
+  </div>
+  <div class="solution-box">
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    <h3>Custom Components</h3>
+    <p>A curated set of base components with defined extension points</p>
+  </div>
+  <div class="solution-box">
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    <h3>Base Components</h3>
+    <p>A curated set of base components with defined extension points</p>
+  </div>
+  <div class="solution-box">
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    <h3>Base Components</h3>
+    <p>A curated set of base components with defined extension points</p>
+  </div>
+  <div class="solution-box">
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    <h3>Base Components</h3>
+    <p>A curated set of base components with defined extension points</p>
+  </div>
+  <div class="solution-box">
+    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
+    <h3>Base Components</h3>
+    <p>A curated set of base components with defined extension points</p>
+  </div>
+</div>
+
 - Custom Components: Reusable custom components addressing common product needs
 - Page Templates: Standardized page templates for frequent use cases
 - Git Workflow: Git-based contribution and review workflow for quality control
+- Content Model: Structured to integrate with CMS for future scalability.
+- Adoption Enablement: Workshops and documentation empowered teams to use the system correctly
 
 **The library was implemented as a static site using Eleventy and hosted on Netlify, making it easy for teams to access, review, and adopt.**
 
----
+</div>
 
-## What I Built
+## My Role
 
 I was responsible for the technical architecture and implementation of the system, including:
 
-- Designing and implementing core UI components as reusable, accessible HTML/CSS/JS patterns
-- Defining component APIs (props, variants, states) to balance consistency and extensibility
-- Encoding accessibility requirements directly into components (ARIA, keyboard behavior, focus management)
-- Creating page templates that demonstrated correct component composition
+- Implemented core USWDS components and custom components commonly used by multiple teams.
+
+- Built page templates using markdown and a static site generator to ensure consistency and ease of adoption.
+
+- Created component-level documentation to guide developers and designers in proper usage.
+
+- Developed the content model to support future CMS integration.
+
+- Collaborated on governance workflows, defining contribution boundaries to prevent uncontrolled variation in the system.
+
+- Ran coding workshops and presentations to onboard teams and demonstrate designing in code.
+
 
 ### Example: Accessible Component Defaults
 
@@ -114,15 +191,19 @@ This reduced the likelihood of teams shipping inaccessible UI, even under time p
 Constraining some design freedom reduced inconsistency and compliance drift across products. Flexibility was preserved through documented extension points rather than ad-hoc customization.
 
 ### Shifting teams from static mockups to code
-Adoption required more than documentation. I ran walkthroughs, demos, and hands-on sessions to help designers and developers understand how to use and extend the system effectively.
+Initial hands-on sessions were limited in impact due to workload and learning curve; future iterations would include self-paced learning tools.
 
 ### Central ownership without slowing delivery
 Versioning and opt-in updates allowed teams to adopt improvements on their own timelines without blocking active work.
 
+### Designed for technical designers
+The library was most immediately useful for designers with coding experience, making adoption by purely visual designers slower. In future iterations, I would expand onboarding resources to better support non-coding designers, such as demo videos and AI-assisted guidance.
+
+
 ---
 
 ## Outcomes
-While formal metrics were not tracked, adoption and reuse across teams indicated clear operational benefits:
+Adoption and reuse across teams indicated clear operational benefits:
 - Used as the starting point for multiple product builds
 - Reduced duplicated front-end work across teams
 - Improved consistency in component behavior and layout
@@ -139,6 +220,6 @@ While formal metrics were not tracked, adoption and reuse across teams indicated
 
 ## If I Did This Again
 
-- I would introduce automated accessibility checks earlier in the workflow
+- I would include onboarding materials tailored towards non-technical designers
 - I would invest sooner in clearer upgrade and versioning communication
 - I would provide more starter templates to accelerate first-time adoption
