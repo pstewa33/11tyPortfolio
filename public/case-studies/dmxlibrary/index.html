@@ -8,6 +8,8 @@
 
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/patterns/navigation.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="/assets/css/case-studies.css">
   <link rel="stylesheet" href="/assets/css/patterns/block.css">
@@ -67,97 +69,59 @@
   
 
 
-
-<div class="grid-container">
-<section class="hero hero--icons">
- 
-
+<section class="hero hero--icons">  
   
-  
-    <div class="hero-media">
-      <img
-        src="https://placehold.co/600x400"
-        alt="Hero image"
-        loading="eager"
-      >
-    </div>
-  
-  
-  <div class="hero-inner">
-
-  
-    <div class="hero-icons">
-  
-    <span class="hero-icon" aria-label="Front End">
-      <i class="fa-solid fa-code" aria-hidden="true"></i>
-    </span>
-  
-    <span class="hero-icon" aria-label="Accessibility">
-      <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
-    </span>
-  
-    <span class="hero-icon" aria-label="Components">
-      <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-    </span>
-  
-</div>
-
-  
-
-    
-
-    <h1>Design System Engineering</h1>
-
-    
-      <p class="hero-subtitle">Scalable, Accessible Pattern Library</p>
-    
-
-    
-      <div class="hero-boxes">
-  
-    <div class="hero-box hero-role">
-      <h3>Role</h3>
-      <p>UX Engineer / Design Systems Engineer</p>
-    </div>
-  
-  
-    <div class="hero-box hero-context">
-      <h3>Context</h3>
-      <p>Large, multi-team digital platform</p>
-    </div>
-  
-  
-    <div class="hero-box hero-focus">
-      <h3>Focus</h3>
-      <p>Design systems, component architecture, accessibility, system adoption</p>
-    </div>
-  
-</div>
-
-    
-
-    
-
-  </div>
 </section>
 
+<div class="grid grid-case-study">
   
+  
+    <aside class="sidebar">
+      
+      <nav class="toc">
+        <h2>On this page</h2>
+        <ul>
+          
+            <li><a href="#summary">Summary</a></li>
+          
+            <li><a href="#the-challenge">The Challenge</a></li>
+          
+            <li><a href="#the-problem">The Problem</a></li>
+          
+            <li><a href="#the-need">The Need</a></li>
+          
+            <li><a href="#constraints-and-requirements">Constraints and Requirements</a></li>
+          
+            <li><a href="#solution-code-based-pattern-library">Solution: Code-Based Pattern Library</a></li>
+          
+            <li><a href="#what-i-built">What I Built</a></li>
+          
+            <li><a href="#system-architecture-and-ownership">System Architecture and Ownership</a></li>
+          
+            <li><a href="#tradeoffs-and-challenges">Tradeoffs and Challenges</a></li>
+          
+            <li><a href="#outcomes">Outcomes</a></li>
+          
+            <li><a href="#key-takeaways">Key Takeaways</a></li>
+          
+            <li><a href="#if-i-did-this-again">If I Did This Again</a></li>
+          
+        </ul>
+      </nav>
+      
+    </aside>
   
 
   
   <article class="main-content">
-    <div class="tldr full-bleed">
-  <div class="tldr-inner">
+    <h2 id="summary" tabindex="-1">Summary</h2>
 <h3 id="tl-dr" tabindex="-1">TL;DR</h3>
-<p>Led the technical implementation and architecture of a reusable, accessible design system, translating USWDS design standards into production-ready components, page templates, and content models. Established governance and workflows to ensure consistency and scalability across teams, and enabled adoption by non-technical designers and developers.</p>
-  </div>
-</div>
+<p>Led the technical implementation of a reusable, accessible design system, partnering with design to translate standards into production-ready components and templates that scaled across teams.</p>
+<hr>
 <h2 id="the-challenge" tabindex="-1">The Challenge</h2>
 <p>In a fast-moving, multi-team environment, product teams were repeatedly solving the same front-end and accessibility problems from scratch. While a shared visual design standard existed, teams relied heavily on static mockups, which failed to capture real interaction behavior, responsiveness, and accessibility constraints.</p>
-<p>I partnered closely with a UX Lead to define and build a shared pattern library, translating design intent into production-ready patterns. Clear ownership boundaries were established early to ensure the system could scale without becoming a bottleneck.</p>
+<p>I partnered closely with a UX designer to define and build a shared pattern library, translating design intent into production-ready patterns. Clear ownership boundaries were established early to ensure the system could scale without becoming a bottleneck.</p>
 <p>My role focused on system architecture and implementation: converting design standards into reusable, code-based components and establishing workflows that enabled consistent adoption across teams without slowing delivery.</p>
-<div class="grid grid-2">
-<div class="the-problem">
 <h2 id="the-problem" tabindex="-1">The Problem</h2>
 <p>Without a shared front-end system:</p>
 <ul>
@@ -166,102 +130,34 @@
 <li>Static design artifacts masked real implementation constraints</li>
 <li>Teams duplicated effort and introduced drift over time</li>
 </ul>
-</div>
-<div class="problem-screenshot">
-<p><img src="https://placehold.co/600x400" alt="problem"></p>
-</div>
-</div>
-<div class="constraints-section">
+<h2 id="the-need" tabindex="-1">The Need</h2>
+<p>The organization needed a <strong>reliable, production-adjacent foundation</strong> that teams could reuse confidently while maintaining flexibility for different product needs.</p>
 <h2 id="constraints-and-requirements" tabindex="-1">Constraints and Requirements</h2>
-<p><strong>The system needed to:</strong></p>
-<ul class="fa-ul">
-  <li>
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    Enforce accessibility and compliance by default (WCAG-aligned)
-  </li>
-  <li>
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    Scale across multiple teams working in parallel
-  </li>
-  <li>
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    Integrate with existing design and development workflows
-  </li>
-  <li>
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    Enable team autonomy without creating a centralized bottleneck
-  </li>
-  <li>
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    Support extension without fragmenting the core system
-  </li>
+<p>The system needed to:</p>
+<ul>
+<li>Enforce accessibility and compliance by default (WCAG-aligned)</li>
+<li>Scale across multiple teams working in parallel</li>
+<li>Integrate with existing design and development workflows</li>
+<li>Enable team autonomy without creating a centralized bottleneck</li>
+<li>Support extension without fragmenting the core system</li>
 </ul>
 <p>These constraints required a system that was <strong>opinionated but extensible</strong>: enforcing strong defaults for accessibility and consistency, while providing clear extension points that allowed teams to adapt patterns without fragmenting the core system.</p>
-</div>
-<div class="solution-section">
 <h2 id="solution-code-based-pattern-library" tabindex="-1">Solution: Code-Based Pattern Library</h2>
-<div class="solution-boxes">
-  <div class="solution-box">
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    <h3>Base Components</h3>
-    <p>A curated set of base components with defined extension points</p>
-  </div>
-  <div class="solution-box">
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    <h3>Custom Components</h3>
-    <p>A curated set of base components with defined extension points</p>
-  </div>
-  <div class="solution-box">
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    <h3>Base Components</h3>
-    <p>A curated set of base components with defined extension points</p>
-  </div>
-  <div class="solution-box">
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    <h3>Base Components</h3>
-    <p>A curated set of base components with defined extension points</p>
-  </div>
-  <div class="solution-box">
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    <h3>Base Components</h3>
-    <p>A curated set of base components with defined extension points</p>
-  </div>
-  <div class="solution-box">
-    <span class="fa-li"><i class="fa-solid fa-check-square"></i></span>
-    <h3>Base Components</h3>
-    <p>A curated set of base components with defined extension points</p>
-  </div>
-</div>
 <ul>
+<li>Base Components: A curated set of base components with defined extension points</li>
 <li>Custom Components: Reusable custom components addressing common product needs</li>
 <li>Page Templates: Standardized page templates for frequent use cases</li>
 <li>Git Workflow: Git-based contribution and review workflow for quality control</li>
-<li>Content Model: Structured to integrate with CMS for future scalability.</li>
-<li>Adoption Enablement: Workshops and documentation empowered teams to use the system correctly</li>
 </ul>
 <p><strong>The library was implemented as a static site using Eleventy and hosted on Netlify, making it easy for teams to access, review, and adopt.</strong></p>
-</div>
-<h2 id="my-role" tabindex="-1">My Role</h2>
+<hr>
+<h2 id="what-i-built" tabindex="-1">What I Built</h2>
 <p>I was responsible for the technical architecture and implementation of the system, including:</p>
 <ul>
-<li>
-<p>Implemented core USWDS components and custom components commonly used by multiple teams.</p>
-</li>
-<li>
-<p>Built page templates using markdown and a static site generator to ensure consistency and ease of adoption.</p>
-</li>
-<li>
-<p>Created component-level documentation to guide developers and designers in proper usage.</p>
-</li>
-<li>
-<p>Developed the content model to support future CMS integration.</p>
-</li>
-<li>
-<p>Collaborated on governance workflows, defining contribution boundaries to prevent uncontrolled variation in the system.</p>
-</li>
-<li>
-<p>Ran coding workshops and presentations to onboard teams and demonstrate designing in code.</p>
-</li>
+<li>Designing and implementing core UI components as reusable, accessible HTML/CSS/JS patterns</li>
+<li>Defining component APIs (props, variants, states) to balance consistency and extensibility</li>
+<li>Encoding accessibility requirements directly into components (ARIA, keyboard behavior, focus management)</li>
+<li>Creating page templates that demonstrated correct component composition</li>
 </ul>
 <h3 id="example-accessible-component-defaults" tabindex="-1">Example: Accessible Component Defaults</h3>
 <p>Rather than documenting accessibility as guidance, components were built with accessible defaults:</p>
@@ -282,14 +178,12 @@
 <h3 id="opinionated-standards-vs-flexibility" tabindex="-1">Opinionated standards vs. flexibility</h3>
 <p>Constraining some design freedom reduced inconsistency and compliance drift across products. Flexibility was preserved through documented extension points rather than ad-hoc customization.</p>
 <h3 id="shifting-teams-from-static-mockups-to-code" tabindex="-1">Shifting teams from static mockups to code</h3>
-<p>Initial hands-on sessions were limited in impact due to workload and learning curve; future iterations would include self-paced learning tools.</p>
+<p>Adoption required more than documentation. I ran walkthroughs, demos, and hands-on sessions to help designers and developers understand how to use and extend the system effectively.</p>
 <h3 id="central-ownership-without-slowing-delivery" tabindex="-1">Central ownership without slowing delivery</h3>
 <p>Versioning and opt-in updates allowed teams to adopt improvements on their own timelines without blocking active work.</p>
-<h3 id="designed-for-technical-designers" tabindex="-1">Designed for technical designers</h3>
-<p>The library was most immediately useful for designers with coding experience, making adoption by purely visual designers slower. In future iterations, I would expand onboarding resources to better support non-coding designers, such as demo videos and AI-assisted guidance.</p>
 <hr>
 <h2 id="outcomes" tabindex="-1">Outcomes</h2>
-<p>Adoption and reuse across teams indicated clear operational benefits:</p>
+<p>While formal metrics were not tracked, adoption and reuse across teams indicated clear operational benefits:</p>
 <ul>
 <li>Used as the starting point for multiple product builds</li>
 <li>Reduced duplicated front-end work across teams</li>
@@ -307,7 +201,7 @@
 </ul>
 <h2 id="if-i-did-this-again" tabindex="-1">If I Did This Again</h2>
 <ul>
-<li>I would include onboarding materials tailored towards non-technical designers</li>
+<li>I would introduce automated accessibility checks earlier in the workflow</li>
 <li>I would invest sooner in clearer upgrade and versioning communication</li>
 <li>I would provide more starter templates to accelerate first-time adoption</li>
 </ul>
@@ -315,6 +209,12 @@
 
     
     <footer class="outro">
+      
+        <p>Want to discuss this project or collaborate?</p>
+        <div class="outro-buttons">
+          <a href="mailto:" class="btn-secondary">Get in touch</a>
+          <a href="/contact" class="btn-outline">Visit my contact page</a>
+        </div>
       
     </footer>
   </article>
