@@ -1,9 +1,8 @@
 ---
 layout: layouts/case-study.njk
-permalink: /case-studies/smokefreevet/
+permalink: false
 projectImage: /assets/images/{{ slug }}/hero.png
-collection: caseStudies
-order: 3
+eleventyExcludeFromCollections: true
 title: Modernizing a Legacy Healthcare System for Clarity and Scale
 subtitle: From Static PDFs to Decision-Guided Care
 role: UX Architect

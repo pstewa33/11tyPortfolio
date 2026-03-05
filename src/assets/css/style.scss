@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary, #333);
+  background-color: var(--surface-primary, #fff);
+  font-size: 16px;
+}
+
 .grid-container{
-    margin-left: var(--space-lg);
-    margin-right: var(--space-lg);
+  margin-left: var(--space-lg);
+  margin-right: var(--space-lg);
 }
 
 //Box Shadow Token
@@ -56,7 +64,9 @@ section{
 }
 
 h1, h2{
-    padding-block: var(--space-sm);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  scroll-margin-top: 6rem;
 }
 
 .flex-center{
