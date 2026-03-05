@@ -1,8 +1,7 @@
 ---
-permalink: /case-studies/dmxlibrary/
+eleventyExcludeFromCollections: true
+permalink: false
 layout: layouts/case-study.njk
-collection: caseStudies
-order: 1
 title: Design System Engineering
 subtitle: Scalable, Accessible Pattern Library
 role: UX Engineer / Design Systems Engineer

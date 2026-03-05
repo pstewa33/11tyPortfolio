@@ -31,9 +31,8 @@
 {% block content %}
 
 {# Hero Section (variant can be overridden in front matter) #}
-
-<div class="grid-container">
 {% include "patterns/hero/hero.njk" %}
+<div class="grid grid-case-study">
   {# Sidebar / TOC (optional) #}
   {% if showSidebar | default(true) %}
     <aside class="sidebar">
@@ -57,8 +56,11 @@
     {# Footer CTA #}
     <footer class="outro">
       {% if showOutro | default(true) %}
-        <button class="btn-primary center">Thank you for reading!</button>
-        <p>Want to discuss this project or collaborate? <a href="/contact/">Get in touch!</a></p>
+        <p>Want to discuss this project or collaborate?</p>
+        <div class="outro-buttons">
+          <a href="mailto:{{ site.email }}" class="btn-secondary">Get in touch</a>
+          <a href="/contact" class="btn-outline">Visit my contact page</a>
+        </div>
       {% endif %}
     </footer>
   </article>

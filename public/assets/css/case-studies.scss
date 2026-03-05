@@ -25,39 +25,201 @@
   background: var(--surface-muted, #f5f7fa);
 }
 
-// The Problem
-
-.the-problem {
-    margin-top: var(--space-md);
+.sidebar{
+    position: sticky;
+    top: var(--space-lg);
     padding: var(--space-md);
-    background-color: var(--surface-muted, #f5f7fa);
-    border-left: 4px solid var(--accent, #2563eb);
+    background: var(--surface-muted, #f5f7fa);
+    border-radius: 8px;
+    width: 16rem;
+}
 
-    h3{
-        margin-bottom: var(--space-sm);
+.grid-case-study{
+    grid-template-columns: 1fr 3fr;
+    gap: var(--space-md);
+    align-items: start;
+}
+
+.challenges {
+  padding: var(--space-lg) 0;
+}
+
+.challenges-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.challenge-panel {
+  background: var(--surface-muted, #f5f7fa);
+  padding: var(--space-lg);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.challenge-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.icon-badge {
+  width: 56px;
+  height: 56px;
+  background: #dbeafe; /* light blue */
+  color: #2563eb;       /* darker blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.25rem;
+}
+
+.challenge-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.challenge-panel li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.challenge-panel li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2563eb; /* blue bullet */
+}
+
+.my-role{
+    background: #f5f7fa;
+    padding: var(--space-lg);
+    margin-top: var(--space-md);
+    h2{
+        text-align: center;
     }
 }
 
-.problem-screenshot{
-    margin-top: var(--space-md);
-    width: 100%;
+.role-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr; /* mobile default */
 }
 
-.constraints-section{
+@media (min-width: 768px) {
+  .role-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    ul{
-        margin-top: var(--space-sm);
-        margin-bottom: var(--space-sm);
+.role-item:last-child {
+  grid-column: 1 / -1;
+}
+
+.role-item {
+  padding: var(--space-md);
+  background: white;
+  border-radius: 15px;
+  border-left: 4px solid blue;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.role-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.impact-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr; /* mobile */
+}
+
+@media (min-width: 640px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .impact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.impact-item {
+  padding: var(--space-md);
+  background: #f5f7fa;
+  border-radius: 8px;
+  border: gray 1px solid;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);;
+
+  i{
+    margin-right: var(--space-sm);
+  }
+}
+
+.tech-stack{
+    background: #f5f7fa;
+    padding: var(--space-lg);
+    margin-top: var(--space-md);
+    h2{
+        text-align: center;
     }
 }
 
-.solution-section{
+.tech-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
     margin-top: var(--space-md);
-    padding: var(--space-md);
-    background-color: var(--surface-muted, #f5f7fa);
-    border-left: 4px solid var(--accent, #2563eb);
+    list-style: none;
+    li{
+        background: white;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: 9999px;
+        font-size: 0.875rem;
+    }
+}
 
-    h3{
-        margin-bottom: var(--space-sm);
+.outro{
+    background-color: #2563eb;
+    color: white;
+    padding: var(--space-lg);
+    text-align: center;
+    .btn-secondary{
+        background: white;
+        color: #2563eb;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-top: var(--space-md);
+        display: inline-block;
+        text-decoration: none;
+    }
+    .btn-outline{
+        background: transparent;
+        color: white;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-top: var(--space-md);
+        display: inline-block;
+        text-decoration: none;
+        border: 2px solid white;
+    }
+    .btn-outline:hover{
+        background: white;
+        color: #2563eb;
+        cursor: pointer;
     }
 }

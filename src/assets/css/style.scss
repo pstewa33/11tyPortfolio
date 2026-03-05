@@ -64,7 +64,9 @@ section{
 }
 
 h1, h2{
-    padding-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  scroll-margin-top: 6rem;
 }
 
 .flex-center{
