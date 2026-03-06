@@ -16,7 +16,7 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
 ## Overview
 
 Built and maintained an internal component library and page templates based on the United States Web Design System (USWDS). The library was used to standardize UI across multiple public sector website redesign projects, improve accessibility compliance, and enable faster, scalable page creation.
-
+<section class="dmxlibrary">
 <section class="my-role">
   <h2 id="my-role">My Role</h2>
   <div class="role-grid">
@@ -141,4 +141,5 @@ Built and maintained an internal component library and page templates based on t
       </ul>
     </article>
   </div>
+</section>
 </section>
