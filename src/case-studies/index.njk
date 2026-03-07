@@ -7,10 +7,18 @@ navOrder: 4
 ---
 <h1>Case Studies</h1>
 
-<ul>
-  {% for case in collections.caseStudies %}
-    <li>
-      <a href="{{ case.url }}">{{ case.data.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<section class="home-work">
+  <div class="container">
+    <h2>Case Studies</h2>
+
+    <ul class="case-card-grid">
+      {% for case in collections.caseStudies %}
+        <li>
+          <a href="{{ case.url }}" class="case-card-link">
+            {% include "patterns/card/case-study-card.njk" %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
