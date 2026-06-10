@@ -46,6 +46,33 @@ Built and maintained an internal component library and page templates based on t
       Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
     </p>
   </section>
+  <section class="context-constraints">
+    <h2 id="Context-and-Constraints">Context and Constraints</h2>
+    <p>This system supported multiple government websites, each with different branding and strict compliance requirements.</p>
+    <p>Key constraints:</p>
+    <div class="constraints">
+      <div class="constraint">
+        <i class="fa-solid fa-universal-access"></i>
+        <span>Accessibility was required</span>
+        <p>All components needed to meet Section 508 and WCAG standards</p>
+      </div>
+      <div class="constraint">
+        <i class="fa-brands fa-css3-alt"></i>
+        <span>Brand flexibility</span>
+        <p>Each agency had its own typography, colors, and visual identity</p>
+      </div>
+      <div class="constraint">
+        <i class="fa-solid fa-arrows-down-to-people"></i>
+        <span>Multiple audiences</span>
+        <p>Designers, developers, and content strategists all needed to use the system</p>
+      </div>
+      <div class="constraint">
+        <i class="fa-solid fa-code"></i>
+        <span>Technical limitations</span>
+        <p>The system was built with static HTML, CSS, and JavaScript, which limited built-in interactivity</p>
+      </div>
+    </div>
+  </section>
   <section class="my-role">
     <h2 id="my-role">My Role</h2>
     <p>My main focus was turning design guidelines into reusable, production-ready components that teams could actually use. </p>
