@@ -16,32 +16,58 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
 ## Overview
 
 Built and maintained an internal component library and page templates based on the United States Web Design System (USWDS). The library was used to standardize UI across multiple public sector website redesign projects, improve accessibility compliance, and enable faster, scalable page creation.
+
 <section class="dmxlibrary">
-<section class="my-role">
-  <h2 id="my-role">My Role</h2>
-  <div class="role-grid">
-    <article class="role-item">
-      <h3>Design System Implementation</h3>
-      <p>Implemented all USWDS components using HTML, CSS, and Markdown to create a consistent internal system.</p>
-    </article>
-    <article class="role-item">
-      <h3>Custom Component Development</h3>
-      <p>Built reusable web components to support scalable UI patterns across projects.</p>
-    </article>
-    <article class="role-item">
-      <h3>Template Architecture</h3>
-      <p>Created flexible, template-based layouts for common page types to reduce duplication.</p>
-    </article>
-    <article class="role-item">
-      <h3>Version Control & Deployment</h3>
-      <p>Managed GitHub workflows and automated Netlify deployments.</p>
-    </article>
-    <article class="role-item">
-      <h3>Build System Modernization</h3>
-      <p>Migrated from Jekyll to Eleventy to improve build speed and flexibility.</p>
-    </article>
-  </div>
-</section>
+  <section class="tech-stack">
+    <h2 id="tech-stack">Tech Stack</h2>
+    <ul class="tech-tags">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Markdown</li>
+        <li>Web Components</li>
+        <li>Jekyll</li>
+        <li>Eleventy</li>
+        <li>Netlify</li>
+        <li>GitHub</li>
+    </ul>
+  </section>
+  <section class="problem">
+    <h2 id="problem">Problem</h2>
+    <p>
+      Across multiple government projects, teams were rebuilding the same UI components from scratch. This slowed development, created inconsistent user experiences, and led to accessibility issues that were often caught late.
+    </p>
+  </section>
+  <section class="solution">
+    <h2 id="solution">Solution</h2>
+    <p>
+      To address this, we built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
+    </p>
+    <p>
+      Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
+    </p>
+  </section>
+  <section class="my-role">
+    <h2 id="my-role">My Role</h2>
+    <p>My main focus was turning design guidelines into reusable, production-ready components that teams could actually use. </p>
+    <p>I worked closely between design and development to determine how the system would be implemented and how it would evolve over time.</p>
+    <div class="role-boxes">
+      <div class="role-box">
+        <span>Owned Outright</span>
+        <ul>
+          <li>Building the component library and page templates</li>
+          <li>Ensuring accessibility was built into every component</li>
+        <ul>
+      </div>
+      <div class="role-box">
+        <span>Shared Ownership</span>
+        <ul>
+          <li>Defining how components should be structured and reused</li>
+          <li>Creating a system that could adapt to different brand styles</li>
+          <li>Establishing workflows for contributing and maintaining the library</li>
+        <ul>
+      </div>
+    </div>
+  </section>
 
 <section class="impact">
   <h2 id="impact">Impact</h2>
@@ -68,20 +94,6 @@ Built and maintained an internal component library and page templates based on t
       <p>Created a system that can grow alongside new products and services.</p>
     </div>
   </div>
-</section>
-
-<section class="tech-stack">
-    <h2 id="tech-stack">Tech Stack</h2>
-    <ul class="tech-tags">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Markdown</li>
-        <li>Web Components</li>
-        <li>Jekyll</li>
-        <li>Eleventy</li>
-        <li>Netlify</li>
-        <li>GitHub</li>
-    </ul>
 </section>
 
 <section class="challenges">
