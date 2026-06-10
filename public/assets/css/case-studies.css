@@ -83,13 +83,28 @@
   left: 0;
   color: #2563eb; /* blue bullet */
 }
-.dmxlibrary .my-role {
-  background: #f5f7fa;
-  padding: var(--space-lg);
+.dmxlibrary .role-boxes {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: auto auto;
   margin-top: var(--space-md);
 }
-.dmxlibrary .my-role h2 {
-  text-align: center;
+.dmxlibrary .role-box {
+  background-color: #f5f7fa;
+  padding: var(--space-sm);
+  border: gray 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.dmxlibrary .role-box span {
+  font-weight: 600;
+}
+.dmxlibrary .role-box ul {
+  padding-left: var(--space-sm);
+  padding-top: var(--space-sm);
+}
+.dmxlibrary .role-box li {
+  padding-bottom: var(--space-sm);
 }
 .dmxlibrary .role-grid {
   display: grid;

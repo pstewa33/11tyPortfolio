@@ -102,11 +102,39 @@
     }
 
     .my-role{
-        background: #f5f7fa;
-        padding: var(--space-lg);
-        margin-top: var(--space-md);
+      //  background: #f5f7fa;
+      //  padding: var(--space-lg);
+      //  margin-top: var(--space-md);
         h2{
-            text-align: center;
+          //  text-align: center;
+        }
+    }
+
+    .role-boxes{
+        display: grid;
+        gap: var(--space-md);
+        grid-template-columns: auto auto;
+        margin-top: var(--space-md);
+    }
+
+    .role-box{
+        background-color: #f5f7fa;
+        padding: var(--space-sm);
+        border: gray 1px solid;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        span{
+            font-weight: 600;
+        }
+
+        ul{
+            padding-left: var(--space-sm);
+            padding-top: var(--space-sm);
+        }
+        li{
+          //  list-style: none;
+            padding-bottom: var(--space-sm);
         }
     }
 
