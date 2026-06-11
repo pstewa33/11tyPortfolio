@@ -11,13 +11,31 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
 
 # {{title}}
 
-*{{subtitle}}*
-
-## Overview
-
-Built and maintained an internal component library and page templates based on the United States Web Design System (USWDS). The library was used to standardize UI across multiple public sector website redesign projects, improve accessibility compliance, and enable faster, scalable page creation.
-
 <section class="dmxlibrary">
+  <section class="overview">
+    <h2 id="overview">Overview</h2>
+    <div class="overview-card">
+      <div class="overview-item">
+        <span>Project</span>
+        <p>DMX Pattern Library</p>
+      </div>
+      <div class="overview-item">
+        <span>Timeline</span>
+        <p>Q3 2021 - Q2 2022</p>
+      </div>
+      <div class="overview-item">
+        <span>Team</span>
+        <p>UX Designer, UX Architect, Content Strategist, Developer</p>
+      </div>
+      <div class="overview-item">
+        <span>Role</span>
+        <p>UX Architect</p>
+      </div>
+    </div>
+    <p>
+      Built and maintained an internal component library and page templates based on the United States Web Design System (USWDS). The library was used to standardize UI across multiple public sector website redesign projects, improve accessibility compliance, and enable faster, scalable page creation.
+    </p>
+  </section>
   <section class="tech-stack">
     <h2 id="tech-stack">Tech Stack</h2>
     <ul class="tech-tags">
@@ -35,15 +53,6 @@ Built and maintained an internal component library and page templates based on t
     <h2 id="problem">Problem</h2>
     <p>
       Across multiple government projects, teams were rebuilding the same UI components from scratch. This slowed development, created inconsistent user experiences, and led to accessibility issues that were often caught late.
-    </p>
-  </section>
-  <section class="solution">
-    <h2 id="solution">Solution</h2>
-    <p>
-      To address this, we built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
-    </p>
-    <p>
-      Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
     </p>
   </section>
   <section class="context-constraints">
@@ -96,9 +105,65 @@ Built and maintained an internal component library and page templates based on t
     </div>
   </section>
 
+<section class="solution">
+  <h2 id="solution">Solution</h2>
+  <p>
+    Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a   reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
+  </p>
+  <br>
+  <p>
+    Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
+  </p>
+</section>
+
+<section class="engineering-challenges">
+  <h2 id="engineering-challenges">Engineering Challenges & Solutions</h2>
+  <div class="challenge-accordion">
+    <details>
+      <summary>Designing for Multiple Roles</summary>
+      <p><strong>Challenge:</strong> The system needed to work for designers, developers, and content strategists.</p>
+      <p><strong>Decision:</strong> We structured the system so each group could work in a way that matched their needs:</p>
+      <ul>
+        <li>Developers used component code directly</li>
+        <li>Designers worked from predefined patterns and templates</li>
+        <li>Content strategists managed content through Contentful</li>
+      </ul>
+      <p><strong>Tradeoff:</strong> This required more upfront structure and documentation.</p>
+      <p><strong>Outcome:</strong> Teams could work more independently, reducing handoff friction.</p>
+    </details>
+    <details>
+      <summary>Flexibility vs. Consistency</summary>
+      <p><strong>Challenge:</strong> Support different brand styles without fragmenting the system.</p>
+      <p><strong>Decision:</strong> Allow customization through design tokens instead of unrestricted styling.</p>
+      <p><strong>Tradeoff:</strong> Fully custom designs were limited.</p>
+      <p><strong>Outcome:</strong> Projects stayed visually consistent while still meeting most branding needs.</p>
+    </details>
+    <details>
+      <summary>Reuse vs. Customization</summary>
+      <p><strong>Challenge:</strong> Make the system reusable without blocking project-specific needs.</p>
+      <p><strong>Decision:</strong> Maintain a central core library and allow teams to create project-level versions.</p>
+      <p><strong>Tradeoff:</strong> Updates to the core system required coordination across projects.</p>
+      <p><strong>Outcome:</strong> Teams could customize their implementations without duplicating the entire system.</p>
+    </details>
+    <details>
+      <summary>Static vs. Dynamic Architecture</summary>
+      <p><strong>Challenge:</strong> Static site generation limited interactivity.</p>
+      <p><strong>Decision:</strong> Static templates were used for structure while Contentful provided dynamic content.</p>
+      <p><strong>Tradeoff:</strong> Complex interactions required additional engineering work.</p>
+      <p><strong>Outcome:</strong> The system remained fast and maintainable while supporting dynamic content where needed.</p>
+    </details>
+    <details>
+      <summary>Accessibility as a System Feature</summary>
+      <p><strong>Challenge:</strong> Accessibility requirements needed to be consistently met across multiple teams and agency websites.</p>
+      <p><strong>Decision:</strong> Accessibility was built directly into the component library through semantic HTML, keyboard navigation, focus management, and approved design tokens.</p>
+      <p><strong>Tradeoff:</strong> Restricting customization reduced flexibility but ensured accessibility standards were maintained.</p>
+      <p><strong>Outcome:</strong> Accessibility became a built-in feature rather than something teams had to implement independently.</p>
+    </details>
+  </div>
+</section>
+
 <section class="impact">
   <h2 id="impact">Impact</h2>
-
   <div class="impact-grid">
     <div class="impact-item">
       <h3><i class="fa-solid fa-arrow-trend-down" style="color: #2563eb;"></i>Reduced Duplication</h3>
