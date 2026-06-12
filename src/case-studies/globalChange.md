@@ -44,7 +44,7 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
         <li>CSS</li>
         <li>Markdown</li>
         <li>Contentful</li>
-        <li>Eleventy</li>
+        <li>Jekyll</li>
         <li>Netlify</li>
         <li>GitHub</li>
     </ul>
@@ -111,16 +111,16 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
       <div class="role-box">
         <span>Owned Outright</span>
         <ul>
-          <li>Building the component library and page templates</li>
-          <li>Ensuring accessibility was built into every component</li>
+          <li>Building a functional, multi-page prototype using HTML, CSS, and JavaScript </li>
+          <li>Applying and extending components from the internal design system</li>
+          <li>Creating new components when needed (while maintaining accessibility standards)</li>
         </ul>
       </div>
       <div class="role-box">
         <span>Shared Ownership</span>
         <ul>
-          <li>Defining how components should be structured and reused</li>
-          <li>Creating a system that could adapt to different brand styles</li>
-          <li>Establishing workflows for contributing and maintaining the library</li>
+          <li>Integrating dynamic content using Contentful</li>
+          <li>Connecting everything into a cohesive, navigable experience</li>
         <ul>
       </div>
     </div>
@@ -128,15 +128,13 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
 
 <section class="solution">
   <h2 id="solution">Solution</h2>
-  <p>
-    Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a   reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
-  </p>
-  <p>
-    The system included reusable UI components, page templates, design tokens, and implementation guidance. Components were designed to be accessible by default and flexible enough to support multiple agency brands without requiring custom implementations.
-  </p>
-  <p>
-    Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
-  </p>
+  <div class="solution-grid">
+    <div class="solution-card">Built a functional multi-page prototype</div>
+    <div class="solution-card">Used the internal design system</div>
+    <div class="solution-card">Integrated Contentful</div>
+    <div class="solution-card">Created custom components when needed</div>
+    <div class="solution-card">Generated content through Jekyll</div>
+  </div>
 </section>
 
 <section class="engineering-challenges">
