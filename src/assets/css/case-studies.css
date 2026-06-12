@@ -235,6 +235,10 @@
   border-radius: 9999px;
   font-size: 0.875rem;
 }
+.dmxlibrary .solution p + p,
+.dmxlibrary .key-takeaways p + p {
+  margin-top: 1.5rem;
+}
 
 .globalchange hr {
   border: none;

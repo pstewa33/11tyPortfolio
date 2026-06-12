@@ -292,6 +292,11 @@
             font-size: 0.875rem;
         }
     }
+
+    .solution p + p,
+    .key-takeaways p + p {
+        margin-top: 1.5rem;
+    }
 }
 
 .globalchange{

@@ -102,7 +102,7 @@
           
             <li><a href="#impact">Impact</a></li>
           
-            <li><a href="#key-challenges">Key Engineering Challenges &amp; Solutions</a></li>
+            <li><a href="#key-takeaways">Key Takeaways and Reflection</a></li>
           
         </ul>
       </nav>
@@ -194,7 +194,7 @@
         <ul>
           <li>Building the component library and page templates</li>
           <li>Ensuring accessibility was built into every component</li>
-        <ul>
+        </ul>
       </div>
       <div class="role-box">
         <span>Shared Ownership</span>
@@ -211,7 +211,9 @@
   <p>
     Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a   reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
   </p>
-  <br>
+  <p>
+    The system included reusable UI components, page templates, design tokens, and implementation guidance. Components were designed to be accessible by default and flexible enough to support multiple agency brands without requiring custom implementations.
+  </p>
   <p>
     Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
   </p>
@@ -265,83 +267,45 @@
   <h2 id="impact">Impact</h2>
   <div class="impact-grid">
     <div class="impact-item">
+      <h3>5+ Projects Adopted</h3>
+      <p>The library became a shared foundation across multiple government website redesign efforts.</p>
+    </div>
+    <div class="impact-item">
       <h3><i class="fa-solid fa-arrow-trend-down" style="color: #2563eb;"></i>Reduced Duplication</h3>
-      <p>Minimized repeated front-end effort across multiple teams.</p>
+      <p>Teams reused shared components instead of creating separate implementations for each project.</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-arrow-trend-up" style="color: green;"></i> Consistency</h3>
-      <p>Standardized component behavior and layout patterns.</p>
+      <h3><i class="fa-solid fa-arrow-trend-up" style="color: green;"></i> More efficient development</h3>
+      <p>Ready-to-use components and templates provided a starting point for common interface patterns.</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-shield" style="color: purple;"></i>Built-in Accessibility</h3>
-      <p>Embedded compliance directly into production components.</p>
+      <h3><i class="fa-solid fa-shield" style="color: purple;"></i>Improved design-development alignment</h3>
+      <p>Shared examples and implementation guidance helped teams work from the same source of truth.</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-rocket" style="color: green;"></i>Faster Onboarding</h3>
-      <p>Enabled teams to ship new pages quickly using reusable templates.</p>
+      <h3><i class="fa-solid fa-rocket" style="color: green;"></i>Accessibility by default</h3>
+      <p>Components incorporated accessibility requirements from the start, reducing the burden on individual teams.</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-scale-balanced" style="color: purple;"></i>Scalable Foundation</h3>
-      <p>Created a system that can grow alongside new products and services.</p>
+      <h3><i class="fa-solid fa-scale-balanced" style="color: purple;"></i>Stronger cross-team collaboration</h3>
+      <p>Shared patterns and conventions made it easier for teams to contribute to and maintain a common system.</p>
     </div>
   </div>
+  <p>
+    The pattern library became a shared foundation for multiple government website projects. By standardizing components, templates, and accessibility practices, teams were able to work from a common set of patterns rather than creating project-specific solutions for every implementation.
+  </p>
 </section>
-<section class="challenges">
-  <h2 id="key-challenges">Key Engineering Challenges & Solutions</h2>
-  <div class="challenges-stack">
-    <article class="challenge-panel">
-      <div class="challenge-header">
-        <div class="icon-badge">
-          <i class="fa-solid fa-cube"></i>
-        </div>
-        <h3>Component Architecture</h3>
-      </div>
-      <ul>
-        <li>Designed a modular, reusable component structure for consistency and scalability</li>
-        <li>Built components with configurable variants and accessible defaults</li>
-        <li>Documented usage patterns for developers to easily consume and extend</li>
-      </ul>
-    </article>
-    <article class="challenge-panel">
-      <div class="challenge-header">
-        <div class="icon-badge">
-          <i class="fa-solid fa-cube"></i>
-        </div>
-        <h3>Template System</h3>
-      </div>
-      <ul>
-        <li>Created reusable page layouts using static site generation</li>
-        <li>Enabled teams to quickly create new pages without duplicating code</li>
-        <li>Structured templates to support future CMS integration</li>
-      </ul>
-    </article>
-    <article class="challenge-panel">
-      <div class="challenge-header">
-        <div class="icon-badge">
-          <i class="fa-solid fa-cube"></i>
-        </div>
-        <h3>Accessibility</h3>
-      </div>
-      <ul>
-        <li>Used semantic HTML and ARIA attributes across components</li>
-        <li>Implemented keyboard interactions and focus management</li>
-        <li>Reduced accessibility risk across all public sector redesign projects</li>
-      </ul>
-    </article>
-    <article class="challenge-panel">
-      <div class="challenge-header">
-        <div class="icon-badge">
-          <i class="fa-solid fa-cube"></i>
-        </div>
-        <h3>Build & Deployment Optimization</h3>
-      </div>
-      <ul>
-        <li>Migrated from Jekyll to Eleventy for faster, more flexible builds</li>
-        <li>Automated deployment to Netlify</li>
-        <li>Managed contributions and updates through GitHub workflows</li>
-      </ul>
-    </article>
-  </div>
+<section class="key-takeaways">
+  <h2 id="key-takeaways">Key Takeaways and Reflection</h2>
+  <p>
+    This project highlighted the challenges of balancing flexibility, accessibility, and ease of adoption across a diverse set of users. While the system reduced duplication and improved consistency, it still required some familiarity with HTML and CSS to use effectively. In the future, I would explore additional tooling or abstraction layers to make the system more approachable for designers and content strategists.
+  </p>
+  <p>
+    Scalability also presented challenges. Teams occasionally created project-specific components independently to meet immediate needs. Although these solutions were intended to be incorporated back into the design system, that process was not always immediate, leading to temporary inconsistencies between projects. A more formal contribution workflow could help ensure enhancements are shared and adopted more consistently.
+  </p>
+  <p>
+    Looking back, a component-driven framework such as React could have provided stronger support for state management, composability, and complex interactive patterns. While the static architecture delivered excellent performance and maintainability, modern component frameworks offer advantages that would make certain interactions easier to scale and evolve over time.
+  </p>
 </section>
 </section>
 
