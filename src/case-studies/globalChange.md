@@ -141,90 +141,64 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
   <h2 id="engineering-challenges">Engineering Challenges & Solutions</h2>
   <div class="challenge-accordion">
     <details>
-      <summary>Designing for Multiple Roles</summary>
-      <p><strong>Challenge:</strong> The system needed to work for designers, developers, and content strategists.</p>
-      <p><strong>Decision:</strong> We structured the system so each group could work in a way that matched their needs:</p>
-      <ul>
-        <li>Developers used component code directly</li>
-        <li>Designers worked from predefined patterns and templates</li>
-        <li>Content strategists managed content through Contentful</li>
-      </ul>
-      <p><strong>Tradeoff:</strong> This required more upfront structure and documentation.</p>
-      <p><strong>Outcome:</strong> Teams could work more independently, reducing handoff friction.</p>
+      <summary>Content Modeling Before UI</summary>
+      <p><strong>Challenge:</strong> Content and templates weren't aligned.</p>
+      <p><strong>Decision:</strong> Defined reusable content models before building layouts.</p>
+      <p><strong>Outcome:</strong> Reduced rework and improved scalability.</p>
     </details>
     <details>
-      <summary>Flexibility vs. Consistency</summary>
-      <p><strong>Challenge:</strong> Support different brand styles without fragmenting the system.</p>
-      <p><strong>Decision:</strong> Allow customization through design tokens instead of unrestricted styling.</p>
-      <p><strong>Tradeoff:</strong> Fully custom designs were limited.</p>
-      <p><strong>Outcome:</strong> Projects stayed visually consistent while still meeting most branding needs.</p>
+      <summary>Extending the Design System</summary>
+      <p><strong>Challenge:</strong> Project requirements exceeded available components.</p>
+      <p><strong>Decision:</strong> Created new components while maintaining token-based styling and accessibility standards.</p>
+      <p><strong>Outcome:</strong> The system expanded without introducing inconsistency.</p>
     </details>
     <details>
-      <summary>Reuse vs. Customization</summary>
-      <p><strong>Challenge:</strong> Make the system reusable without blocking project-specific needs.</p>
-      <p><strong>Decision:</strong> Maintain a central core library and allow teams to create project-level versions.</p>
-      <p><strong>Tradeoff:</strong> Updates to the core system required coordination across projects.</p>
-      <p><strong>Outcome:</strong> Teams could customize their implementations without duplicating the entire system.</p>
+      <summary>CMS-Driven Prototyping</summary>
+      <p><strong>Challenge:</strong> A realistic prototype required realistic content workflows.</p>
+      <p><strong>Decision:</strong> Integrated Contentful and generated pages through Jekyll.</p>
+      <p><strong>Outcome:</strong> Stakeholders experienced realistic content behavior before development.</p>
     </details>
     <details>
-      <summary>Static vs. Dynamic Architecture</summary>
-      <p><strong>Challenge:</strong> Static site generation limited interactivity.</p>
-      <p><strong>Decision:</strong> Static templates were used for structure while Contentful provided dynamic content.</p>
-      <p><strong>Tradeoff:</strong> Complex interactions required additional engineering work.</p>
-      <p><strong>Outcome:</strong> The system remained fast and maintainable while supporting dynamic content where needed.</p>
-    </details>
-    <details>
-      <summary>Accessibility as a System Feature</summary>
-      <p><strong>Challenge:</strong> Accessibility requirements needed to be consistently met across multiple teams and agency websites.</p>
-      <p><strong>Decision:</strong> Accessibility was built directly into the component library through semantic HTML, keyboard navigation, focus management, and approved design tokens.</p>
-      <p><strong>Tradeoff:</strong> Restricting customization reduced flexibility but ensured accessibility standards were maintained.</p>
-      <p><strong>Outcome:</strong> Accessibility became a built-in feature rather than something teams had to implement independently.</p>
+      <summary>Accessibility in Custom Components</summary>
+      <p><strong>Challenge:</strong> Custom interactions risked introducing accessibility issues.</p>
+      <p><strong>Decision:</strong> Implemented keyboard support, ARIA attributes, and focus management.</p>
+      <p><strong>Outcome:</strong> Custom components remained consistent with accessibility requirements.</p>
     </details>
   </div>
 </section>
 <section class="impact">
   <h2 id="impact">Impact</h2>
+  <p>The interactive prototype changed how stakeholders evaluated the redesign.</p>
+  <p>Instead of reviewing static mockups, they could navigate real user flows, interact with content, and experience responsive layouts directly. This led to:</p>
   <div class="impact-grid">
     <div class="impact-item">
-      <h3>5+ Projects Adopted</h3>
-      <p>The library became a shared foundation across multiple government website redesign efforts.</p>
+      <p>Earlier feedback on navigation and content organization</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-arrow-trend-down" style="color: #2563eb;"></i>Reduced Duplication</h3>
-      <p>Teams reused shared components instead of creating separate implementations for each project.</p>
+      <p>Validation of layouts using real content rather than placeholder text</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-arrow-trend-up" style="color: green;"></i> More efficient development</h3>
-      <p>Ready-to-use components and templates provided a starting point for common interface patterns.</p>
+      <p>Identification of usability issues before development</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-shield" style="color: purple;"></i>Improved design-development alignment</h3>
-      <p>Shared examples and implementation guidance helped teams work from the same source of truth.</p>
+      <p>Greater stakeholder confidence in design decisions</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-rocket" style="color: green;"></i>Accessibility by default</h3>
-      <p>Components incorporated accessibility requirements from the start, reducing the burden on individual teams.</p>
-    </div>
-    <div class="impact-item">
-      <h3><i class="fa-solid fa-scale-balanced" style="color: purple;"></i>Stronger cross-team collaboration</h3>
-      <p>Shared patterns and conventions made it easier for teams to contribute to and maintain a common system.</p>
+      <p>Validation of the internal design system on a large, content-heavy site</p>
     </div>
   </div>
-  <p>
-    The pattern library became a shared foundation for multiple government website projects. By standardizing components, templates, and accessibility practices, teams were able to work from a common set of patterns rather than creating project-specific solutions for every implementation.
-  </p>
 </section>
 
 <section class="key-takeaways">
   <h2 id="key-takeaways">Key Takeaways and Reflection</h2>
   <p>
-    This project highlighted the challenges of balancing flexibility, accessibility, and ease of adoption across a diverse set of users. While the system reduced duplication and improved consistency, it still required some familiarity with HTML and CSS to use effectively. In the future, I would explore additional tooling or abstraction layers to make the system more approachable for designers and content strategists.
+    One key lesson was the importance of involving content strategy early. Defining the content model upfront reduces iteration-time and better-informs layout decisions.
   </p>
   <p>
-    Scalability also presented challenges. Teams occasionally created project-specific components independently to meet immediate needs. Although these solutions were intended to be incorporated back into the design system, that process was not always immediate, leading to temporary inconsistencies between projects. A more formal contribution workflow could help ensure enhancements are shared and adopted more consistently.
+    The project also exposed limitations of static site generation. While tools like Jekyll worked well for structured prototyping, they made it harder to simulate complex, dynamic interactions. If I were rebuilding this today, I would use a framework like React to support more dynamic behavior and state-driven components.
   </p>
   <p>
-    Looking back, a component-driven framework such as React could have provided stronger support for state management, composability, and complex interactive patterns. While the static architecture delivered excellent performance and maintainability, modern component frameworks offer advantages that would make certain interactions easier to scale and evolve over time.
+    More broadly, this project reinforced how important it is to align content, components, and system constraints early—and how much tooling choices affect both the development process and the quality of feedback.
   </p>
 </section>
 </section>
