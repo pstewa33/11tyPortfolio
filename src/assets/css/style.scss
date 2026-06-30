@@ -94,3 +94,18 @@ h1, h2{
 .btn{
     padding: 5px;
 }
+
+// Home Page
+
+.skill-cards-container{
+  margin-top: var(--space-lg);
+  gap: var(--grid-gap-md);
+}
+
+.skill-cards-container .skill-card{
+  background-color: var(--surface-secondary, #f9f9f9);
+  padding: var(--space-md);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

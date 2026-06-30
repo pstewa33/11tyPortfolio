@@ -1,25 +1,35 @@
 <article class="case-card">
-  <h3 class="case-card-title">
-    {{ case.data.title }}
-  </h3>
 
-  {% if case.data.subtitle %}
-    <p class="case-card-subtitle">
-      {{ case.data.subtitle }}
-    </p>
-  {% endif %}
+  <div class="case-card-image-container">
+    {% if case.data.projectImage %}
+      <img src="{{ case.data.projectImage }}" alt="{{ case.data.title }}" class="case-card-image">
+    {% endif %}
+  </div>
 
-  {% if case.data.role %}
-    <p class="case-card-role">
-      {{ case.data.role }}
-    </p>
-  {% endif %}
+  <div class="case-card-content">
+  
+    <h3 class="case-card-title">
+      {{ case.data.title }}
+    </h3>
 
-  {% if case.data.cardTags %}
-    <ul class="case-card-tags">
-      {% for tag in case.data.cardTags %}
-        <li>{{ tag }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+    {% if case.data.subtitle %}
+      <p class="case-card-subtitle">
+        {{ case.data.subtitle }}
+      </p>
+    {% endif %}
+
+    {% if case.data.role %}
+      <p class="case-card-role">
+        {{ case.data.role }}
+      </p>
+    {% endif %}
+
+    {% if case.data.cardTags %}
+      <ul class="case-card-tags">
+        {% for tag in case.data.cardTags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
 </article>
