@@ -130,7 +130,7 @@
         A federal mandate required public sector websites to align with the United States Web Design System (USWDS). The Global Change website needed a full redesign to meet these standards, but the existing site was outdated in both structure and accessibility.
     </p>
     <p>
-        Instead of relying on static mockups, we built a fully interactive prototype. This allowed stakeholders to experience navigation, layout, and content behavior in a real environment before committing to full development.
+        Instead of relying on static mockups, we built a fully interactive prototype. This allowed stakeholders to experience navigation, layout, and interactive behavior in a real environment before committing to full development.
     </p>
   </section>
   <section class="tech-stack">
@@ -148,21 +148,8 @@
   <section class="problem">
     <h2 id="problem">Problem</h2>
     <p>
-      The existing workflow relied heavily on static designs, which made it difficult to evaluate:
+      The existing workflow relied heavily on static designs, making it difficult to validate navigation across multiple pages, test responsive behavior across devices, and understand how real content would affect layouts. As a result, feedback arrived late, design decisions relied on assumptions, and accessibility and usability issues were often discovered later in the process.
     </p>
-    <ul>
-        <li>Navigation across multiple pages</li>
-        <li>Responsive behavior on different devices</li>
-        <li>How real content would fit into layouts</li>
-    </ul>
-    <p>
-      As a result:
-    </p>
-    <ul>
-        <li>Feedback came late in the process </li>
-        <li>Design decisions were based on assumptions </li>
-        <li>Accessibility and usability issues were harder to catch early</li>
-    </ul>
   </section>
   <section class="context-constraints">
     <h2 id="Context-and-Constraints">Context and Constraints</h2>
@@ -201,14 +188,14 @@
   </section>
   <section class="my-role">
     <h2 id="my-role">My Role</h2>
-    <p>My main focus was turning design guidelines into reusable, production-ready components that teams could actually use. </p>
-    <p>I worked closely between design and development to determine how the system would be implemented and how it would evolve over time.</p>
+    <p>My main focus was turning design guidelines into reusable, production-ready components that teams could consistently use. </p>
+    <p>I worked closely with both designers and developers to define how the design system would be implemented, maintained, and evolve over time.</p>
     <div class="role-boxes">
       <div class="role-box">
         <span>Owned Outright</span>
         <ul>
           <li>Building a functional, multi-page prototype using HTML, CSS, and JavaScript </li>
-          <li>Applying and extending components from the internal design system</li>
+          <li>Applying and extending components from the US Web Design System</li>
           <li>Creating new components when needed (while maintaining accessibility standards)</li>
         </ul>
       </div>
@@ -223,40 +210,36 @@
   </section>
 <section class="solution">
   <h2 id="solution">Solution</h2>
-  <div class="solution-grid">
-    <div class="solution-card">Built a functional multi-page prototype</div>
-    <div class="solution-card">Used the internal design system</div>
-    <div class="solution-card">Integrated Contentful</div>
-    <div class="solution-card">Created custom components when needed</div>
-    <div class="solution-card">Generated content through Jekyll</div>
-  </div>
+  <p>
+    To reduce uncertainty and gather earlier feedback, I collaborated with designers and developers to create a realistic, multi-page prototype that closely reflected the final product. We built on the existing design system, integrated Contentful to support real content, created custom components where needed, and used Jekyll to generate production-like pages from structured content. This allowed the team to validate navigation, responsiveness, and content early in the design process.
+  </p>
 </section>
 <section class="engineering-challenges">
   <h2 id="engineering-challenges">Engineering Challenges & Solutions</h2>
   <div class="challenge-accordion">
     <details>
-      <summary>Content Modeling Before UI</summary>
-      <p><strong>Challenge:</strong> Content and templates weren't aligned.</p>
-      <p><strong>Decision:</strong> Defined reusable content models before building layouts.</p>
-      <p><strong>Outcome:</strong> Reduced rework and improved scalability.</p>
+      <summary>Modeling Content Before Templates</summary>
+      <p><strong>Challenge:</strong> Existing website content didn't map cleanly to the new page templates, making it difficult to build reusable layouts.</p>
+      <p><strong>Decision:</strong> Defined reusable content models in Contentful before designing and implementing page templates.</p>
+      <p><strong>Outcome:</strong> Created a scalable content structure that reduced rework and made templates more flexible.</p>
     </details>
     <details>
       <summary>Extending the Design System</summary>
-      <p><strong>Challenge:</strong> Project requirements exceeded available components.</p>
-      <p><strong>Decision:</strong> Created new components while maintaining token-based styling and accessibility standards.</p>
-      <p><strong>Outcome:</strong> The system expanded without introducing inconsistency.</p>
+      <p><strong>Challenge:</strong> Some project requirements couldn't be met using the existing USWDS components alone.</p>
+      <p><strong>Decision:</strong> Designed and built new components that followed USWDS design tokens, accessibility standards, and interaction patterns.</p>
+      <p><strong>Outcome:</strong> Expanded the design system while maintaining a consistent, accessible experience across the product.</p>
     </details>
     <details>
       <summary>CMS-Driven Prototyping</summary>
-      <p><strong>Challenge:</strong> A realistic prototype required realistic content workflows.</p>
-      <p><strong>Decision:</strong> Integrated Contentful and generated pages through Jekyll.</p>
-      <p><strong>Outcome:</strong> Stakeholders experienced realistic content behavior before development.</p>
+      <p><strong>Challenge:</strong> Static content couldn't accurately represent how the site would behave once content was managed through a CMS.</p>
+      <p><strong>Decision:</strong> Integrated Contentful into the prototype and used Jekyll to generate production-like pages from structured content.</p>
+      <p><strong>Outcome:</strong> Stakeholders could evaluate navigation, layouts, and content workflows using realistic content before development began.</p>
     </details>
     <details>
       <summary>Accessibility in Custom Components</summary>
-      <p><strong>Challenge:</strong> Custom interactions risked introducing accessibility issues.</p>
-      <p><strong>Decision:</strong> Implemented keyboard support, ARIA attributes, and focus management.</p>
-      <p><strong>Outcome:</strong> Custom components remained consistent with accessibility requirements.</p>
+      <p><strong>Challenge:</strong> Extending the design system with custom components introduced the risk of inconsistent or inaccessible interactions.</p>
+      <p><strong>Decision:</strong> Applied accessible interaction patterns, including keyboard navigation, semantic ARIA attributes, and focus management.</p>
+      <p><strong>Outcome:</strong> New components met accessibility standards while remaining consistent with the rest of the design system.</p>
     </details>
   </div>
 </section>
@@ -285,13 +268,13 @@
 <section class="key-takeaways">
   <h2 id="key-takeaways">Key Takeaways and Reflection</h2>
   <p>
-    One key lesson was the importance of involving content strategy early. Defining the content model upfront reduces iteration-time and better-informs layout decisions.
+    One of the biggest lessons from this project was the value of involving content strategy early. Understanding how content would be structured before designing page templates helped reduce rework, influenced layout decisions, and created a stronger foundation for the CMS.
   </p>
   <p>
-    The project also exposed limitations of static site generation. While tools like Jekyll worked well for structured prototyping, they made it harder to simulate complex, dynamic interactions. If I were rebuilding this today, I would use a framework like React to support more dynamic behavior and state-driven components.
+    The project also showed the strengths and limitations of static site generation. Jekyll was a great fit for building realistic, content-driven prototypes, but it made it more difficult to explore complex interactions and dynamic experiences. If I were rebuilding this today, I would consider using a framework like React to better support interactive components while keeping the same content-first approach.
   </p>
   <p>
-    More broadly, this project reinforced how important it is to align content, components, and system constraints early—and how much tooling choices affect both the development process and the quality of feedback.
+    More broadly, this project reinforced that a successful design system is about more than creating reusable components. The best results come from aligning content, design, and technical constraints early—leading to better collaboration, more realistic prototypes, and stronger design decisions.
   </p>
 </section>
 </section>
