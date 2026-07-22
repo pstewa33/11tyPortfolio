@@ -1,4 +1,4 @@
-<article class="case-card">
+<article class="case-card {% if loop.index0 % 2 == 1 %}case-card--reverse{% endif %}">
 
   <div class="case-card-image-container">
     {% if case.data.projectImage %}
