@@ -106,16 +106,30 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
   </section>
 
 <section class="solution">
-  <h2 id="solution">Solution</h2>
-  <p>
-    Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a   reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
-  </p>
-  <p>
-    The system included reusable UI components, page templates, design tokens, and implementation guidance. Components were designed to be accessible by default and flexible enough to support multiple agency brands without requiring custom implementations.
-  </p>
-  <p>
-    Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
-  </p>
+  <div class="solution-text">
+    <h2 id="solution">Solution</h2>
+    <p>
+      Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a   reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
+    </p>
+    <p>
+      The system included reusable UI components, page templates, design tokens, and implementation guidance. Components were designed to be accessible by default and flexible enough to support multiple agency brands without requiring custom implementations.
+    </p>
+    <p>
+      Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
+    </p>
+  </div>
+  <div class="solution-images">
+    <img
+      src="/assets/images/dmxlibrary/libraryBefore.png"
+      class="solution-image active"
+      alt="Component library overview"
+    >
+    <img
+      src="/assets/images/dmxlibrary/libraryAfter.png"
+      class="solution-image"
+      alt="Component example"
+    >
+  </div>
 </section>
 
 <section class="engineering-challenges">
