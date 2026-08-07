@@ -245,9 +245,26 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
       <p>Shared patterns and conventions made it easier for teams to contribute to and maintain a common system.</p>
     </div>
   </div>
-  <p>
+  <p class="impact-statement">
     The pattern library became a shared foundation for multiple government website projects. By standardizing components, templates, and accessibility practices, teams were able to work from a common set of patterns rather than creating project-specific solutions for every implementation.
   </p>
+  <div class="impact-images">
+    <img
+      src="/assets/images/dmxlibrary/uswds-landing-temp.png"
+      class="impact-image"
+      alt="USWDS Landing Page Template"
+    >
+    <img
+      src="/assets/images/dmxlibrary/dccps-nci-home.png"
+      class="impact-image"
+      alt="DCCPS Home Page w/ USWDS"
+    >
+    <img
+      src="/assets/images/dmxlibrary/gc-home.png"
+      class="impact-image"
+      alt="Global Change Home Page w/ USWDS"
+    >
+  </div>
 </section>
 
 <section class="key-takeaways">

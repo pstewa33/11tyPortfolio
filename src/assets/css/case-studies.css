@@ -149,6 +149,27 @@
   margin-right: var(--space-sm);
 }
 
+.impact-statement {
+  margin-top: var(--space-md);
+}
+
+.impact-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.impact-image {
+  width: 300px;
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .tech-stack {
   background: #f5f7fa;
   padding: var(--space-lg);
