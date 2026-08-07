@@ -8,10 +8,16 @@
   width: 16rem;
 }
 
+.case-study {
+  overflow-x: hidden;
+}
+
 .grid-case-study {
-  grid-template-columns: 1fr 3fr;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
   gap: var(--space-md);
   align-items: start;
+  width: 100%;
 }
 
 .overview-card {
@@ -110,6 +116,12 @@
   padding-bottom: var(--space-sm);
 }
 
+.grid-case-study,
+.impact-grid,
+.impact-item {
+  min-width: 0;
+}
+
 .impact-grid {
   display: grid;
   gap: var(--space-md);
@@ -186,41 +198,235 @@
   display: flex;
   gap: 3rem;
   align-items: center;
+  min-width: 0;
 }
 
 .solution-text {
   flex: 1;
+  min-width: 0;
 }
 
 .solution-images {
   position: relative;
-  width: 500px;
-  height: 360px;
+  flex: 1;
+  min-width: 0;
+  max-width: 550px;
+  aspect-ratio: 4/3;
 }
 
-.solution-images {
-  position: relative;
-}
-
-.image-next {
+.solution-image {
   position: absolute;
-  right: -18px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 12px;
+  background: white;
+  padding: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s, z-index 0.45s;
+}
+
+@media (max-width: 900px) {
+  .solution {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .solution-images {
+    width: 100%;
+    max-width: none;
+  }
+}
+.solution-images .image-next {
+  position: absolute;
+  right: -24px;
   top: 50%;
   transform: translateY(-50%);
   width: 48px;
   height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 50%;
   background: white;
+  color: #333;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
   cursor: pointer;
   font-size: 1.4rem;
-  transition: transform 0.2s ease;
+  line-height: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 20;
 }
 
-.image-next:hover {
+.solution-images .image-next:hover {
   transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 900px) {
+  .solution-images .image-next {
+    right: -12px;
+  }
+}
+.image-expand {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: 50;
+}
+
+.solution-images:hover .image-expand {
+  opacity: 1;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(15, 15, 20, 0.82);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.lightbox-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: min(1200px, 85vw);
+  max-height: 75vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+  scrollbar-width: thin;
+}
+
+.lightbox-image-wrapper {
+  -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+          mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+}
+
+.lightbox.hidden {
+  display: none;
+}
+
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: min(92vw, 1400px);
+}
+
+#lightbox-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.25s;
+}
+
+.lightbox-image-wrapper.tall-image {
+  width: min(900px, 85vw);
+}
+
+.lightbox-image-wrapper.tall-image #lightbox-image {
+  width: 100%;
+  height: auto;
+}
+
+.lightbox-info {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+#lightbox-caption {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+#lightbox-counter {
+  opacity: 0.7;
+}
+
+.lightbox button {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 1.5rem;
+}
+
+.lightbox button:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.lightbox-prev {
+  position: fixed;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-close {
+  top: 40px;
+  right: 40px;
+}
+
+#lightbox-image {
+  cursor: zoom-in;
+  transition: transform 0.25s;
+}
+
+#lightbox-image.zoom {
+  transform: scale(1.8);
+  cursor: zoom-out;
+}
+
+body.lightbox-open {
+  overflow: hidden;
 }
 
 .image-info {
@@ -246,22 +452,6 @@
 .image-counter {
   color: #666;
   font-size: 0.875rem;
-}
-
-.solution-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain; /* keeps the whole screenshot visible */
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 12px;
-  background: white;
-  padding: 12px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-  cursor: pointer;
-  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s, z-index 0.45s;
 }
 
 /* Front image */

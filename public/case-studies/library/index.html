@@ -233,24 +233,37 @@
   </div>
   <div class="solution-images">
     <img
-      src="/assets/images/dmxlibrary/uswds-landing-temp.png"
+      src="/assets/images/dmxlibrary/library1.png"
       class="solution-image"
-      alt="USWDS Landing Page"
+      alt="Template Landing Page"
     >
     <img
-      src="/assets/images/dmxlibrary/dccps-nci-home.png"
+      src="/assets/images/dmxlibrary/library2.png"
       class="solution-image"
-      alt="DCCPS Homepage"
+      alt="Component Landing Page"
     >
     <img
-      src="/assets/images/dmxlibrary/gc-home.png"
+      src="/assets/images/dmxlibrary/documentation-page.png"
       class="solution-image"
-      alt="Global Change Homepage"
+      alt="Template Schema"
+    >
+    <img
+      src="/assets/images/dmxlibrary/card-component-documentation.png"
+      class="solution-image"
+      alt="Component Documentation Page"
     >
     <!-- Add more images here anytime -->
     <button class="image-next" aria-label="Next image">
       →
     </button>
+    <button class="image-expand" aria-label="View full size">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 3h6v6"/>
+        <path d="M21 3l-7 7"/>
+        <path d="M9 21H3v-6"/>
+        <path d="M3 21l7-7"/>
+      </svg>
+    </button>    
     <div class="image-info">
       <div id="image-caption"></div>
       <div class="image-counter">
@@ -349,6 +362,24 @@
   </p>
 </section>
 </section>
+<div id="lightbox" class="lightbox hidden">
+  <div class="lightbox-image-wrapper">
+<p><img id="lightbox-image" src="" alt=""></p>
+  </div>
+  <div class="lightbox-info">
+    <p id="lightbox-caption"></p>
+    <span id="lightbox-counter"></span>
+  </div>
+  <button class="lightbox-prev" aria-label="Previous image">
+    ←
+  </button>
+  <button class="lightbox-next" aria-label="Next image">
+    →
+  </button>
+  <button class="lightbox-close" aria-label="Close image">
+    ✕
+  </button>
+</div>
 
     
     <footer class="outro">
