@@ -133,29 +133,30 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
   <div class="solution-images">
     <img
       src="/assets/images/dmxlibrary/uswds-landing-temp.png"
-      class="solution-image active"
-      alt="USWDS Landing Page Template"
+      class="solution-image"
+      alt="USWDS Landing Page"
     >
     <img
       src="/assets/images/dmxlibrary/dccps-nci-home.png"
-      class="solution-image middle"
-      alt="DCCPS Home built with USWDS"
+      class="solution-image"
+      alt="DCCPS Homepage"
     >
     <img
       src="/assets/images/dmxlibrary/gc-home.png"
-      class="solution-image back"
-      alt="Global Change Home built with USWDS"
+      class="solution-image"
+      alt="Global Change Homepage"
     >
+    <!-- Add more images here anytime -->
     <button class="image-next" aria-label="Next image">
-    →
+      →
     </button>
     <div class="image-info">
       <div id="image-caption"></div>
-        <div class="image-counter">
-          <span id="current-image"></span> / 3
-        </div>
+      <div class="image-counter">
+        <span id="current-image"></span> / <span id="total-images"></span>
       </div>
     </div>
+  </div>
 </section>
 
 <section class="engineering-challenges">
