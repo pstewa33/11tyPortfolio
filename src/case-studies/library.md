@@ -56,14 +56,9 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
     </p>
     <div class="problem-images">
       <img
-        src="/assets/images/dmxlibrary/libraryBefore.png"
+        src="/assets/images/dmxlibrary/WorkflowDiagram.png"
         class="problem-image"
         alt="Pre-library Workflow"
-      >
-      <img
-        src="/assets/images/dmxlibrary/libraryAfter.png"
-        class="problem-image active"
-        alt="Workflow with library"
       >
     </div>
   </section>
