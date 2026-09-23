@@ -80,15 +80,21 @@
           
             <li><a href="#overview">Overview</a></li>
           
-            <li><a href="#my-role">My Role</a></li>
-          
             <li><a href="#tech-stack">Tech Stack</a></li>
           
-            <li><a href="#tech-approach">Technical Approach</a></li>
+            <li><a href="#problem">Problem</a></li>
           
-            <li><a href="#challenges">Key Engineering Challenges and Solutions</a></li>
+            <li><a href="#Context-and-Constraints">Context and Constraints</a></li>
+          
+            <li><a href="#my-role">My Role</a></li>
+          
+            <li><a href="#solution">Solution</a></li>
+          
+            <li><a href="#engineering-challenges">Engineering Challenges &amp; Solutions</a></li>
           
             <li><a href="#impact">Impact</a></li>
+          
+            <li><a href="#key-takeaways">Key Takeaways and Reflection</a></li>
           
         </ul>
       </nav>
@@ -98,105 +104,178 @@
 
   
   <article class="main-content">
-    <section class="globalchange">
-<section class="hero-section">
-<h1 id="functional-mini-site-prototype-for-global-change" tabindex="-1">Functional Mini-Site Prototype for Global Change</h1>
-<p><em>Created a deployable, high-fidelity prototype using reusable components, brand styling, and headless CMS integration.</em></p>
-</section>
-<section class="overview-section">
-    <h2 id="overview"> Overview </h2>
-    <hr>
-    <p>Developed a functional mini-site prototype using reusable components from an internal design system. Integrated a headless CMS to simulate dynamic content and deployed the project as a working site for client review. The prototype demonstrated real interactions, branding, and content behavior beyond static mockups.</p>
-    <img src="https://placehold.co/600x400">
-</section>
-<section class="my-role">
-    <h2 id="my-role">My Role</h2>
-    <hr>
-    <ul class="my-role-list">
-        <li>Wrote HTML/CSS/JS prototypes using components from the internal USWDS-based library</li>
-        <li>Applied brand-specific styling to create high-fidelity interactive frames</li>
-        <li>Connected Jekyll to Contentful for dynamic content management</li>
-        <li>Deployed the prototype on Netlify</li>
-        <li>Delivered a functional mini-site demonstrating accurate interactions, branding, and content</li>
-    </ul>
-    <div class="screenshots grid grid-2">
-        <img src="https://placehold.co/500x400">
-        <img src="https://placehold.co/500x400">
+    <h1 id="functional-mini-site-prototype-for-global-change" tabindex="-1">Functional Mini-Site Prototype for Global Change</h1>
+<section class="dmxlibrary">
+  <section class="overview">
+    <h2 id="overview">Overview</h2>
+    <div class="overview-card">
+      <div class="overview-item">
+        <span>Project</span>
+        <p>Global Change Research Program Website Redesign</p>
+      </div>
+      <div class="overview-item">
+        <span>Timeline</span>
+        <p>Q2 2022 - Q3 2022</p>
+      </div>
+      <div class="overview-item">
+        <span>Team</span>
+        <p>UX Designer, UX Architect, Content Strategist, Developer</p>
+      </div>
+      <div class="overview-item">
+        <span>Role</span>
+        <p>UX Architect</p>
+      </div>
     </div>
-</section>
-<section class="tech-stack">
+    <p>
+        A federal mandate required public sector websites to align with the United States Web Design System (USWDS). The Global Change website needed a full redesign to meet these standards, but the existing site was outdated in both structure and accessibility.
+    </p>
+    <p>
+        Instead of relying on static mockups, we built a fully interactive prototype. This allowed stakeholders to experience navigation, layout, and interactive behavior in a real environment before committing to full development.
+    </p>
+  </section>
+  <section class="tech-stack">
     <h2 id="tech-stack">Tech Stack</h2>
-    <hr>
-    <div class="tech-grid">
-        <article class="stack-item">
-            <h3>Languages & Markup</h3>
-            <p>HTML / CSS / Markdown</p>
-        </article>
-        <article class="stack-item">
-            <h3>Components</h3>
-            <p>Custom Web Components</p>
-        </article>
-        <article class="stack-item">
-            <h3>CMS Integration</h3>
-            <p>Jekyll + Contentful integration</p>
-        </article>
-        <article class="stack-item">
-            <h3>Deployment & Version Control</h3>
-            <p>Netlify, GitHub</p>
-        </article>
+    <ul class="tech-tags">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Markdown</li>
+        <li>Contentful</li>
+        <li>Jekyll</li>
+        <li>Netlify</li>
+        <li>GitHub</li>
+    </ul>
+  </section>
+  <section class="problem">
+    <h2 id="problem">Problem</h2>
+    <p>
+      The existing workflow relied heavily on static designs, making it difficult to validate navigation across multiple pages, test responsive behavior across devices, and understand how real content would affect layouts. As a result, feedback arrived late, design decisions relied on assumptions, and accessibility and usability issues were often discovered later in the process.
+    </p>
+  </section>
+  <section class="context-constraints">
+    <h2 id="Context-and-Constraints">Context and Constraints</h2>
+    <p>The project ran for about a year in collaboration with the Global Change web team.</p>
+    <p>Key constraints:</p>
+    <div class="constraints">
+      <div class="constraint">
+        <i class="fa-solid fa-universal-access"></i>
+        <span>Stakeholder Expectations</span>
+        <p>
+            Stakeholders responded more effectively to interactive prototypes than static mockups, requiring a realistic and navigable experience.
+        </p>
+      </div>
+      <div class="constraint">
+        <i class="fa-brands fa-css3-alt"></i>
+        <span>Design System Requirements</span>
+        <p>
+            The prototype needed to be built using an existing USWDS-based design system to maintain consistency and test its effectiveness in a real-world implementation.
+        </p>
+      </div>
+      <div class="constraint">
+        <i class="fa-solid fa-arrows-down-to-people"></i>
+        <span>Pattern Constraints</span>
+        <p>
+            The design system accelerated development but limited customization, requiring careful decisions about when to extend existing components versus create new ones.
+        </p>
+      </div>
+      <div class="constraint">
+        <i class="fa-solid fa-code"></i>
+        <span>Project Scope</span>
+        <p>
+            The site contained a large amount of content and multiple page types, making navigation, content hierarchy, and content modeling critical to success.
+        </p>
+      </div>
     </div>
+  </section>
+  <section class="my-role">
+    <h2 id="my-role">My Role</h2>
+    <p>My main focus was turning design guidelines into reusable, production-ready components that teams could consistently use. </p>
+    <p>I worked closely with both designers and developers to define how the design system would be implemented, maintained, and evolve over time.</p>
+    <div class="role-boxes">
+      <div class="role-box">
+        <span>Owned Outright</span>
+        <ul>
+          <li>Building a functional, multi-page prototype using HTML, CSS, and JavaScript </li>
+          <li>Applying and extending components from the US Web Design System</li>
+          <li>Creating new components when needed (while maintaining accessibility standards)</li>
+        </ul>
+      </div>
+      <div class="role-box">
+        <span>Shared Ownership</span>
+        <ul>
+          <li>Integrating dynamic content using Contentful</li>
+          <li>Connecting everything into a cohesive, navigable experience</li>
+        <ul>
+      </div>
+    </div>
+  </section>
+<section class="solution">
+  <h2 id="solution">Solution</h2>
+  <p>
+    To reduce uncertainty and gather earlier feedback, I collaborated with designers and developers to create a realistic, multi-page prototype that closely reflected the final product. We built on the existing design system, integrated Contentful to support real content, created custom components where needed, and used Jekyll to generate production-like pages from structured content. This allowed the team to validate navigation, responsiveness, and content early in the design process.
+  </p>
 </section>
-<section class="technical-approach">
-    <h2 id="tech-approach">Technical Approach</h2>
-    <hr>
-    <p>The prototype was built using the existing internal component library to ensure consistency with production systems. Components were extended with brand-specific styling while preserving their accessibility and structural patterns.</p>
-    <p>Content was delivered dynamically by connecting Jekyll templates to Contentful entries, allowing the prototype to simulate a real content workflow rather than relying on static placeholder content.</p>
-    <p>The site was deployed to Netlify for easy stakeholder access, enabling the client team to explore the prototype as a working site and provide feedback on navigation, layout, and interactions.</p>
-</section>
-<section class="challenges">
-    <h2 id="challenges">Key Engineering Challenges and Solutions</h2>
-    <hr>
-    <article class="challenge-item">
-        <h3>Component Reuse</h3>
-        <p>Leveraged internal library components to maintain consistency and speed up development.</p>
-    </article>
-    <article class="challenge-item">
-        <h3>High-Fidelity Prototyping</h3>
-        <p>Applied brand styling and interactions in code rather than static mockups.</p>
-    </article>
-    <article class="challenge-item">
-        <h3>CMS Integration</h3>
-        <p>Connected Jekyll to Contentful for dynamic content delivery.</p>
-    </article>
-    <article class="challenge-item">
-        <h3>Deployment & Delivery</h3>
-        <p>Hosted on Netlify for client-accessible functional prototype.</p>
-    </article>
-    <img src="https://placehold.co/600x400">
+<section class="engineering-challenges">
+  <h2 id="engineering-challenges">Engineering Challenges & Solutions</h2>
+  <div class="challenge-accordion">
+    <details>
+      <summary>Modeling Content Before Templates</summary>
+      <p><strong>Challenge:</strong> Existing website content didn't map cleanly to the new page templates, making it difficult to build reusable layouts.</p>
+      <p><strong>Decision:</strong> Defined reusable content models in Contentful before designing and implementing page templates.</p>
+      <p><strong>Outcome:</strong> Created a scalable content structure that reduced rework and made templates more flexible.</p>
+    </details>
+    <details>
+      <summary>Extending the Design System</summary>
+      <p><strong>Challenge:</strong> Some project requirements couldn't be met using the existing USWDS components alone.</p>
+      <p><strong>Decision:</strong> Designed and built new components that followed USWDS design tokens, accessibility standards, and interaction patterns.</p>
+      <p><strong>Outcome:</strong> Expanded the design system while maintaining a consistent, accessible experience across the product.</p>
+    </details>
+    <details>
+      <summary>CMS-Driven Prototyping</summary>
+      <p><strong>Challenge:</strong> Static content couldn't accurately represent how the site would behave once content was managed through a CMS.</p>
+      <p><strong>Decision:</strong> Integrated Contentful into the prototype and used Jekyll to generate production-like pages from structured content.</p>
+      <p><strong>Outcome:</strong> Stakeholders could evaluate navigation, layouts, and content workflows using realistic content before development began.</p>
+    </details>
+    <details>
+      <summary>Accessibility in Custom Components</summary>
+      <p><strong>Challenge:</strong> Extending the design system with custom components introduced the risk of inconsistent or inaccessible interactions.</p>
+      <p><strong>Decision:</strong> Applied accessible interaction patterns, including keyboard navigation, semantic ARIA attributes, and focus management.</p>
+      <p><strong>Outcome:</strong> New components met accessibility standards while remaining consistent with the rest of the design system.</p>
+    </details>
+  </div>
 </section>
 <section class="impact">
-    <h2 id="impact">Impact</h2>
-    <hr>
-    <div class="impact-list">
-        <ul class="fa-ul">
-            <li> 
-                <span class="fa-li"><i class="fa-solid fa-check"></i></span>
-                Delivered a fully interactive prototype, allowing stakeholders to explore real navigation, interactions, and content rather than static mockups
-            </li>
-            <li>
-                <span class="fa-li"><i class="fa-solid fa-check"></i></span>
-                Demonstrated how the internal design system could scale to support branded client experiences
-            </li>
-            <li>
-                <span class="fa-li"><i class="fa-solid fa-check"></i></span>
-            Enabled faster client feedback by presenting a realistic mini-site environment instead of isolated design screens
-            </li>
-            <li>
-                <span class="fa-li"><i class="fa-solid fa-check"></i></span>
-            Validated component reuse and CMS-driven content workflows for future projects
-            </li>
-        </ul>
+  <h2 id="impact">Impact</h2>
+  <p>The interactive prototype changed how stakeholders evaluated the redesign.</p>
+  <p>Instead of reviewing static mockups, they could navigate real user flows, interact with content, and experience responsive layouts directly. This led to:</p>
+  <div class="impact-grid">
+    <div class="impact-item">
+      <p>Earlier feedback on navigation and content organization</p>
     </div>
+    <div class="impact-item">
+      <p>Validation of layouts using real content rather than placeholder text</p>
+    </div>
+    <div class="impact-item">
+      <p>Identification of usability issues before development</p>
+    </div>
+    <div class="impact-item">
+      <p>Greater stakeholder confidence in design decisions</p>
+    </div>
+    <div class="impact-item">
+      <p>Validation of the internal design system on a large, content-heavy site</p>
+    </div>
+  </div>
+</section>
+<section class="key-takeaways">
+  <h2 id="key-takeaways">Key Takeaways and Reflection</h2>
+  <p>
+    One of the biggest lessons from this project was the value of involving content strategy early. Understanding how content would be structured before designing page templates helped reduce rework, influenced layout decisions, and created a stronger foundation for the CMS.
+  </p>
+  <p>
+    The project also showed the strengths and limitations of static site generation. Jekyll was a great fit for building realistic, content-driven prototypes, but it made it more difficult to explore complex interactions and dynamic experiences. If I were rebuilding this today, I would consider using a framework like React to better support interactive components while keeping the same content-first approach.
+  </p>
+  <p>
+    More broadly, this project reinforced that a successful design system is about more than creating reusable components. The best results come from aligning content, design, and technical constraints early—leading to better collaboration, more realistic prototypes, and stronger design decisions.
+  </p>
 </section>
 </section>
 
@@ -220,5 +299,6 @@
 
 
   <script src="/assets/js/patterns/navigation.js"></script>
+  <script src="/assets/js/case-studies.js"></script>
 </body>
 </html>

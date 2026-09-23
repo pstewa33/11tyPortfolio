@@ -5,8 +5,8 @@ collection: caseStudies
 order: 1
 heroImage: true
 projectImage: /assets/images/dmxlibrary/libraryHero.png
-title: Internal Component Library Based on USWDS
-subtitle: Built an internal USWDS-based design system with reusable components, page templates, and front-end patterns supporting multiple government websites.
+title: Internal USWDS-Based Pattern Library
+subtitle: Built and maintained a USWDS-based component library and reusable page templates used across multiple government website redesigns.
 ---
 
 # {{title}}
@@ -33,7 +33,7 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
       </div>
     </div>
     <p>
-      Built and maintained an internal component library and page templates based on the United States Web Design System (USWDS). The library was used to standardize UI across multiple public sector website redesign projects, improve accessibility compliance, and enable faster, scalable page creation.
+      Built and maintained a USWDS-based pattern library used across multiple government website redesign efforts. The system standardized UI patterns, embedded accessibility into reusable components, and reduced duplicated implementation work across teams.
     </p>
   </section>
   <section class="tech-stack">
@@ -54,6 +54,13 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
     <p>
       Across multiple government projects, teams were rebuilding the same UI components from scratch. This slowed development, created inconsistent user experiences, and led to accessibility issues that were often caught late.
     </p>
+    <div class="problem-images">
+      <img
+        src="/assets/images/dmxlibrary/WorkflowDiagram.png"
+        class="problem-image"
+        alt="Pre-library Workflow"
+      >
+    </div>
   </section>
   <section class="context-constraints">
     <h2 id="Context-and-Constraints">Context and Constraints</h2>
@@ -84,7 +91,7 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
   </section>
   <section class="my-role">
     <h2 id="my-role">My Role</h2>
-    <p>My main focus was turning design guidelines into reusable, production-ready components that teams could actually use. </p>
+    <p>I was responsible for the technical architecture of the system, including reusable components, page templates, accessibility implementation, contribution workflows, and supporting adoption across project teams.</p>
     <p>I worked closely between design and development to determine how the system would be implemented and how it would evolve over time.</p>
     <div class="role-boxes">
       <div class="role-box">
@@ -100,22 +107,64 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
           <li>Defining how components should be structured and reused</li>
           <li>Creating a system that could adapt to different brand styles</li>
           <li>Establishing workflows for contributing and maintaining the library</li>
-        <ul>
+        </ul>
       </div>
     </div>
   </section>
 
 <section class="solution">
-  <h2 id="solution">Solution</h2>
-  <p>
-    Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a   reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
-  </p>
-  <p>
-    The system included reusable UI components, page templates, design tokens, and implementation guidance. Components were designed to be accessible by default and flexible enough to support multiple agency brands without requiring custom implementations.
-  </p>
-  <p>
-    Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
-  </p>
+  <div class="solution-text">
+    <h2 id="solution">Solution</h2>
+    <p>
+      Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
+    </p>
+    <p>
+      The system included reusable UI components, page templates, design tokens, and implementation guidance. Components were designed to be accessible by default and flexible enough to support multiple agency brands without requiring custom implementations.
+    </p>
+    <p>
+      Within the first year, the library was adopted across 5+ projects. Teams reduced design-to-development back-and-forth, reused components instead of rebuilding them, and shipped more consistent, accessible interfaces.
+    </p>
+  </div>
+  <div class="solution-images">
+    <img
+      src="/assets/images/dmxlibrary/library1.png"
+      class="solution-image"
+      alt="Template Landing Page"
+    >
+    <img
+      src="/assets/images/dmxlibrary/library2.png"
+      class="solution-image"
+      alt="Component Landing Page"
+    >
+    <img
+      src="/assets/images/dmxlibrary/documentation-page.png"
+      class="solution-image"
+      alt="Template Schema"
+    >
+    <img
+      src="/assets/images/dmxlibrary/card-component-documentation.png"
+      class="solution-image"
+      alt="Component Documentation Page"
+    >
+    <!-- Add more images here anytime -->
+    <button class="image-next" aria-label="Next image">
+      →
+    </button>
+    <button class="image-expand" aria-label="View full size">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 3h6v6"/>
+        <path d="M21 3l-7 7"/>
+        <path d="M9 21H3v-6"/>
+        <path d="M3 21l7-7"/>
+      </svg>
+    </button>    
+    <div class="image-info">
+      <div id="image-caption"></div>
+      <div class="image-counter">
+        <span id="current-image"></span> / <span id="total-images"></span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="engineering-challenges">
@@ -171,11 +220,11 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
       <p>The library became a shared foundation across multiple government website redesign efforts.</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-arrow-trend-down" style="color: #2563eb;"></i>Reduced Duplication</h3>
-      <p>Teams reused shared components instead of creating separate implementations for each project.</p>
+      <h3><i class="fa-solid fa-arrow-trend-down" style="color: #2563eb;"></i>50+ Reusable Components</h3>
+      <p>A standardized component library reduced redundant front-end implementation across multiple projects.</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-arrow-trend-up" style="color: green;"></i> More efficient development</h3>
+      <h3><i class="fa-solid fa-arrow-trend-up" style="color: green;"></i> More efficient delivery</h3>
       <p>Ready-to-use components and templates provided a starting point for common interface patterns.</p>
     </div>
     <div class="impact-item">
@@ -191,9 +240,26 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
       <p>Shared patterns and conventions made it easier for teams to contribute to and maintain a common system.</p>
     </div>
   </div>
-  <p>
+  <p class="impact-statement">
     The pattern library became a shared foundation for multiple government website projects. By standardizing components, templates, and accessibility practices, teams were able to work from a common set of patterns rather than creating project-specific solutions for every implementation.
   </p>
+  <div class="impact-images">
+    <img
+      src="/assets/images/dmxlibrary/uswds-landing-temp.png"
+      class="impact-image"
+      alt="USWDS Landing Page Template"
+    >
+    <img
+      src="/assets/images/dmxlibrary/dccps-nci-home.png"
+      class="impact-image"
+      alt="DCCPS Home Page w/ USWDS"
+    >
+    <img
+      src="/assets/images/dmxlibrary/gc-home.png"
+      class="impact-image"
+      alt="Global Change Home Page w/ USWDS"
+    >
+  </div>
 </section>
 
 <section class="key-takeaways">
@@ -209,3 +275,29 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
   </p>
 </section>
 </section>
+<div id="lightbox" class="lightbox hidden">
+
+  <div class="lightbox-image-wrapper">
+
+    <img id="lightbox-image" src="" alt="">
+
+  </div>
+
+  <div class="lightbox-info">
+    <p id="lightbox-caption"></p>
+    <span id="lightbox-counter"></span>
+  </div>
+
+  <button class="lightbox-prev" aria-label="Previous image">
+    ←
+  </button>
+
+  <button class="lightbox-next" aria-label="Next image">
+    →
+  </button>
+
+  <button class="lightbox-close" aria-label="Close image">
+    ✕
+  </button>
+
+</div>
