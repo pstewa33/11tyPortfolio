@@ -5,8 +5,8 @@ collection: caseStudies
 order: 1
 heroImage: true
 projectImage: /assets/images/dmxlibrary/libraryHero.png
-title: Internal Component Library Based on USWDS
-subtitle: Built an internal USWDS-based design system with reusable components, page templates, and front-end patterns supporting multiple government websites.
+title: Internal USWDS-Based Pattern Library
+subtitle: Built and maintained a USWDS-based component library and reusable page templates used across multiple government website redesigns.
 ---
 
 # {{title}}
@@ -33,7 +33,7 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
       </div>
     </div>
     <p>
-      Built and maintained an internal component library and page templates based on the United States Web Design System (USWDS). The library was used to standardize UI across multiple public sector website redesign projects, improve accessibility compliance, and enable faster, scalable page creation.
+      Built and maintained a USWDS-based pattern library used across multiple government website redesign efforts. The system standardized UI patterns, embedded accessibility into reusable components, and reduced duplicated implementation work across teams.
     </p>
   </section>
   <section class="tech-stack">
@@ -91,7 +91,7 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
   </section>
   <section class="my-role">
     <h2 id="my-role">My Role</h2>
-    <p>My main focus was turning design guidelines into reusable, production-ready components that teams could actually use. </p>
+    <p>I was responsible for the technical architecture of the system, including reusable components, page templates, accessibility implementation, contribution workflows, and supporting adoption across project teams.</p>
     <p>I worked closely between design and development to determine how the system would be implemented and how it would evolve over time.</p>
     <div class="role-boxes">
       <div class="role-box">
@@ -107,7 +107,7 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
           <li>Defining how components should be structured and reused</li>
           <li>Creating a system that could adapt to different brand styles</li>
           <li>Establishing workflows for contributing and maintaining the library</li>
-        <ul>
+        </ul>
       </div>
     </div>
   </section>
@@ -116,7 +116,7 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
   <div class="solution-text">
     <h2 id="solution">Solution</h2>
     <p>
-      Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a   reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
+      Our team built a shared pattern library based on the United States Web Design System (USWDS). The goal was to give teams a reliable set of reusable components and templates so they could move faster while maintaining consistency and accessibility.
     </p>
     <p>
       The system included reusable UI components, page templates, design tokens, and implementation guidance. Components were designed to be accessible by default and flexible enough to support multiple agency brands without requiring custom implementations.
@@ -220,11 +220,11 @@ subtitle: Built an internal USWDS-based design system with reusable components, 
       <p>The library became a shared foundation across multiple government website redesign efforts.</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-arrow-trend-down" style="color: #2563eb;"></i>Reduced Duplication</h3>
-      <p>Teams reused shared components instead of creating separate implementations for each project.</p>
+      <h3><i class="fa-solid fa-arrow-trend-down" style="color: #2563eb;"></i>50+ Reusable Components</h3>
+      <p>A standardized component library reduced redundant front-end implementation across multiple projects.</p>
     </div>
     <div class="impact-item">
-      <h3><i class="fa-solid fa-arrow-trend-up" style="color: green;"></i> More efficient development</h3>
+      <h3><i class="fa-solid fa-arrow-trend-up" style="color: green;"></i> More efficient delivery</h3>
       <p>Ready-to-use components and templates provided a starting point for common interface patterns.</p>
     </div>
     <div class="impact-item">
