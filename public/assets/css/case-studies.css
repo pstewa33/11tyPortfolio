@@ -574,4 +574,12 @@ body.lightbox-open {
   background: white;
   color: #2563eb;
   cursor: pointer;
+}
+
+.solution-box {
+  background: var(--surface-muted, #f5f7fa);
+  padding: var(--space-lg);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-md);
 }/*# sourceMappingURL=case-studies.css.map */
