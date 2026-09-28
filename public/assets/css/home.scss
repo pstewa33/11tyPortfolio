@@ -62,6 +62,21 @@
         }
     }
 }
+
+.skill-cards-container{
+  margin-top: var(--space-lg);
+  gap: var(--grid-gap-md);
+}
+
+.skill-cards-container .skill-card{
+  background-color: var(--surface-secondary, white);
+  padding: var(--space-md);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid blue;
+}
+
 .reference-card{
     background-color: lightgray;
     padding: var(--space-md);
