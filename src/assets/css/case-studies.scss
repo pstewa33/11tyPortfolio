@@ -688,3 +688,13 @@ body.lightbox-open {
         cursor: pointer;
     }
 }
+
+// Global Change
+
+.solution-box{
+    background: var(--surface-muted, #f5f7fa);
+    padding: var(--space-lg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-md);
+}
