@@ -1,7 +1,7 @@
 ---
 permalink: /case-studies/global-change/
 layout: layouts/case-study.njk
-projectImage: /assets/images/{{ slug }}/hero.png
+projectImage: /assets/images/globalChange/gc-overview.png
 collection: caseStudies
 order: 2
 title: Functional Mini-Site Prototype for Global Change
