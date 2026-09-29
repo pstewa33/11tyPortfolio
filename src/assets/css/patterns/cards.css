@@ -40,6 +40,11 @@
   flex-direction: column;
 }
 
+.case-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .case-card-grid {
   display: grid;
   gap: 2rem;
