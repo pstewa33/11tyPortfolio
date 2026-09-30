@@ -30,7 +30,7 @@ function renderGallery() {
 
     images.forEach((img, index) => {
 
-        img.classList.remove("active", "middle", "back");
+        img.classList.remove("active", "middle", "back", "hidden");
 
         const position =
             (index - currentIndex + images.length) % images.length;
@@ -43,9 +43,13 @@ function renderGallery() {
 
             img.classList.add("middle");
 
-        } else {
+        } else if (position === 2) {
 
             img.classList.add("back");
+
+        } else {
+
+            img.classList.add("hidden");
 
         }
 
@@ -57,8 +61,8 @@ function renderGallery() {
     if (!lightbox.classList.contains("hidden")) {
         updateLightbox();
     }
-
 }
+
 
 // ---------- Navigation ----------
 

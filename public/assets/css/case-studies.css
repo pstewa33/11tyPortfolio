@@ -496,6 +496,11 @@ body.lightbox-open {
   opacity: 0.9;
 }
 
+.solution-image.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .solution p + p,
 .key-takeaways p + p {
   margin-top: 1.5rem;
@@ -601,4 +606,16 @@ body.lightbox-open {
      object-fit: contain;
   -o-object-position: top;
      object-position: top;
+}
+
+.solution-text-container {
+  display: flex;
+  margin-bottom: var(--space-md);
+}
+
+.gc-solution-image {
+  width: auto;
+  height: 800px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=case-studies.css.map */

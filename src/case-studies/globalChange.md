@@ -135,44 +135,44 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
 
   <section class="gc-solution">
     <h2 id="solution">Solution</h2>
-    <div class="solution-text">
-      <p>
-        We created a realistic, multi-page prototype that brought the design system, content model, and user experience together in one working environment.
-      </p>
-    </div>
-    <div class="solution-images">
-      <img class="solution-image" src="/assets/images/globalChange/gc-contentful-folder.png" alt="homepage-prototype">
-      <img class="solution-image" src="/assets/images/globalChange/gc-navigation-yaml.png" alt="homepage-prototype">
-      <img class="solution-image" src="/assets/images/globalChange/gc-assessmentReport-yaml.png" alt="Contentful model">
-      <img class="solution-image" src="/assets/images/globalChange/gc-workshops.png" alt="Contentful model">
-       <!-- Add more images here anytime -->
-      <button class="image-next" aria-label="Next image">
-        →
-      </button>
-      <button class="image-expand" aria-label="View full size">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M15 3h6v6"/>
-          <path d="M21 3l-7 7"/>
-          <path d="M9 21H3v-6"/>
-          <path d="M3 21l7-7"/>
-        </svg>
-      </button>    
-      <div class="image-info">
-        <div id="image-caption"></div>
-        <div class="image-counter">
-          <span id="current-image"></span> / <span id="total-images"></span>
+    <div class="solution-text-container">
+      <div class="solution-text">
+        <p class="solution-box">
+          We created a realistic, multi-page prototype that brought the design system, content model, and user experience together in one working environment.
+        </p>
+        <p class="solution-box">
+          The prototype used reusable design-system components as a foundation, introduced custom components where necessary, and connected structured content from Contentful to production-like page templates. Jekyll generated the pages so the team could evaluate the experience with realistic content rather than placeholder copy.
+        </p>
+        <p class="solution-box">
+              This shifted stakeholder conversations from “What might this look like?” to “Does this experience work?” Navigation, content hierarchy, responsive layouts, and component behavior could be evaluated directly and iterated before full development.
+        </p>
+      </div>
+      <div class="solution-images">
+        <img class="solution-image" src="/assets/images/globalChange/gc-contentful-folder.png" alt="homepage-prototype">
+        <img class="solution-image" src="/assets/images/globalChange/gc-navigation-yaml.png" alt="homepage-prototype">
+        <img class="solution-image" src="/assets/images/globalChange/gc-assessmentReport-yaml.png" alt="Contentful model">
+        <img class="solution-image" src="/assets/images/globalChange/gc-workshops.png" alt="Contentful model">
+        <img class="solution-image" src="/assets/images/globalChange/gc-template-landing.png" alt="Components">
+        <!-- Add more images here anytime -->
+        <button class="image-next" aria-label="Next image">
+          →
+        </button>
+        <button class="image-expand" aria-label="View full size">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h6v6"/>
+            <path d="M21 3l-7 7"/>
+            <path d="M9 21H3v-6"/>
+            <path d="M3 21l7-7"/>
+          </svg>
+        </button>    
+        <div class="image-info">
+          <div id="image-caption"></div>
+          <div class="image-counter">
+            <span id="current-image"></span> / <span id="total-images"></span>
+          </div>
         </div>
       </div>
     </div>
-    <p class="solution-box">
-      The prototype used reusable design-system components as a foundation, introduced custom components where necessary, and connected structured content from Contentful to production-like page templates. Jekyll generated the pages so the team could evaluate the experience with realistic content rather than placeholder copy.
-    </p>
-    <img class="gc-solution-image" src="/assets/images/globalChange/gc-template-landing.png" alt="Components">
-    <img class="gc-solution-image" src="" alt="Responsive-Behavior">
-    <p class="solution-box">
-      This shifted stakeholder conversations from “What might this look like?” to “Does this experience work?” Navigation, content hierarchy, responsive layouts, and component behavior could be evaluated directly and iterated before full development.
-    </p>
-    <img class="gc-solution-image" src="" alt="Sitemap or IA">
   </section>
 
   <section class="engineering-challenges">
