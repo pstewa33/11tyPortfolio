@@ -1,0 +1,19 @@
+* [33mc0005bc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m added images for gc to repo
+[31m|[m * [33m07978d2[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #30 from pstewa33/homepage
+[31m|[m[31m/[m[33m|[m 
+[31m|[m * [33m7754888[m[33m ([m[1;31morigin/homepage[m[33m, [m[1;32mhomepage[m[33m)[m homepage in a good state
+[31m|[m * [33m50edb1d[m modernizing the featured work section
+[31m|[m * [33m02dc619[m working on skill card design; added icons, need to style them
+[31m|[m * [33m86d8a89[m fixed hero
+[31m|[m[31m/[m  
+* [33m390cd73[m update
+*   [33mdc31095[m Merge pull request #26 from pstewa33/globalchange-study
+[34m|[m[35m\[m  
+[34m|[m * [33md1492cc[m[33m ([m[1;31morigin/globalchange-study[m[33m, [m[1;32mglobalchange-study[m[33m)[m updated constraints icons
+[34m|[m * [33m1a499f3[m made it almost finalized; content updated, needs imgs
+* [35m|[m [33mcde630e[m Merge pull request #20 from pstewa33/globalchange-study
+[36m|[m[35m\[m[35m|[m 
+[36m|[m * [33mf67c64f[m Final Draft of library study done, fixed nav width
+[36m|[m * [33m1adb2ae[m added a workflow diagram, need to reposition
+[36m|[m * [33m279a10d[m started on impact images
+[36m|[m * [33ma63a77e[m fixed the solution images functionality and style

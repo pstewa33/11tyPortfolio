@@ -602,6 +602,12 @@ body.lightbox-open {
   opacity: .9;
 }
 
+.solution-image.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 .solution p + p,
 .key-takeaways p + p {
     margin-top: 1.5rem;
@@ -697,4 +703,34 @@ body.lightbox-open {
     border-radius: 16px;
     box-shadow: var(--shadow-sm);
     margin-bottom: var(--space-md);
+}
+
+.intro-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
+
+  .image-container{
+    display: flex;
+    align-items: flex-start;
+  }
+
+  img{
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+    object-position: top;
+  }
+}
+
+.solution-text-container{
+    display: flex;
+    margin-bottom: var(--space-md);
+}
+
+.gc-solution-image{
+    width: auto;
+    height: 800px;
+    object-fit: contain;
 }
