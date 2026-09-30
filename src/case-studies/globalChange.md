@@ -241,6 +241,17 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
     </div>
   </section>
 
+  <section class="results">
+    <h2 id="results"> Results </h2>
+    <div class="result-image-container">
+      <h3>Component Landing</h3>
+      <h3>Template Landing</h3>
+      <h3>Component Page</h3>
+      <h3>Schema Page</h3>
+      <h3>Prototype Page</h3>
+    </div>
+  </section>
+
   <section class="impact">
     <h2 id="impact">Impact</h2>
     <p>
