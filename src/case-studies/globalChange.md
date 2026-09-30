@@ -30,15 +30,21 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
         <p>UX Architect</p>
       </div>
     </div>
-    <p>
-      The Global Change Research Program needed to redesign its website to align with the United States Web Design System (USWDS) while improving the structure, accessibility, and usability of an existing content-heavy site.
-    </p>
-    <img class="gc-solution-image" src="/assets/images/globalChange/gc-home.png" alt="homepage-prototype">
-    <img class="gc-solution-image" src="/assets/images/globalChange/gc-2020.png" alt="homepage-prototype">
-    <br>
-    <p>
-      Rather than relying solely on static design files, I helped create a functional, multi-page prototype that behaved much more like the eventual product. The prototype combined reusable design-system components, structured CMS content, and production-like templates so stakeholders could evaluate the experience before development began.
-    </p>
+    <div class="intro-container">
+      <div class="intro-text">
+        <p>
+          The Global Change Research Program needed to redesign its website to align with the United States Web Design System (USWDS) while improving the structure, accessibility, and usability of an existing content-heavy site.
+        </p>
+        <br>
+        <p>
+          Rather than relying solely on static design files, I helped create a functional, multi-page prototype that behaved much more like the eventual product. The prototype combined reusable design-system components, structured CMS content, and production-like templates so stakeholders could evaluate the experience before development began.
+        </p>
+      </div>
+      <div class="image-container">
+        <img class="gc-solution-image" src="/assets/images/globalChange/gc-2020.png" alt="homepage-prototype">
+        <img class="gc-solution-image" src="/assets/images/globalChange/gc-home.png" alt="homepage-prototype">
+      </div>
+    </div>
   </section>
   <section class="tech-stack">
     <h2 id="tech-stack">Tech Stack</h2>
@@ -129,13 +135,35 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
 
   <section class="gc-solution">
     <h2 id="solution">Solution</h2>
-    <p class="solution-box">
-      We created a realistic, multi-page prototype that brought the design system, content model, and user experience together in one working environment.
-    </p>
-    <img class="gc-solution-image" src="/assets/images/globalChange/gc-contentful-folder.png" alt="homepage-prototype">
-    <img class="gc-solution-image" src="/assets/images/globalChange/gc-navigation-yaml.png" alt="homepage-prototype">
-    <img class="gc-solution-image" src="/assets/images/globalChange/gc-assessmentReport-yaml.png" alt="Contentful model">
-    <img class="gc-solution-image" src="/assets/images/globalChange/gc-workshops.png" alt="Contentful model">
+    <div class="solution-text">
+      <p>
+        We created a realistic, multi-page prototype that brought the design system, content model, and user experience together in one working environment.
+      </p>
+    </div>
+    <div class="solution-images">
+      <img class="solution-image" src="/assets/images/globalChange/gc-contentful-folder.png" alt="homepage-prototype">
+      <img class="solution-image" src="/assets/images/globalChange/gc-navigation-yaml.png" alt="homepage-prototype">
+      <img class="solution-image" src="/assets/images/globalChange/gc-assessmentReport-yaml.png" alt="Contentful model">
+      <img class="solution-image" src="/assets/images/globalChange/gc-workshops.png" alt="Contentful model">
+       <!-- Add more images here anytime -->
+      <button class="image-next" aria-label="Next image">
+        →
+      </button>
+      <button class="image-expand" aria-label="View full size">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 3h6v6"/>
+          <path d="M21 3l-7 7"/>
+          <path d="M9 21H3v-6"/>
+          <path d="M3 21l7-7"/>
+        </svg>
+      </button>    
+      <div class="image-info">
+        <div id="image-caption"></div>
+        <div class="image-counter">
+          <span id="current-image"></span> / <span id="total-images"></span>
+        </div>
+      </div>
+    </div>
     <p class="solution-box">
       The prototype used reusable design-system components as a foundation, introduced custom components where necessary, and connected structured content from Contentful to production-like page templates. Jekyll generated the pages so the team could evaluate the experience with realistic content rather than placeholder copy.
     </p>
@@ -252,3 +280,30 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
     </p>
   </section>
 </section>
+
+<div id="lightbox" class="lightbox hidden">
+
+  <div class="lightbox-image-wrapper">
+
+    <img id="lightbox-image" src="" alt="">
+
+  </div>
+
+  <div class="lightbox-info">
+    <p id="lightbox-caption"></p>
+    <span id="lightbox-counter"></span>
+  </div>
+
+  <button class="lightbox-prev" aria-label="Previous image">
+    ←
+  </button>
+
+  <button class="lightbox-next" aria-label="Next image">
+    →
+  </button>
+
+  <button class="lightbox-close" aria-label="Close image">
+    ✕
+  </button>
+
+</div>

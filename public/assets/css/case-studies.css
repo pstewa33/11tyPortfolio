@@ -582,4 +582,23 @@ body.lightbox-open {
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
   margin-bottom: var(--space-md);
+}
+
+.intro-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+.intro-container .image-container {
+  display: flex;
+  align-items: flex-start;
+}
+.intro-container img {
+  width: 300px;
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
 }/*# sourceMappingURL=case-studies.css.map */

@@ -698,3 +698,22 @@ body.lightbox-open {
     box-shadow: var(--shadow-sm);
     margin-bottom: var(--space-md);
 }
+
+.intro-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
+
+  .image-container{
+    display: flex;
+    align-items: flex-start;
+  }
+
+  img{
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+    object-position: top;
+  }
+}
