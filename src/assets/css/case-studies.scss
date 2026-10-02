@@ -24,18 +24,97 @@
 // Overview
 // =====================================================
 
+.dmxlibrary{
+
+    .overview-container{
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-lg);
+    }
+
+}
+
+.intro-container{
+    flex: 0 0 800px;
+}
+
+.overview-tech-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    flex: 1;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-lg);
+    margin: auto;
+}
+
 .overview-card {
+
     background: var(--surface-muted, #f5f7fa);
-    padding: var(--space-lg);
+    padding: var(--space-md);
     border-radius: 16px;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-md);
+    border: 1px solid gray;
+
+    .overview-item{
+        margin-bottom: var(--space-sm);
+    }
 
     span {
         font-weight: 600;
     }
+}
+
+// =====================================================
+// Tech Stack
+// =====================================================
+
+.tech-stack {
+    background: #f5f7fa;
+    padding: var(--space-md);
+    border-radius: 16px;
+    border: 1px solid gray;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.tech-tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    list-style: none;
+
+    li {
+        background: white;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: 9999px;
+        font-size: 0.875rem;
+    }
+}
+
+// =====================================================
+// Intro Images
+// =====================================================
+
+.image-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+}
+
+.image-container figure {
+    margin: 0;
+}
+
+.image-container img {
+width: 100%;
+aspect-ratio: 16 / 10;
+object-fit: cover;
+border-radius: 1rem;
+border: 1px solid var(--border-subtle);
 }
 
 
@@ -199,37 +278,6 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
-
-// =====================================================
-// Tech Stack
-// =====================================================
-
-.tech-stack {
-    background: #f5f7fa;
-    padding: var(--space-lg);
-    margin-top: var(--space-md);
-
-    h2 {
-        text-align: center;
-    }
-}
-
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-top: var(--space-md);
-    list-style: none;
-
-    li {
-        background: white;
-        padding: var(--space-sm) var(--space-md);
-        border-radius: 9999px;
-        font-size: 0.875rem;
-    }
-}
-
 
 // =====================================================
 // Problem Images
@@ -540,30 +588,6 @@
 // Global Change Intro Images
 // =====================================================
 
-.gc-solution-image {
-    width: auto;
-    height: 800px;
-    object-fit: contain;
-}
-
-.intro-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
-    align-items: start;
-
-    .image-container {
-        display: flex;
-        align-items: flex-start;
-    }
-
-    img {
-        width: 300px;
-        height: 400px;
-        object-fit: contain;
-        object-position: top;
-    }
-}
 
 
 // =====================================================
