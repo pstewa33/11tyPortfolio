@@ -1,13 +1,4 @@
-// ---------- Elements ----------
-
-const images = [...document.querySelectorAll(".solution-image")];
-
-const nextButton = document.querySelector(".image-next");
-const expandButton = document.querySelector(".image-expand");
-
-const caption = document.getElementById("image-caption");
-const counter = document.getElementById("current-image");
-const total = document.getElementById("total-images");
+// ---------- Shared Lightbox ----------
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
@@ -18,95 +9,340 @@ const closeButton = document.querySelector(".lightbox-close");
 const prevButton = document.querySelector(".lightbox-prev");
 const nextLightboxButton = document.querySelector(".lightbox-next");
 
-// ---------- State ----------
+let activeGallery = null;
 
-let currentIndex = 0;
 
-total.textContent = images.length;
+// ---------- Gallery Initialization ----------
 
-// ---------- Gallery ----------
+document.querySelectorAll(".solution-images").forEach(gallery => {
 
-function renderGallery() {
+    const images = [
+        ...gallery.querySelectorAll(".solution-image")
+    ];
 
-    images.forEach((img, index) => {
+    const nextButton =
+        gallery.querySelector(".image-next");
 
-        img.classList.remove("active", "middle", "back", "hidden");
+    const expandButton =
+        gallery.querySelector(".image-expand");
 
-        const position =
-            (index - currentIndex + images.length) % images.length;
+    // Supports both:
+    // .image-caption / .current-image / .total-images
+    // and the old ID-based markup
+    const caption =
+        gallery.querySelector(".image-caption") ||
+        gallery.querySelector("#image-caption");
 
-        if (position === 0) {
+    const counter =
+        gallery.querySelector(".current-image") ||
+        gallery.querySelector("#current-image");
 
-            img.classList.add("active");
+    const total =
+        gallery.querySelector(".total-images") ||
+        gallery.querySelector("#total-images");
 
-        } else if (position === 1) {
+    let currentIndex = 0;
 
-            img.classList.add("middle");
 
-        } else if (position === 2) {
+    // Safety check
+    if (!images.length) return;
 
-            img.classList.add("back");
 
-        } else {
+    // ---------- Initial Counter ----------
 
-            img.classList.add("hidden");
+    if (total) {
+        total.textContent = images.length;
+    }
+
+
+    // ---------- Determine Carousel Type ----------
+
+    /*
+        Global Change carousel:
+        .solution-images.gc-carousel
+
+        Pattern Library carousel:
+        regular .solution-images
+    */
+
+    const isGCCarousel =
+        gallery.classList.contains("gc-carousel");
+
+
+    // ---------- Render Gallery ----------
+
+    function renderGallery() {
+
+        images.forEach((img, index) => {
+
+            img.classList.remove(
+                "active",
+                "middle",
+                "back",
+                "left",
+                "right",
+                "hidden"
+            );
+
+
+            const position =
+                (index - currentIndex + images.length) %
+                images.length;
+
+
+            // -----------------------------
+            // Global Change carousel
+            // -----------------------------
+
+            if (isGCCarousel) {
+
+                if (position === 0) {
+
+                    img.classList.add("active");
+
+                }
+
+                else if (position === 1) {
+
+                    img.classList.add("right");
+
+                }
+
+                else if (
+                    position === images.length - 1
+                ) {
+
+                    img.classList.add("left");
+
+                }
+
+                else {
+
+                    img.classList.add("hidden");
+
+                }
+
+            }
+
+
+            // -----------------------------
+            // Pattern Library carousel
+            // -----------------------------
+
+            else {
+
+                if (position === 0) {
+
+                    img.classList.add("active");
+
+                }
+
+                else if (position === 1) {
+
+                    img.classList.add("middle");
+
+                }
+
+                else if (position === 2) {
+
+                    img.classList.add("back");
+
+                }
+
+                else {
+
+                    img.classList.add("hidden");
+
+                }
+
+            }
+
+        });
+
+
+        // ---------- Caption ----------
+
+        if (caption) {
+
+            caption.textContent =
+                images[currentIndex].alt;
 
         }
 
+
+        // ---------- Counter ----------
+
+        if (counter) {
+
+            counter.textContent =
+                currentIndex + 1;
+
+        }
+
+
+        // ---------- Lightbox ----------
+
+        if (activeGallery === gallery) {
+
+            updateLightbox();
+
+        }
+
+    }
+
+
+    // ---------- Next Image ----------
+
+    function nextImage() {
+
+        currentIndex =
+            (currentIndex + 1) % images.length;
+
+        renderGallery();
+
+    }
+
+
+    // ---------- Previous Image ----------
+
+    function previousImage() {
+
+        currentIndex =
+            (currentIndex - 1 + images.length) %
+            images.length;
+
+        renderGallery();
+
+    }
+
+
+    // ---------- Open Lightbox ----------
+
+    function openLightbox() {
+
+        activeGallery = gallery;
+
+        document.body.classList.add(
+            "lightbox-open"
+        );
+
+        lightbox.classList.remove("hidden");
+
+        updateLightbox();
+
+    }
+
+
+    // ---------- Image Click ----------
+
+    images.forEach(img => {
+
+        img.addEventListener(
+            "click",
+            nextImage
+        );
+
     });
 
-    caption.textContent = images[currentIndex].alt;
-    counter.textContent = currentIndex + 1;
 
-    if (!lightbox.classList.contains("hidden")) {
-        updateLightbox();
+    // ---------- Carousel Next Button ----------
+
+    if (nextButton) {
+
+        nextButton.addEventListener(
+            "click",
+            nextImage
+        );
+
     }
-}
 
 
-// ---------- Navigation ----------
+    // ---------- Expand Button ----------
 
-function nextImage() {
+    if (expandButton) {
 
-    currentIndex =
-        (currentIndex + 1) % images.length;
+        expandButton.addEventListener(
+            "click",
+            openLightbox
+        );
 
-    renderGallery();
+    }
 
-}
 
-function previousImage() {
-
-    currentIndex =
-        (currentIndex - 1 + images.length) % images.length;
+    // ---------- Initial Render ----------
 
     renderGallery();
 
-}
 
-// ---------- Lightbox ----------
+    // Store navigation functions on gallery
+    gallery._carousel = {
+        next: nextImage,
+        previous: previousImage
+    };
+
+});
+
+
+// ---------- Lightbox Update ----------
 
 function updateLightbox() {
 
-    const image = images[currentIndex];
+    if (!activeGallery) return;
 
+
+    const images = [
+        ...activeGallery.querySelectorAll(
+            ".solution-image"
+        )
+    ];
+
+
+    const activeImage =
+        activeGallery.querySelector(
+            ".solution-image.active"
+        );
+
+
+    if (!activeImage) return;
+
+
+    const currentIndex =
+        images.indexOf(activeImage);
+
+
+    // Reset zoom
     lightboxImage.classList.remove("zoom");
 
-    lightboxImage.src = image.src;
 
-    lightboxCaption.textContent = image.alt;
+    // Update image
+    lightboxImage.src =
+        activeImage.src;
+
+    lightboxImage.alt =
+        activeImage.alt;
+
+
+    // Update text
+    lightboxCaption.textContent =
+        activeImage.alt;
 
     lightboxCounter.textContent =
         `${currentIndex + 1} / ${images.length}`;
 
+
+    // Determine tall images
     lightboxImage.onload = () => {
 
         const ratio =
             lightboxImage.naturalHeight /
             lightboxImage.naturalWidth;
 
+
         const wrapper =
-            document.querySelector(".lightbox-image-wrapper");
+            document.querySelector(
+                ".lightbox-image-wrapper"
+            );
+
 
         wrapper.classList.toggle(
             "tall-image",
@@ -117,80 +353,160 @@ function updateLightbox() {
 
 }
 
-function openLightbox() {
 
-    document.body.classList.add("lightbox-open");
+// ---------- Lightbox Next ----------
 
-    updateLightbox();
+function nextLightboxImage() {
 
-    lightbox.classList.remove("hidden");
+    if (!activeGallery) return;
+
+
+    if (activeGallery._carousel) {
+
+        activeGallery._carousel.next();
+
+    }
 
 }
+
+
+// ---------- Lightbox Previous ----------
+
+function previousLightboxImage() {
+
+    if (!activeGallery) return;
+
+
+    if (activeGallery._carousel) {
+
+        activeGallery._carousel.previous();
+
+    }
+
+}
+
+
+// ---------- Close Lightbox ----------
 
 function closeLightbox() {
 
-    document.body.classList.remove("lightbox-open");
+    document.body.classList.remove(
+        "lightbox-open"
+    );
 
     lightbox.classList.add("hidden");
 
+    activeGallery = null;
+
 }
 
-// ---------- Event Listeners ----------
 
-// Click gallery image
-images.forEach(img => {
-    img.addEventListener("click", nextImage);
-});
+// ---------- Close Button ----------
 
-// Next button
-nextButton.addEventListener("click", nextImage);
+if (closeButton) {
 
-// Expand button
-expandButton.addEventListener("click", openLightbox);
+    closeButton.addEventListener(
+        "click",
+        closeLightbox
+    );
 
-// Lightbox controls
-closeButton.addEventListener("click", closeLightbox);
+}
 
-nextLightboxButton.addEventListener("click", nextImage);
 
-prevButton.addEventListener("click", previousImage);
+// ---------- Lightbox Next Button ----------
 
-lightboxImage.addEventListener("click", () => {
-    lightboxImage.classList.toggle("zoom");
-});
+if (nextLightboxButton) {
 
-// Click outside image to close
-lightbox.addEventListener("click", (e) => {
+    nextLightboxButton.addEventListener(
+        "click",
+        nextLightboxImage
+    );
 
-    if (e.target === lightbox) {
-        closeLightbox();
+}
+
+
+// ---------- Lightbox Previous Button ----------
+
+if (prevButton) {
+
+    prevButton.addEventListener(
+        "click",
+        previousLightboxImage
+    );
+
+}
+
+
+// ---------- Zoom ----------
+
+lightboxImage.addEventListener(
+    "click",
+    () => {
+
+        lightboxImage.classList.toggle(
+            "zoom"
+        );
+
     }
+);
 
-});
 
-// Keyboard controls
-document.addEventListener("keydown", (e) => {
+// ---------- Click Outside ----------
 
-    if (lightbox.classList.contains("hidden")) return;
+lightbox.addEventListener(
+    "click",
+    e => {
 
-    switch (e.key) {
+        if (e.target === lightbox) {
 
-        case "Escape":
             closeLightbox();
-            break;
 
-        case "ArrowRight":
-            nextImage();
-            break;
-
-        case "ArrowLeft":
-            previousImage();
-            break;
+        }
 
     }
+);
 
-});
 
-// ---------- Initialize ----------
+// ---------- Keyboard Controls ----------
 
-renderGallery();
+document.addEventListener(
+    "keydown",
+    e => {
+
+        if (
+            lightbox.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        switch (e.key) {
+
+            case "Escape":
+
+                closeLightbox();
+
+                break;
+
+
+            case "ArrowRight":
+
+                nextLightboxImage();
+
+                break;
+
+
+            case "ArrowLeft":
+
+                previousLightboxImage();
+
+                break;
+
+        }
+
+    }
+);

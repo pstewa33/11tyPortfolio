@@ -159,9 +159,9 @@ subtitle: Built and maintained a USWDS-based component library and reusable page
       </svg>
     </button>    
     <div class="image-info">
-      <div id="image-caption"></div>
+      <div class="image-caption"></div>
       <div class="image-counter">
-        <span id="current-image"></span> / <span id="total-images"></span>
+        <span class="current-image"></span> / <span class="total-images"></span>
       </div>
     </div>
   </div>
