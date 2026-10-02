@@ -62,6 +62,14 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
       <p>
         The images below compare the previous Global Change homepage with the prototype redesign. While the visual refresh was important, the larger goal was improving content organization, accessibility, and the overall usability of a content-heavy experience.
       </p>
+      <br>
+      <p>
+        The existing homepage prior to the redesign. Navigation, content hierarchy, and key user pathways competed for attention, making it difficult for users to quickly find information and understand the site's structure.
+      </p>
+      <br>
+      <p>
+        The functional prototype redesign built with reusable USWDS-based components, improved content organization, and a clearer information hierarchy designed to support navigation, accessibility, and content discovery
+      </p>
       <div class="solution-images comparison-carousel">
         <figure class="comparison-item">
           <img
@@ -69,7 +77,7 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
             src="/assets/images/globalChange/gc-2020.png"
             alt="Prior Global Change Homepage"
           >
-          <figcaption>Existing homepage prior to the redesign. Navigation, content hierarchy, and key user pathways competed for attention, making it difficult for users to quickly find information and understand the site's structure.</figcaption>
+          <figcaption>Existing homepage prior to the redesign.</figcaption>
         </figure>
         <figure class="comparison-item">
           <img
@@ -77,7 +85,7 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
             src="/assets/images/globalChange/gc-home.png"
             alt="Global Change prototype homepage"
           >
-          <figcaption>Functional prototype redesign built with reusable USWDS-based components, improved content organization, and a clearer information hierarchy designed to support navigation, accessibility, and content discovery.</figcaption>
+          <figcaption>Functional prototype redesign built with reusable USWDS-based components.</figcaption>
         </figure>
         <!-- Add more images here anytime -->
         <button class="image-expand" aria-label="View full size">
