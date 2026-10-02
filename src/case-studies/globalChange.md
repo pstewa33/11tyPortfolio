@@ -62,13 +62,10 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
       <p>
         The images below compare the previous Global Change homepage with the prototype redesign. While the visual refresh was important, the larger goal was improving content organization, accessibility, and the overall usability of a content-heavy experience.
       </p>
-      <div class="solution-images gc-carousel">
+      <div class="solution-images comparison-carousel">
         <img class="solution-image" src="/assets/images/globalChange/gc-2020.png" alt="Prior Global Change Homepage">
         <img class="solution-image" src="/assets/images/globalChange/gc-home.png" alt="Global Change prototype homepage">
         <!-- Add more images here anytime -->
-        <button class="image-next" aria-label="Next image">
-          →
-        </button>
         <button class="image-expand" aria-label="View full size">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M15 3h6v6"/>

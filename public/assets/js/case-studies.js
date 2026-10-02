@@ -235,13 +235,22 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
 
     // ---------- Image Click ----------
 
-    images.forEach(img => {
+    images.forEach((img, index) => {
 
-        img.addEventListener(
-            "click",
-            nextImage
-        );
+        img.addEventListener("click", () => {
 
+            if (gallery.classList.contains("comparison-carousel")) {
+
+                currentIndex = index;
+                openLightbox();
+
+            } else {
+
+                nextImage();
+
+            }
+
+        });
     });
 
 
