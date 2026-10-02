@@ -63,8 +63,22 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
         The images below compare the previous Global Change homepage with the prototype redesign. While the visual refresh was important, the larger goal was improving content organization, accessibility, and the overall usability of a content-heavy experience.
       </p>
       <div class="solution-images comparison-carousel">
-        <img class="solution-image" src="/assets/images/globalChange/gc-2020.png" alt="Prior Global Change Homepage">
-        <img class="solution-image" src="/assets/images/globalChange/gc-home.png" alt="Global Change prototype homepage">
+        <figure class="comparison-item">
+          <img
+            class="solution-image"
+            src="/assets/images/globalChange/gc-2020.png"
+            alt="Prior Global Change Homepage"
+          >
+          <figcaption>Existing homepage prior to the redesign. Navigation, content hierarchy, and key user pathways competed for attention, making it difficult for users to quickly find information and understand the site's structure.</figcaption>
+        </figure>
+        <figure class="comparison-item">
+          <img
+            class="solution-image"
+            src="/assets/images/globalChange/gc-home.png"
+            alt="Global Change prototype homepage"
+          >
+          <figcaption>Functional prototype redesign built with reusable USWDS-based components, improved content organization, and a clearer information hierarchy designed to support navigation, accessibility, and content discovery.</figcaption>
+        </figure>
         <!-- Add more images here anytime -->
         <button class="image-expand" aria-label="View full size">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
@@ -74,12 +88,6 @@ subtitle: Created a deployable, high-fidelity prototype using reusable component
             <path d="M3 21l7-7"/>
           </svg>
         </button>    
-        <div class="image-info">
-          <div class="image-caption"></div>
-          <div class="image-counter">
-            <span class="current-image"></span> / <span class="total-images"></span>
-          </div>
-        </div>
       </div>
     </div>
   </section>

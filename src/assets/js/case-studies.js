@@ -1,4 +1,6 @@
-// ---------- Shared Lightbox ----------
+// =====================================================
+// Shared Lightbox
+// =====================================================
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
@@ -10,9 +12,12 @@ const prevButton = document.querySelector(".lightbox-prev");
 const nextLightboxButton = document.querySelector(".lightbox-next");
 
 let activeGallery = null;
+let lightboxIndex = 0;
 
 
-// ---------- Gallery Initialization ----------
+// =====================================================
+// Gallery Initialization
+// =====================================================
 
 document.querySelectorAll(".solution-images").forEach(gallery => {
 
@@ -26,9 +31,6 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
     const expandButton =
         gallery.querySelector(".image-expand");
 
-    // Supports both:
-    // .image-caption / .current-image / .total-images
-    // and the old ID-based markup
     const caption =
         gallery.querySelector(".image-caption") ||
         gallery.querySelector("#image-caption");
@@ -44,32 +46,36 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
     let currentIndex = 0;
 
 
+    // -------------------------------------------------
     // Safety check
+    // -------------------------------------------------
+
     if (!images.length) return;
 
 
-    // ---------- Initial Counter ----------
+    // -------------------------------------------------
+    // Determine carousel type
+    // -------------------------------------------------
+
+    const isGCCarousel =
+        gallery.classList.contains("gc-carousel");
+
+    const isComparisonCarousel =
+        gallery.classList.contains("comparison-carousel");
+
+
+    // -------------------------------------------------
+    // Initial Counter
+    // -------------------------------------------------
 
     if (total) {
         total.textContent = images.length;
     }
 
 
-    // ---------- Determine Carousel Type ----------
-
-    /*
-        Global Change carousel:
-        .solution-images.gc-carousel
-
-        Pattern Library carousel:
-        regular .solution-images
-    */
-
-    const isGCCarousel =
-        gallery.classList.contains("gc-carousel");
-
-
-    // ---------- Render Gallery ----------
+    // =================================================
+    // Render Gallery
+    // =================================================
 
     function renderGallery() {
 
@@ -90,9 +96,23 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
                 images.length;
 
 
-            // -----------------------------
+            // -----------------------------------------
+            // Comparison carousel
+            //
+            // Images are side-by-side and do not use
+            // the stacked carousel positioning.
+            // -----------------------------------------
+
+            if (isComparisonCarousel) {
+
+                return;
+
+            }
+
+
+            // -----------------------------------------
             // Global Change carousel
-            // -----------------------------
+            // -----------------------------------------
 
             if (isGCCarousel) {
 
@@ -125,9 +145,9 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
             }
 
 
-            // -----------------------------
+            // -----------------------------------------
             // Pattern Library carousel
-            // -----------------------------
+            // -----------------------------------------
 
             else {
 
@@ -160,7 +180,9 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
         });
 
 
-        // ---------- Caption ----------
+        // -------------------------------------------------
+        // Caption
+        // -------------------------------------------------
 
         if (caption) {
 
@@ -170,7 +192,9 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
         }
 
 
-        // ---------- Counter ----------
+        // -------------------------------------------------
+        // Counter
+        // -------------------------------------------------
 
         if (counter) {
 
@@ -180,7 +204,9 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
         }
 
 
-        // ---------- Lightbox ----------
+        // -------------------------------------------------
+        // Update lightbox if this gallery is active
+        // -------------------------------------------------
 
         if (activeGallery === gallery) {
 
@@ -191,36 +217,52 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
     }
 
 
-    // ---------- Next Image ----------
+    // =================================================
+    // Go To Image
+    // =================================================
+
+    function goToImage(index) {
+
+        currentIndex =
+            (index + images.length) % images.length;
+
+        renderGallery();
+
+    }
+
+
+    // =================================================
+    // Next Image
+    // =================================================
 
     function nextImage() {
 
-        currentIndex =
-            (currentIndex + 1) % images.length;
-
-        renderGallery();
+        goToImage(currentIndex + 1);
 
     }
 
 
-    // ---------- Previous Image ----------
+    // =================================================
+    // Previous Image
+    // =================================================
 
     function previousImage() {
 
-        currentIndex =
-            (currentIndex - 1 + images.length) %
-            images.length;
-
-        renderGallery();
+        goToImage(currentIndex - 1);
 
     }
 
 
-    // ---------- Open Lightbox ----------
+    // =================================================
+    // Open Lightbox
+    // =================================================
 
-    function openLightbox() {
+    function openLightbox(index = currentIndex) {
 
         activeGallery = gallery;
+
+        lightboxIndex =
+            (index + images.length) % images.length;
 
         document.body.classList.add(
             "lightbox-open"
@@ -233,28 +275,46 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
     }
 
 
-    // ---------- Image Click ----------
+    // =================================================
+    // Image Click
+    // =================================================
 
     images.forEach((img, index) => {
 
         img.addEventListener("click", () => {
 
-            if (gallery.classList.contains("comparison-carousel")) {
+            // -----------------------------------------
+            // Comparison carousel
+            //
+            // Clicking either image opens that exact
+            // image in the lightbox.
+            // -----------------------------------------
 
-                currentIndex = index;
-                openLightbox();
+            if (isComparisonCarousel) {
 
-            } else {
+                openLightbox(index);
 
-                nextImage();
+                return;
 
             }
 
+
+            // -----------------------------------------
+            // Existing carousels
+            //
+            // Clicking an image advances the carousel.
+            // -----------------------------------------
+
+            nextImage();
+
         });
+
     });
 
 
-    // ---------- Carousel Next Button ----------
+    // =================================================
+    // Carousel Next Button
+    // =================================================
 
     if (nextButton) {
 
@@ -266,33 +326,49 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
     }
 
 
-    // ---------- Expand Button ----------
+    // =================================================
+    // Expand Button
+    // =================================================
 
     if (expandButton) {
 
         expandButton.addEventListener(
             "click",
-            openLightbox
+            () => openLightbox(currentIndex)
         );
 
     }
 
 
-    // ---------- Initial Render ----------
+    // =================================================
+    // Initial Render
+    // =================================================
 
     renderGallery();
 
 
-    // Store navigation functions on gallery
+    // =================================================
+    // Store Carousel Functions
+    // =================================================
+
     gallery._carousel = {
+
         next: nextImage,
-        previous: previousImage
+
+        previous: previousImage,
+
+        goTo: goToImage,
+
+        getCurrentIndex: () => currentIndex
+
     };
 
 });
 
 
-// ---------- Lightbox Update ----------
+// =====================================================
+// Lightbox Update
+// =====================================================
 
 function updateLightbox() {
 
@@ -306,24 +382,33 @@ function updateLightbox() {
     ];
 
 
+    if (!images.length) return;
+
+
+    // Make sure the index is valid
+    lightboxIndex =
+        (lightboxIndex + images.length) %
+        images.length;
+
+
     const activeImage =
-        activeGallery.querySelector(
-            ".solution-image.active"
-        );
+        images[lightboxIndex];
 
 
     if (!activeImage) return;
 
 
-    const currentIndex =
-        images.indexOf(activeImage);
-
-
+    // -------------------------------------------------
     // Reset zoom
+    // -------------------------------------------------
+
     lightboxImage.classList.remove("zoom");
 
 
+    // -------------------------------------------------
     // Update image
+    // -------------------------------------------------
+
     lightboxImage.src =
         activeImage.src;
 
@@ -331,15 +416,26 @@ function updateLightbox() {
         activeImage.alt;
 
 
-    // Update text
+    // -------------------------------------------------
+    // Update caption
+    // -------------------------------------------------
+
     lightboxCaption.textContent =
         activeImage.alt;
 
+
+    // -------------------------------------------------
+    // Update counter
+    // -------------------------------------------------
+
     lightboxCounter.textContent =
-        `${currentIndex + 1} / ${images.length}`;
+        `${lightboxIndex + 1} / ${images.length}`;
 
 
-    // Determine tall images
+    // -------------------------------------------------
+    // Determine image height
+    // -------------------------------------------------
+
     lightboxImage.onload = () => {
 
         const ratio =
@@ -363,39 +459,84 @@ function updateLightbox() {
 }
 
 
-// ---------- Lightbox Next ----------
+// =====================================================
+// Lightbox Next
+// =====================================================
 
 function nextLightboxImage() {
 
     if (!activeGallery) return;
 
 
+    const images =
+        activeGallery.querySelectorAll(
+            ".solution-image"
+        );
+
+
+    if (!images.length) return;
+
+
+    lightboxIndex =
+        (lightboxIndex + 1) % images.length;
+
+
+    // Keep the underlying carousel in sync
     if (activeGallery._carousel) {
 
-        activeGallery._carousel.next();
+        activeGallery._carousel.goTo(
+            lightboxIndex
+        );
 
     }
+
+
+    updateLightbox();
 
 }
 
 
-// ---------- Lightbox Previous ----------
+// =====================================================
+// Lightbox Previous
+// =====================================================
 
 function previousLightboxImage() {
 
     if (!activeGallery) return;
 
 
+    const images =
+        activeGallery.querySelectorAll(
+            ".solution-image"
+        );
+
+
+    if (!images.length) return;
+
+
+    lightboxIndex =
+        (lightboxIndex - 1 + images.length) %
+        images.length;
+
+
+    // Keep the underlying carousel in sync
     if (activeGallery._carousel) {
 
-        activeGallery._carousel.previous();
+        activeGallery._carousel.goTo(
+            lightboxIndex
+        );
 
     }
+
+
+    updateLightbox();
 
 }
 
 
-// ---------- Close Lightbox ----------
+// =====================================================
+// Close Lightbox
+// =====================================================
 
 function closeLightbox() {
 
@@ -407,10 +548,14 @@ function closeLightbox() {
 
     activeGallery = null;
 
+    lightboxIndex = 0;
+
 }
 
 
-// ---------- Close Button ----------
+// =====================================================
+// Close Button
+// =====================================================
 
 if (closeButton) {
 
@@ -422,7 +567,9 @@ if (closeButton) {
 }
 
 
-// ---------- Lightbox Next Button ----------
+// =====================================================
+// Lightbox Next Button
+// =====================================================
 
 if (nextLightboxButton) {
 
@@ -434,7 +581,9 @@ if (nextLightboxButton) {
 }
 
 
-// ---------- Lightbox Previous Button ----------
+// =====================================================
+// Lightbox Previous Button
+// =====================================================
 
 if (prevButton) {
 
@@ -446,46 +595,59 @@ if (prevButton) {
 }
 
 
-// ---------- Zoom ----------
+// =====================================================
+// Zoom
+// =====================================================
 
-lightboxImage.addEventListener(
-    "click",
-    () => {
+if (lightboxImage) {
 
-        lightboxImage.classList.toggle(
-            "zoom"
-        );
+    lightboxImage.addEventListener(
+        "click",
+        () => {
 
-    }
-);
-
-
-// ---------- Click Outside ----------
-
-lightbox.addEventListener(
-    "click",
-    e => {
-
-        if (e.target === lightbox) {
-
-            closeLightbox();
+            lightboxImage.classList.toggle(
+                "zoom"
+            );
 
         }
+    );
 
-    }
-);
+}
 
 
-// ---------- Keyboard Controls ----------
+// =====================================================
+// Click Outside Lightbox
+// =====================================================
+
+if (lightbox) {
+
+    lightbox.addEventListener(
+        "click",
+        e => {
+
+            if (e.target === lightbox) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+}
+
+
+// =====================================================
+// Keyboard Controls
+// =====================================================
 
 document.addEventListener(
     "keydown",
     e => {
 
         if (
-            lightbox.classList.contains(
-                "hidden"
-            )
+            !lightbox ||
+            lightbox.classList.contains("hidden")
         ) {
 
             return;
