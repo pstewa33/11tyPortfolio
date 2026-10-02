@@ -459,128 +459,128 @@ border: 1px solid var(--border-subtle);
 
 .solution-text-container {
     margin-bottom: var(--space-md);
+}
 
-    // The carousel is now below the text
-    .solution-images.gc-carousel {
-        position: relative;
+ // The carousel is now below the text
+.solution-images.gc-carousel {
+    position: relative;
 
-        width: 100%;
-        max-width: 900px;
+    width: 100%;
+    max-width: 900px;
 
-        height: 450px;
+    height: 450px;
 
-        margin:
-            var(--space-md)
-            auto
-            0;
+    margin:
+        var(--space-md)
+        auto
+        0;
 
-        flex: none;
-    }
-
-
-    // -----------------------------------------
-    // Base Global Change image
-    // -----------------------------------------
-
-    .solution-images.gc-carousel .solution-image {
-        position: absolute;
-
-        top: 50%;
-        left: 50%;
-
-        width: 70%;
-        height: 90%;
-
-        object-fit: contain;
-        object-position: center;
-
-        background: white;
-        padding: 12px;
-
-        border-radius: 12px;
-
-        box-shadow:
-            0 12px 30px rgba(0, 0, 0, .18);
-
-        cursor: pointer;
-
-        transform-origin: center center;
-
-        transition:
-            transform .45s cubic-bezier(.2, .8, .2, 1),
-            opacity .45s ease,
-            box-shadow .45s ease;
-    }
+    flex: none;
+}
 
 
-    // -----------------------------------------
-    // Focused image
-    // -----------------------------------------
+// -----------------------------------------
+// Base Global Change image
+// -----------------------------------------
 
-    .solution-images.gc-carousel
-    .solution-image.active {
+.solution-images.gc-carousel .solution-image {
+    position: absolute;
 
-        z-index: 3;
+    top: 50%;
+    left: 50%;
 
-        transform:
-            translate(-50%, -50%)
-            scale(1);
+    width: 70%;
+    height: 90%;
 
-        opacity: 1;
-    }
+    object-fit: contain;
+    object-position: center;
+
+    background: white;
+    padding: 12px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .18);
+
+    cursor: pointer;
+
+    transform-origin: center center;
+
+    transition:
+        transform .45s cubic-bezier(.2, .8, .2, 1),
+        opacity .45s ease,
+        box-shadow .45s ease;
+}
 
 
-    // -----------------------------------------
-    // Image behind on the left
-    // -----------------------------------------
+// -----------------------------------------
+// Focused image
+// -----------------------------------------
 
-    .solution-images.gc-carousel
-    .solution-image.left {
+.solution-images.gc-carousel
+.solution-image.active {
 
-        z-index: 2;
+    z-index: 3;
 
-        transform:
-            translate(calc(-50% - 300px), -50%)
-            scale(.88);
+    transform:
+        translate(-50%, -50%)
+        scale(1);
 
-        opacity: .7;
-    }
+    opacity: 1;
+}
 
 
-    // -----------------------------------------
-    // Image behind on the right
-    // -----------------------------------------
+// -----------------------------------------
+// Image behind on the left
+// -----------------------------------------
 
-    .solution-images.gc-carousel
-    .solution-image.right {
+.solution-images.gc-carousel
+.solution-image.left {
 
-        z-index: 2;
+    z-index: 2;
 
-       transform:
-        translate(calc(-50% + 300px), -50%)
+    transform:
+        translate(calc(-50% - 300px), -50%)
         scale(.88);
 
-        opacity: .7;
-    }
+    opacity: .7;
+}
 
 
-    // -----------------------------------------
-    // Hidden images
-    // -----------------------------------------
+// -----------------------------------------
+// Image behind on the right
+// -----------------------------------------
 
-    .solution-images.gc-carousel
-    .solution-image.hidden {
+.solution-images.gc-carousel
+.solution-image.right {
 
-        z-index: 0;
+    z-index: 2;
 
-        opacity: 0;
+    transform:
+    translate(calc(-50% + 300px), -50%)
+    scale(.88);
 
-        pointer-events: none;
+    opacity: .7;
+}
 
-        transform:
-            translate(-50%, -50%)
-            scale(.8);
-    }
+
+// -----------------------------------------
+// Hidden images
+// -----------------------------------------
+
+.solution-images.gc-carousel
+.solution-image.hidden {
+
+    z-index: 0;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.8);
 }
 
 
@@ -684,35 +684,33 @@ border: 1px solid var(--border-subtle);
     }
 
 
-    // Global Change carousel
-    .solution-text-container {
+// Global Change carousel
 
-        .solution-images.gc-carousel {
+.solution-images.gc-carousel {
 
-            height: 400px;
-        }
+        height: 400px;
+    }
 
-        .solution-images.gc-carousel
-        .solution-image {
+    .solution-images.gc-carousel
+    .solution-image {
 
-            width: 78%;
-        }
+        width: 78%;
+    }
 
-        .solution-images.gc-carousel
-        .solution-image.left {
+    .solution-images.gc-carousel
+    .solution-image.left {
 
-            transform:
-                translate(calc(-50% - 90px), -50%)
-                scale(.85);
-        }
+        transform:
+            translate(calc(-50% - 90px), -50%)
+            scale(.85);
+    }
 
-        .solution-images.gc-carousel
-        .solution-image.right {
+    .solution-images.gc-carousel
+    .solution-image.right {
 
-            transform:
-                translate(calc(-50% + 90px), -50%)
-                scale(.85);
-        }
+        transform:
+            translate(calc(-50% + 90px), -50%)
+            scale(.85);
     }
 }
 

@@ -347,7 +347,8 @@
 .solution-text-container {
   margin-bottom: var(--space-md);
 }
-.solution-text-container .solution-images.gc-carousel {
+
+.solution-images.gc-carousel {
   position: relative;
   width: 100%;
   max-width: 900px;
@@ -355,7 +356,8 @@
   margin: var(--space-md) auto 0;
   flex: none;
 }
-.solution-text-container .solution-images.gc-carousel .solution-image {
+
+.solution-images.gc-carousel .solution-image {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -373,22 +375,26 @@
   transform-origin: center center;
   transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.45s ease, box-shadow 0.45s ease;
 }
-.solution-text-container .solution-images.gc-carousel .solution-image.active {
+
+.solution-images.gc-carousel .solution-image.active {
   z-index: 3;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
-.solution-text-container .solution-images.gc-carousel .solution-image.left {
+
+.solution-images.gc-carousel .solution-image.left {
   z-index: 2;
   transform: translate(calc(-50% - 300px), -50%) scale(0.88);
   opacity: 0.7;
 }
-.solution-text-container .solution-images.gc-carousel .solution-image.right {
+
+.solution-images.gc-carousel .solution-image.right {
   z-index: 2;
   transform: translate(calc(-50% + 300px), -50%) scale(0.88);
   opacity: 0.7;
 }
-.solution-text-container .solution-images.gc-carousel .solution-image.hidden {
+
+.solution-images.gc-carousel .solution-image.hidden {
   z-index: 0;
   opacity: 0;
   pointer-events: none;
@@ -452,16 +458,16 @@
   .solution-images .image-next {
     right: -12px;
   }
-  .solution-text-container .solution-images.gc-carousel {
+  .solution-images.gc-carousel {
     height: 400px;
   }
-  .solution-text-container .solution-images.gc-carousel .solution-image {
+  .solution-images.gc-carousel .solution-image {
     width: 78%;
   }
-  .solution-text-container .solution-images.gc-carousel .solution-image.left {
+  .solution-images.gc-carousel .solution-image.left {
     transform: translate(calc(-50% - 90px), -50%) scale(0.85);
   }
-  .solution-text-container .solution-images.gc-carousel .solution-image.right {
+  .solution-images.gc-carousel .solution-image.right {
     transform: translate(calc(-50% + 90px), -50%) scale(0.85);
   }
 }
