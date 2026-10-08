@@ -110,7 +110,7 @@ subtitle: Built and maintained a USWDS-based component library and reusable page
   <section class="problem">
     <h2 id="problem">Problem</h2>
     <p>
-      Across multiple government projects, teams were rebuilding the same UI components from scratch. This slowed development, created inconsistent user experiences, and led to accessibility issues that were often caught late.
+      Across multiple government projects, teams were repeatedly rebuilding common UI components, page templates, and accessibility solutions from scratch. This duplicated effort, created inconsistent user experiences, and increased the likelihood of accessibility issues being discovered late in the process.
     </p>
     <div class="comparison-container">
       <div class="solution-images comparison-carousel" style="max-width: 1000px; aspect-ratio: auto;">
@@ -120,7 +120,7 @@ subtitle: Built and maintained a USWDS-based component library and reusable page
             src="/assets/images/dmxlibrary/WorkflowDiagram.png"
             alt="DMX Library Workflow Diagram"
           >
-          <figcaption>DMX Library Workflow Diagram.</figcaption>
+          <figcaption>Prior to the pattern library, teams repeatedly solved the same implementation problems independently across projects.</figcaption>
         </figure>
         <!-- Add more images here anytime -->
         <button class="image-expand" aria-label="View full size">
