@@ -13,53 +13,125 @@ subtitle: Built and maintained a USWDS-based component library and reusable page
 
 <section class="dmxlibrary">
   <section class="overview">
-    <h2 id="overview">Overview</h2>
-    <div class="overview-card">
-      <div class="overview-item">
-        <span>Project</span>
-        <p>DMX Pattern Library</p>
+    <div class="overview-container">
+      <div class="intro-container">
+        <p>
+          Teams across multiple government website projects were repeatedly solving the same front-end and accessibility problems. Without a shared system, components were implemented differently between projects, design patterns drifted over time, and accessibility requirements had to be re-evaluated on each effort.
+        </p>
+        <br>
+        <p>
+          To address this, I helped design, build, and maintain a USWDS-based pattern library that provided reusable components, templates, and implementation guidance. By embedding accessibility and design standards directly into the system, teams could move faster while maintaining consistency across projects.
+        </p>
       </div>
-      <div class="overview-item">
-        <span>Timeline</span>
-        <p>Q3 2021 - Q2 2022</p>
-      </div>
-      <div class="overview-item">
-        <span>Team</span>
-        <p>UX Designer, UX Architect, Content Strategist, Developer</p>
-      </div>
-      <div class="overview-item">
-        <span>Role</span>
-        <p>UX Architect</p>
+      <div class="overview-tech-container">
+        <div class="overview-card">
+          <h2 id="overview">Overview</h2>
+          <div class="overview-item">
+            <span>Project</span>
+            <p>DMX Pattern Library</p>
+          </div>
+          <div class="overview-item">
+            <span>Timeline</span>
+            <p>Q3 2021 - Q2 2022</p>
+          </div>
+          <div class="overview-item">
+            <span>Team</span>
+            <p>UX Designer, UX Architect, Content Strategist, Developer</p>
+          </div>
+          <div class="overview-item">
+            <span>Role</span>
+            <p>UX Architect</p>
+          </div>
+        </div>
+        <div class="tech-stack">
+          <h2 id="tech-stack">Tech Stack</h2>
+          <ul class="tech-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Markdown</li>
+              <li>Web Components</li>
+              <li>Jekyll</li>
+              <li>Eleventy</li>
+              <li>Netlify</li>
+              <li>GitHub</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <p>
-      Built and maintained a USWDS-based pattern library used across multiple government website redesign efforts. The system standardized UI patterns, embedded accessibility into reusable components, and reduced duplicated implementation work across teams.
-    </p>
-  </section>
-  <section class="tech-stack">
-    <h2 id="tech-stack">Tech Stack</h2>
-    <ul class="tech-tags">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Markdown</li>
-        <li>Web Components</li>
-        <li>Jekyll</li>
-        <li>Eleventy</li>
-        <li>Netlify</li>
-        <li>GitHub</li>
-    </ul>
+    <div class="comparison-container">
+      <p>
+        The images below show the pattern library alongside examples of projects that reused its components, templates, and accessibility patterns.
+      </p>
+      <div class="solution-images comparison-carousel" style="max-width: 1000px; aspect-ratio: auto;">
+        <figure class="comparison-item">
+          <img
+            class="solution-image"
+            src="/assets/images/dmxlibrary/libraryHero.png"
+            alt="DMX Pattern Library Home Page"
+          >
+          <figcaption>The reusable component and template library that served as the foundation for multiple government website projects.</figcaption>
+        </figure>
+        <figure class="comparison-item">
+          <img
+            class="solution-image"
+            src="/assets/images/globalChange/gc-home.png"
+            alt="Global Change Prototype"
+          >
+          <figcaption>A prototype implementation used to validate navigation, content structure, and reusable design-system patterns before development.</figcaption>
+        </figure>
+        <figure class="comparison-item">
+          <img
+            class="solution-image"
+            src="/assets/images/dmxlibrary/dccps-nci-home.png"
+            alt="DCCPS Website"
+          >
+          <figcaption>A production implementation that reused shared components, templates, and accessibility standards from the pattern library.</figcaption>
+        </figure>
+        <figure class="comparison-item">
+          <img
+            class="solution-image"
+            src="/assets/images/smokefree/quitvet-landing-page.png"
+            alt="Smokefree Quitvet Landing Page"
+          >
+          <figcaption>Another production implementation demonstrating how the design system supported different content, branding, and user needs while maintaining consistency.</figcaption>
+        </figure>
+        <!-- Add more images here anytime -->
+        <button class="image-expand" aria-label="View full size">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h6v6"/>
+            <path d="M21 3l-7 7"/>
+            <path d="M9 21H3v-6"/>
+            <path d="M3 21l7-7"/>
+          </svg>
+        </button>    
+      </div>
+    </div>
   </section>
   <section class="problem">
     <h2 id="problem">Problem</h2>
     <p>
       Across multiple government projects, teams were rebuilding the same UI components from scratch. This slowed development, created inconsistent user experiences, and led to accessibility issues that were often caught late.
     </p>
-    <div class="problem-images">
-      <img
-        src="/assets/images/dmxlibrary/WorkflowDiagram.png"
-        class="problem-image"
-        alt="Pre-library Workflow"
-      >
+    <div class="comparison-container">
+      <div class="solution-images comparison-carousel" style="max-width: 1000px; aspect-ratio: auto;">
+        <figure class="comparison-item">
+          <img
+            class="solution-image"
+            src="/assets/images/dmxlibrary/WorkflowDiagram.png"
+            alt="DMX Library Workflow Diagram"
+          >
+          <figcaption>DMX Library Workflow Diagram.</figcaption>
+        </figure>
+        <!-- Add more images here anytime -->
+        <button class="image-expand" aria-label="View full size">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h6v6"/>
+            <path d="M21 3l-7 7"/>
+            <path d="M9 21H3v-6"/>
+            <path d="M3 21l7-7"/>
+          </svg>
+        </button>    
+      </div>
     </div>
   </section>
   <section class="context-constraints">
