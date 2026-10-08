@@ -20,7 +20,7 @@ subtitle: Built and maintained a USWDS-based component library and reusable page
         </p>
         <br>
         <p>
-          To address this, I helped design and build a USWDS-based pattern library that provided reusable components, templates, and implementation guidance. By embedding accessibility and design standards directly into the system, teams could move faster while maintaining consistency across projects.
+          To address this, I helped design, build, and maintain a USWDS-based pattern library that provided reusable components, templates, and implementation guidance. By embedding accessibility and design standards directly into the system, teams could move faster while maintaining consistency across projects.
         </p>
       </div>
       <div class="overview-tech-container">
@@ -60,9 +60,9 @@ subtitle: Built and maintained a USWDS-based component library and reusable page
     </div>
     <div class="comparison-container">
       <p>
-        The images below show the pattern library itself alongside examples of projects that adopted its components, templates, and accessibility standards.
+        The images below show the pattern library alongside examples of projects that reused its components, templates, and accessibility patterns.
       </p>
-      <div class="solution-images comparison-carousel" style="max-width: 1000px; aspect-ratio: auto; grid-template-columns: repeat(3, minmax(0, 1fr));">
+      <div class="solution-images comparison-carousel" style="max-width: 1000px; aspect-ratio: auto;">
         <figure class="comparison-item">
           <img
             class="solution-image"
@@ -77,7 +77,7 @@ subtitle: Built and maintained a USWDS-based component library and reusable page
             src="/assets/images/globalChange/gc-home.png"
             alt="Global Change Prototype"
           >
-          <figcaption>A site prototype built using shared pattern library components, demonstrating how the system supported real-world implementations.</figcaption>
+          <figcaption>A prototype implementation used to validate navigation, content structure, and reusable design-system patterns before development.</figcaption>
         </figure>
         <figure class="comparison-item">
           <img
@@ -85,7 +85,15 @@ subtitle: Built and maintained a USWDS-based component library and reusable page
             src="/assets/images/dmxlibrary/dccps-nci-home.png"
             alt="DCCPS Website"
           >
-          <figcaption>A production implementation that reused the design system's components, templates, and accessibility patterns.</figcaption>
+          <figcaption>A production implementation that reused shared components, templates, and accessibility standards from the pattern library.</figcaption>
+        </figure>
+        <figure class="comparison-item">
+          <img
+            class="solution-image"
+            src="/assets/images/smokefree/quitvet-landing-page.png"
+            alt="Smokefree Quitvet Landing Page"
+          >
+          <figcaption>Another production implementation demonstrating how the design system supported different content, branding, and user needs while maintaining consistency.</figcaption>
         </figure>
         <!-- Add more images here anytime -->
         <button class="image-expand" aria-label="View full size">
