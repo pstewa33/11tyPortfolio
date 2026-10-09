@@ -216,7 +216,7 @@
         <i class="fa-solid fa-layer-group"></i>
         <span>Design System Requirements</span>
         <p>
-          The prototype needed to use an existing USWDS-based design system to maintain consistency while also testing how well the system supported the project's requirements.
+          The prototype needed to use an existing USWDS-based design system, both to maintain consistency and to validate how well the system could support the project's requirements.
         </p>
       </div>
       <div class="constraint">
@@ -247,7 +247,7 @@
           <li>Built a functional, multi-page prototype using HTML, CSS, and JavaScript</li>
           <li>Applied and extended components from the US Web Design System</li>
           <li>Designed and implemented custom components where existing patterns did not meet project requirements</li>
-          <li>Considered accessibility requirements when extending component behavior and interactions</li>
+          <li>Maintained accessibility standards when extending component behavior and interactions</li>
         </ul>
       </div>
       <div class="role-box">
@@ -265,13 +265,13 @@
     <div class="solution-text-container">
       <div class="solution-text">
         <p class="solution-box">
-          We created a realistic, multi-page prototype that brought the design system, content model, and user experience together in one working environment.
+          We created a realistic, multi-page prototype that brought the design system, content model, and user experience together in a production-like environment.
         </p>
       </div>
       <div class="solution-images gc-carousel">
-        <img class="solution-image" src="/assets/images/globalChange/gc-contentful-folder.png" alt="contentful content structure">
-        <img class="solution-image" src="/assets/images/globalChange/gc-navigation-yaml.png" alt="contentful navigation yaml">
-        <img class="solution-image" src="/assets/images/globalChange/gc-assessmentReport-yaml.png" alt="Contentful Assesment Report yaml">
+        <img class="solution-image" src="/assets/images/globalChange/gc-contentful-folder.png" alt="Contentful data folder structure" data-caption="Content models used to support reusable page templates and structured content.">
+        <img class="solution-image" src="/assets/images/globalChange/gc-navigation-yaml.png" alt="YAML configuration defining the site's navigation structure." data-caption="Structured navigation data used to generate consistent site-wide navigation.">
+        <img class="solution-image" src="/assets/images/globalChange/gc-assessmentReport-yaml.png" alt="Assessment Report content model" data-caption="Structured content model used to generate assessment report pages from reusable templates.">
         <!-- Add more images here anytime -->
         <button class="image-next" aria-label="Next image">
           →
@@ -299,9 +299,9 @@
         </p>
       </div>
       <div class="solution-images gc-carousel">
-        <img class="solution-image" src="/assets/images/globalChange/gc-template-landing.png" alt="Template Landing Page">
-        <img class="solution-image" src="/assets/images/globalChange/gc-AssesmentReportSchema.png" alt="Template">
-        <img class="solution-image" src="/assets/images/globalChange/gc-component-landing.png" alt="Component Landing Page">
+        <img class="solution-image" src="/assets/images/globalChange/gc-template-landing.png" alt="Template Landing Page" data-caption="Reusable page templates built from shared components and structured content.">
+        <img class="solution-image" src="/assets/images/globalChange/gc-AssesmentReportSchema.png" alt="Template" data-caption="Schema outlining the content types and content relationships used by the Assessment Report template.">
+        <img class="solution-image" src="/assets/images/globalChange/gc-component-landing.png" alt="Component Landing Page" data-caption="Centralized component catalog used to support consistent implementation across the prototype.">
         <!-- Add more images here anytime -->
         <button class="image-next" aria-label="Next image">
           →
@@ -324,12 +324,14 @@
     </div>
     <div class="solution-text-container">
       <div class="solution-text">
-        <p class="solution-box">
-              This shifted stakeholder conversations from “What might this look like?” to “Does this experience work?” Navigation, content hierarchy, responsive layouts, and component behavior could be evaluated directly and iterated before full development.
-        </p>
+        <blockquote class="gc-quote">
+          <p class="solution-box">
+            This shifted stakeholder conversations from <strong>“What might this look like?”</strong> to <strong>“Does this experience work?”</strong> Navigation, content hierarchy, responsive layouts, and component behavior could be evaluated directly and iterated before full development.
+          </p>
+        </blockqupte>
       </div>
       <div class="solution-images gc-carousel">
-        <img class="solution-image" src="/assets/images/globalChange/gc-AssesmentReport.png" alt="Prototype Page">
+        <img class="solution-image" src="/assets/images/globalChange/gc-AssesmentReport.png" alt="Prototype Page" data-caption="Production-like prototype page used to validate navigation, content hierarchy, and user experience before development.">
         <!-- Add more images here anytime -->
         <button class="image-next" aria-label="Next image">
           →
@@ -368,6 +370,9 @@
           <strong>Outcome:</strong>
           The resulting content structure provided a more flexible foundation for multiple page types and reduced the need to redesign templates around individual pieces of content.
         </p>
+        <p>
+          <strong>Tradeoff:</strong>
+          This required additional upfront planning and collaboration before page development could begin.
       </details>
       <details>
         <summary>Extending the Design System</summary>
@@ -382,6 +387,10 @@
         <p>
           <strong>Outcome:</strong>
           The prototype could support project-specific requirements without abandoning the consistency of the broader design system.
+        </p>
+        <p>
+          <strong>Tradeoff:</strong>
+          Creating custom components increased implementation effort and required careful alignment with existing patterns.
         </p>
       </details>
       <details>
@@ -398,6 +407,10 @@
           <strong>Outcome:</strong>
           Stakeholders could evaluate layouts and information architecture using realistic content rather than placeholder text.
         </p>
+        <p>
+          <strong>Tradeoff:</strong>
+          Integrating Contentful introduced additional setup and content-modeling complexity compared to a static prototype.
+        </p>
       </details>
       <details>
         <summary>Accessibility in Custom Components</summary>
@@ -413,6 +426,10 @@
           <strong>Outcome:</strong>
           The custom components maintained the interaction and accessibility principles established by the broader design system.
         </p>
+        <p>
+          <strong>Tradeoff:</strong>
+          Prioritizing accessible interaction patterns reduced flexibility in how certain components could behave, but helped maintain consistency with the broader design system.
+        </p>
       </details>
     </div>
   </section>
@@ -426,18 +443,21 @@
         <p>Navigation and information architecture were validated before implementation.</p>
       </div>
       <div class="impact-item">
-        <p>Validation of layouts using realistic content rather than placeholder text</p>
+        <p>Layout decisions were validated using realistic content rather than placeholder text.</p>
       </div>
       <div class="impact-item">
-        <p>Earlier identification of usability and interaction issues</p>
+        <p>Usability and interaction issues were identified before development began.</p>
       </div>
       <div class="impact-item">
         <p>Stakeholders evaluated a production-like experience rather than interpreting static mockups.</p>
       </div>
       <div class="impact-item">
-        <p>Real-world validation of the design system on a large, content-heavy website</p>
+        <p>The design system was successfully validated on a large, content-heavy website.</p>
       </div>
     </div>
+    <p class="impact-statement">
+      The prototype reduced uncertainty before implementation by bringing content, navigation, design-system components, and user experience into a single working environment. Stakeholders could evaluate realistic user flows and content structures before development began, leading to more informed decisions across the project.
+    </p>
   </section>
   <section class="key-takeaways">
     <h2 id="key-takeaways">Key Takeaways and Reflection</h2>
@@ -451,7 +471,7 @@
       If I were rebuilding the prototype today, I would consider a component-based framework such as React for more complex interactions while retaining the same content-first approach. The underlying lesson would remain the same: technology should support the design and content model rather than dictate them.
     </p>
     <p>
-      More broadly, this project reinforced that a design system is more than a collection of reusable components. Its value comes from how effectively design, content, and technology work together. By bringing those considerations into the prototyping process earlier, the team was able to make more informed decisions before committing to full development.
+      More broadly, this project reinforced that a design system delivers value only when design, content, and technology work together effectively. By bringing those considerations into the prototyping process earlier, the team was able to make more informed decisions before committing to full development.
     </p>
   </section>
 </section>

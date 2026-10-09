@@ -185,10 +185,9 @@ document.querySelectorAll(".solution-images").forEach(gallery => {
         // -------------------------------------------------
 
         if (caption) {
-
             caption.textContent =
+                images[currentIndex].dataset.caption ||
                 images[currentIndex].alt;
-
         }
 
 
@@ -419,11 +418,9 @@ function updateLightbox() {
     // -------------------------------------------------
     // Update caption
     // -------------------------------------------------
-
-    lightboxCaption.textContent =
-        activeImage.alt;
-
-
+        lightboxCaption.textContent =
+            activeImage.dataset.caption ||
+            activeImage.alt;
     // -------------------------------------------------
     // Update counter
     // -------------------------------------------------
